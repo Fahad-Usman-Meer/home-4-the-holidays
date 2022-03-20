@@ -1,0 +1,4 @@
+<span class="Title">
+<h5><font size="5" face="Tahoma">Welcome to Canadian Chihuahua Rescue and Transport</font> </h5>
+<h5>&nbsp;</h5>
+</span><font size="4">We are volunteers working together to rescue, foster and provide necessary veterinary care for homeless, abandoned and neglected Chihuahuas across Canada. </font>

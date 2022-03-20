@@ -1,0 +1,10 @@
+<h3 style="VISIBILITY: visible">Mission</h3>
+<p>Valley Oak SPCA, a non-profit organization, will, through direct action:</p>
+<ul>
+    <li>promote the humane treatment of animals</li>
+    <li>educate the community on responsible pet care</li>
+    <li>reduce pet overpopulation through an aggressive spay/neuter program</li>
+    <li>and provide unique services, programs and shared experiences that strengthen and celebrate the bond between animals and people.</li>
+</ul>
+<h3 style="VISIBILITY: visible">Vision</h3>
+<p>Valley Oak SPCA desires to be a trusted name in the community that provides educational resources and vital services to humans and their pets. Valley Oak SPCA seeks to create a welcoming, interactive campus that allows us to meet the diverse needs of the communities we serve.</p>

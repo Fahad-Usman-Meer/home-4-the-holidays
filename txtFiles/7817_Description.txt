@@ -1,0 +1,8 @@
+<p><img border="1" hspace="1" alt="Hickory Level Hound Rescue - Changing Hopeless Into Hope One Dog At A Time." vspace="1" align="absMiddle" width="164" height="148" src="http://www.hickorylevelhoundrescue.com/Hope.jpg" /></p>
+<p>&nbsp;</p>
+<a onmouseover="window.status='Hickory Level Hound Rescue'; return true" title="Hickory Level Hound Rescue" onmouseout="window.status=' '" href="http://www.hickorylevelhoundrescue.com/index2.html">Hickory Level Hound Rescue</a>
+<p>Changing Hopeless Into Hope One Dog At A Time.</p>
+<p>&nbsp;</p>
+<p><font size="2" face="Verdana"></font></p>
+<p><br />
+</p>

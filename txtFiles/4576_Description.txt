@@ -1,0 +1,9 @@
+<table cellspacing="0" cellpadding="0" border="0">
+    <tbody>
+        <tr>
+            <td width="47%" height="368">
+            <p>All animals deserve the right to a happy, healthy environment. Last Chance Animal Rescue is a non-profit organization committed to saving the lives of animals that otherwise would be destroyed. </p>
+            </td>
+        </tr>
+    </tbody>
+</table>

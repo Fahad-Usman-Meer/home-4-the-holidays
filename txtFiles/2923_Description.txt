@@ -1,0 +1,40 @@
+<table border="0">
+    <tbody>
+        <tr>
+            <td>
+            <p><span style="FONT-FAMILY: 'Arial','sans-serif'; COLOR: #3a4c53"><span style="FONT-SIZE: 10pt">The Society has been a part Norfolk County since 1953, looking after animals both large and small.&nbsp; <o:p></o:p></span></span></p>
+            <p><span style="FONT-FAMILY: 'Arial','sans-serif'; COLOR: #3a4c53"><span style="FONT-SIZE: 10pt">Now located in the industrial section of Simcoe at 24 Grigg Drive, SDHS has a 3.5 acre property purchased from the County in 2004.&nbsp;<o:p></o:p></span></span></p>
+            <p><span style="FONT-FAMILY: 'Arial','sans-serif'; COLOR: #3a4c53"><span style="FONT-SIZE: 10pt">In 2007, volunteers moved in to the temporary office and storage facility&nbsp;which was set up&nbsp;to assist foster homes and the public, however, the need in the community grew quickly and the&nbsp;space&nbsp;was soon transformed to house the overflow of small animals ... mainly those ready for adoption.</span></span></p>
+            </td>
+            <td><span style="FONT-SIZE: 10pt"><img alt="horse logo" width="203" height="198" src="http://www.s-dhs.ca/images/stories/horse%20logo.jpg" /></span></td>
+        </tr>
+        <tr>
+            <td><span style="FONT-SIZE: 10pt">&nbsp;</span></td>
+            <td><span style="FONT-SIZE: 10pt">&nbsp;</span></td>
+        </tr>
+    </tbody>
+</table>
+<p><span style="FONT-FAMILY: 'Arial','sans-serif'; COLOR: #3a4c53"><span style="FONT-SIZE: 10pt">Volunteers work round the clock to provide a comfortable and healthy environment for&nbsp;all animals in care, whether their stay is at the shelter or in foster care.&nbsp;The goal is to prepare every animal&nbsp;for adoption&nbsp;into&nbsp;a loving and forever home.<o:p></o:p></span></span></p>
+<p><span style="FONT-FAMILY: arial,helvetica,sans-serif"><span style="FONT-SIZE: 12pt"><span style="FONT-SIZE: 10pt">There are no paid positions in Simcoe and District Humane Society and the Society relies on volunteers to raise funds, answer phones, work with the animals, and deal with the public.&nbsp; If you are interested in helping the animals please visit our </span><a target="_blank" href="http://www.s-dhs.ca/index.php/volunteering"><em><span style="FONT-SIZE: 10pt">volunteer page</span></em></a><span style="FONT-SIZE: 10pt"> or the </span><a target="_blank" href="http://www.s-dhs.ca/index.php/foster-homes-needed"><em><span style="FONT-SIZE: 10pt">information on fostering</span></em></a><span style="FONT-SIZE: 10pt"> if you have time or space.&nbsp;</span></span></span></p>
+<p><span style="FONT-FAMILY: arial,helvetica,sans-serif"><span style="FONT-SIZE: 10pt">The Society relies strictly on fundraising efforts and donations from the community, not contracted or paid by any level of government or organization to do the work in the County.</span></span></p>
+<p><span style="FONT-FAMILY: arial,helvetica,sans-serif"><span style="FONT-SIZE: 10pt">Your donation is greatly appreciated and will help SDHS continue helping the animals.</span></span></p>
+<p><span style="FONT-FAMILY: arial,helvetica,sans-serif"><span style="FONT-SIZE: 10pt">All volunteers look forward to helping each animal find its forever family and will gladly introduce you to animals ready for adoption.</span></span></p>
+<p><span style="FONT-FAMILY: arial,helvetica,sans-serif"><span style="FONT-SIZE: 10pt">If you would like more information on adoption, volunteering or donating to the Society please contact us by email at </span></span><a target="_blank" href="mailto:%20%3Cscript%20language='JavaScript'%20type='text/javascript'%3E%20%3C!--%20var%20prefix%20=%20'mailto:';%20var%20suffix%20=%20'';%20var%20attribs%20=%20'';%20var%20path%20=%20'hr'%20+%20'ef'%20+%20'=';%20var%20addy73609%20=%20'info'%20+%20'@';%20addy73609%20=%20addy73609%20+%20's-dhs'%20+%20'.'%20+%20'ca';%20document.write(%20'%3Ca%20'%20+%20path%20+%20'\''%20+%20prefix%20+%20addy73609%20+%20suffix%20+%20'\''%20+%20attribs%20+%20'%3E'%20);%20document.write(%20addy73609%20);%20document.write(%20'%3C\/a%3E'%20);%20//--%3E%20%3C/script%3E%3Cscript%20language='JavaScript'%20type='text/javascript'%3E%20%3C!--%20document.write(%20'%3Cspan%20style=\'display:%20none;\'%3E'%20);%20//--%3E%20%3C/script%3EThis%20e-mail%20address%20is%20being%20protected%20from%20spambots.%20You%20need%20JavaScript%20enabled%20to%20view%20it%20%3Cscript%20language='JavaScript'%20type='text/javascript'%3E%20%3C!--%20document.write(%20'%3C/'%20);%20document.write(%20'span%3E'%20);%20//--%3E%20%3C/script%3E"><span style="FONT-FAMILY: arial,helvetica,sans-serif"><span style="FONT-SIZE: 12pt"><span style="COLOR: #666699"><em><span style="FONT-SIZE: 10pt"><SCRIPT language=JavaScript type=text/javascript>
+ <!--
+ var prefix = 'm&#97;&#105;lt&#111;:';
+ var suffix = '';
+ var attribs = '';
+ var path = 'hr' + 'ef' + '=';
+ var addy48657 = '&#105;nf&#111;' + '&#64;';
+ addy48657 = addy48657 + 's-dhs' + '&#46;' + 'c&#97;';
+ document.write( '<a ' + path + '\'' + prefix + addy48657 + suffix + '\'' + attribs + '>' );
+ document.write( addy48657 );
+ document.write( '<\/a>' );
+ //-->
+ </SCRIPT></span></em></span></span></span><span style="FONT-FAMILY: arial,helvetica,sans-serif"><span style="FONT-SIZE: 10pt">&nbsp; During our very busy days, email is the best way to contact every volunteer.</span></span></a><a href="mailto:info@s-dhs.ca">info@s-dhs.ca</a>&nbsp;.<SCRIPT language=JavaScript type=text/javascript>
+ <!--
+ document.write( '<span style=\'display: none;\'>' );
+ //-->
+ </SCRIPT></p>
+<p><span style="FONT-FAMILY: arial,helvetica,sans-serif"><span style="FONT-SIZE: 12pt"><span style="FONT-SIZE: 10pt">You may also visit our </span><a target="_blank" href="http://www.s-dhs.ca/index.php/contact-us"><em><span style="FONT-SIZE: 10pt">contact us</span></em></a><span style="FONT-SIZE: 10pt"> page for more information.</span></span></span></p>
+<p><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: arial,helvetica,sans-serif">We thank you for your continued support and look forward to meeting you at our next event or at the shelter! </span></span></p>

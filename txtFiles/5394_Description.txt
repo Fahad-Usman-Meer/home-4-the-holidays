@@ -1,0 +1,12 @@
+&nbsp;&nbsp;&nbsp;&nbsp; Chartered in 1934, the Animal Defense League is a non-profit organization that is a true no-kill shelter for abandoned, abused, or neglected dogs and cats. Our mission is to enhance the quality of life for these animals by providing needed medical care, including spaying and neutering. Food, shelter, and safety are also provided &ndash; along with compassion and attention. While maintaining a healthy and loving facility, ADL consistently works to find the best possible home for each resident animal.
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Supported by contributions and directed by a volunteer board, the League provides programs and services which strengthen the bond between animals and people. Through grass roots advocacy, education, legal intervention, and rescue, the organization is the leading voice for dogs and cats in crisis. </p>
+<p>The Animal Defense League provides a variety of services and resources including: </p>
+<ul>
+    <li>Sheltering of animals, regardless of their conditions when they arrive </li>
+    <li>Medical treatment of injured or ill dogs and cats who have been abandoned </li>
+    <li>Full-time veterinarian and staff who treat all resident animals </li>
+    <li>Low&ndash;cost spay/neuter program for pets of low-income families </li>
+    <li>Humane education programs in schools and the broader community </li>
+    <li>Pet Therapy programs for people with special needs, including children and the elderly </li>
+    <li>Active adoption services to find homes for all the animals taken in by the Animal Defense League </li>
+</ul>

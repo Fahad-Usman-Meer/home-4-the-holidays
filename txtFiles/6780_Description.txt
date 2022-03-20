@@ -1,0 +1,11 @@
+<span class="Title">
+<table width="100%">
+    <tbody>
+        <tr>
+            <td colspan="3"><span id="ctl00_maincontent_lblShelterDescription">
+            <h3><font size="3" face="Comic Sans MS">All Paws Placement is a Volunteer based No-Kill Arizona Rescue Group. We work out of our homes and dedicate our time, love and money to saving those that have no voice other than us. We intake from Maricopa County via private turn ins, AHS and MCAC&amp;C, All of our animals are fully vetted, spayed or neutered and given any training and rehabilitation necessary to find the animals the perfect home.</font></h3>
+            </span></td>
+        </tr>
+    </tbody>
+</table>
+</span>

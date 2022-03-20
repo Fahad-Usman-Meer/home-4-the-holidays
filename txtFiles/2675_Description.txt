@@ -1,0 +1,2 @@
+<p>Please visit our Website for more information about our shelter!</p>
+<p><a href="http://www.lloydminsterspca.org">www.lloydminsterspca.org</a></p>

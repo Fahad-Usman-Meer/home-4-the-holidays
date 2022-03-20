@@ -1,0 +1,19 @@
+<p>Our mission is to promote responsible care and training for household pets through education and public awareness, and when appropriate, to provide a safe and sheltering haven for lost and abandoned animals pending placement in suitable permanent homes. Some of our services include:</p>
+
+<ul>
+	<li><a href="http://lakesareahumanesociety.org/obedience.html">Dog Obedience Training</a></li>
+	<li>Adoptions and Reuniting Lost Pets</li>
+	<li>Impounding and Surrender Service</li>
+	<li>Adoptions Counseling</li>
+	<li>Prevention</li>
+</ul>
+
+<p>Hours:</p>
+
+<p>Mon: 12:00 pm - 6:00 pm</p>
+
+<p>Wed: 12:00 pm - 6:00 pm</p>
+
+<p>Thu - Fri: 12:00 pm - 5:00 pm</p>
+
+<p>Sat: 11:00 am - 4:00 pm</p>

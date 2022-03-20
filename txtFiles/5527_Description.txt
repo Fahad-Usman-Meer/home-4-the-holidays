@@ -1,0 +1,9 @@
+<strong><font face="Comic Sans MS" color="#000080" size="4"><font color="#ff0000">
+<p><br />
+Chow Dog Rescue <font color="#000080">is a Non-Profit organization dedicated to the rescue and placement of chow-chows and chow mixes through the United States, Canada and Northern Mexico. Please feel free to visit our website at </font><a href="http://www.chowdog.com/"><font color="#0000ff">www.chowdog.com</font></a><font color="#000080"> for a list of our wonderful dogs and cats.</font></p>
+<p>Chow Dog Rescue<br />
+<a href="mailto:rescue@chowdog.com">rescue@chowdog.com</a><br />
+<a href="http://www.chowdog.com">www.chowdog.com</a><br />
+Tel 909-623-CHOW<br />
+Fax 909-623-0939</p>
+</font></font></strong>

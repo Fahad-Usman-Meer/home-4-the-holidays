@@ -1,0 +1,17 @@
+<font size="3" face="Arial">
+<div align="center">
+<p><font size="3"><em><u>Our Mission<br />
+</u></em></font></p>
+</div>
+<p><font size="1"><br />
+</font>To educate the public on the necessity of spaying and neutering, which will drastically reduce the number of free-roaming cats.<br />
+<br />
+To help reduce the vast number of cats that are taken to shelters and killed every day because of lack of space.<br />
+<br />
+To promote compassion and empathy toward cats and all animals.</p>
+</font>
+<div class="" id="editableInfoTop"><font size="3" face="Arial"><span style="font-size: 14pt; color: rgb(51, 51, 51); font-family: Arial;">Feline Urban Rescue and Rehab, Inc. (FURR) is a volunteer based non-profit animal rescue organization. We are a progressive and responsible group, committed to spaying and neutering and providing proper veterinary attention to all cats or other animals that come into our care. We are active in doing companion animal adoptions which entail placing friendly cats into good, loving homes. Additionally, we socialize feral cats and kittens whenever possible, and we provide low cost spay neuter options for those who need them. FURR finds homes for more than 400 cats per year. We also assist individuals and communities with feral cat colony management using the Trap-Neuter-Return (TNR) method, which helps to humanely control free roaming cats. All of our cats and kittens are either in foster care in private homes or are residing in one of our 2 adoption centers, which are at the Petco stores in </span>
+<place></place>
+<city></city><span style="font-size: 14pt; color: rgb(51, 51, 51); font-family: Arial;">Whitehall</span><span style="font-size: 14pt; color: rgb(51, 51, 51); font-family: Arial;">, </span><state></state><span style="font-size: 14pt; color: rgb(51, 51, 51); font-family: Arial;">PA</span><span style="font-size: 14pt; color: rgb(51, 51, 51); font-family: Arial;">&nbsp;and </span>
+<place></place>
+<city></city><span style="font-size: 14pt; color: rgb(51, 51, 51); font-family: Arial;">Phillipsburg</span><span style="font-size: 14pt; color: rgb(51, 51, 51); font-family: Arial;">, </span><state></state><span style="font-size: 14pt; color: rgb(51, 51, 51); font-family: Arial;">NJ</span><span style="font-size: 14pt; color: rgb(51, 51, 51); font-family: Arial;">. FURR has an organizational presence in both states.</span></font></div>

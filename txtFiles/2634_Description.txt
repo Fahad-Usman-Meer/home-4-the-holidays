@@ -1,0 +1,10 @@
+<table border="0" align="center">
+    <tbody>
+        <tr>
+            <td>The mission of the Cheyenne Animal Shelter is to enhance the quality of life for animals and people through compassion, respect and education. <br />
+            <br />
+            For nearly 40 years, the Cheyenne Animal Shelter has extended the hand of kindness to neglected and abused companion animals in Cheyenne and Laramie County.&nbsp; Today, we are involved in an ever-expanding effort to accomplish a mission that goes beyond sheltering the homeless and unwanted pet population.&nbsp; Our goal is to find a home for every adoptable companion animal brought to our door.&nbsp; To reach this goal, we must increase the number of pets we place and decrease the number of pets relinquished.&nbsp; We hope to achieve this goal through ongoing community relations programs, such as humane education, offsite adoptions and outreach. <br />
+            </td>
+        </tr>
+    </tbody>
+</table>

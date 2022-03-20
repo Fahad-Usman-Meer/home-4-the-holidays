@@ -1,0 +1,24 @@
+<p align="center"><font color="#800000" size="5" face="comic sans ms,sans-serif">Our Mission Statement</font></p>
+<p align="center">The Mission of All American Dachshund Rescue is to Protect the Welfare of Dachshunds, to Promote the Humane Treatment and Well Being of these Animals by:</p>
+<ul>
+    <li>
+    <div align="center">Providing shelter and medical care for stray and abandoned Dachshunds;<br />
+    </div>
+    </li>
+    <li>
+    <div align="center">Responding with personal commitment, humane sensitivity, compassion, and technical skill to the needs of these Dachshunds;<br />
+    </div>
+    </li>
+    <li>
+    <div align="center">Actively promoting suitable adoptions of Dachshunds;<br />
+    </div>
+    </li>
+    <li>
+    <div align="center">Encouraging spaying and neutering to ensure the numbers of unwanted Dachshunds be kept to a minimum;<br />
+    </div>
+    </li>
+    <li>
+    <div align="center">Helping to prevent cruelty to animals by promoting animal welfare education.<br />
+    </div>
+    </li>
+</ul>

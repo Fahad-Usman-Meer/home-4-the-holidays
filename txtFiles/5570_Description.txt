@@ -1,0 +1,16 @@
+<p><span style="font-family: Arial;">Dallas Cat Rescue, dba Cat Matchers is an all-volunteer 501c3 organization dedicated to reducing the number of homeless animals.</span></p>
+<p><span style="font-family: Arial;">We will accomplish this: </span></p>
+<ul>
+    <li><span style="font-family: Arial;">through programs that rescue, spay/neuter and place animals in need in loving homes.</span></li>
+    <li><span style="font-family: Arial;">by supporting spay/neuter programs that reduce the number of animals that are euthanized or left homeless each year.<br />
+    </span></li>
+</ul>
+<p><strong><span style="font-family: Arial Narrow; font-size: small;"><span style="font-size: 12pt; font-family: 'Arial Narrow';"><span style="font-size: 12pt; font-family: Arial;">The goal is to turn disposable animals into lifelong companions.</span></span></span></strong></p>
+<p><strong><span style="font-family: Arial Narrow; font-size: small;"><span style="font-size: 12pt; font-family: 'Arial Narrow';"><span style="font-size: 12pt; font-family: Arial;"></span></span></span></strong></p>
+<p><strong><span style="font-family: Arial;">Who we are:</span></strong><span style="font-family: Arial;"><br />
+Volunteers that take homeless animals from differing situations, provide appropriate vet care, and prepare them for adoption into a loving, lifelong home.<br />
+We also try to educate the public about responsible pet ownership.</span></p>
+<p><span style="font-size: small;"><span style="font-family: Arial Narrow;"><strong><span style="font-family: Arial;">What we do:</span></strong><span style="font-family: Arial;"><br />
+At Cat matchers, we strive to place the right cat (and sometimes dogs) into the right home. Cats have different temperaments and personalities just as dogs do. They also have different activity levels depending on their age.</span></span></span></p>
+<p><span style="font-size: small;"><span style="font-family: Arial Narrow;"><span style="font-family: Arial;">The cats and dogs that Cat Matchers places for adoption, have been in a home setting with foster volunteers. Not only does this give the animal(s) a chance to live in a healthier environment than a shelter or an outdoor living situation, but also this gives our foster volunteers an opportunity to learn about the animal&rsquo;s temperament and personality. This is how our volunteer &ldquo;matchmakers&rdquo; are able to guide prospective adopters to the right pet.</span></span></span></p>
+<p><span style="font-size: small;"><span style="font-family: Arial Narrow;"><span style="font-family: Arial;">Although not infallible, this approach helps maximize the desired outcome of the animal being a lifelong part of the family.</span></span></span></p>

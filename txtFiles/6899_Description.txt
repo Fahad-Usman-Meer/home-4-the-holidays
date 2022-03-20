@@ -1,0 +1,17 @@
+<p class="MsoNormal" style="MARGIN: 0in 0in 0pt; TEXT-ALIGN: center" align="center"><font face="Times New Roman" size="3">Waterbury Police Department</font></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 0pt; TEXT-ALIGN: center" align="center"><font face="Times New Roman" size="3">Division of Animal Control</font></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 0pt; TEXT-ALIGN: center" align="center"><font size="3"><font face="Times New Roman"><st1:place w:st="on">Mission</st1:place> Statement</font></font></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 0pt"><o:p><font face="Times New Roman" size="3">&nbsp;</font></o:p></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 0pt"><font face="Times New Roman" size="3">The Division of Animal Control&rsquo;s mission is to balance the health, safety and welfare needs of the people and animals within the City of <st1:city w:st="on"><st1:place w:st="on">Waterbury</st1:place></st1:city> by:</font></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 0pt"><o:p><font face="Times New Roman" size="3">&nbsp;</font></o:p></p>
+<ul style="MARGIN-TOP: 0in" type="square">
+    <li class="MsoNormal" style="MARGIN: 0in 0in 0pt; mso-list: l0 level1 lfo1; tab-stops: list .5in"><font face="Times New Roman" size="3">Protecting the rights of people from dangers and nuisances caused by uncontrollable animals.</font></li>
+    <li class="MsoNormal" style="MARGIN: 0in 0in 0pt; mso-list: l0 level1 lfo1; tab-stops: list .5in"><font face="Times New Roman" size="3">Ensuring the legal protection of animals from mistreatment.</font></li>
+    <li class="MsoNormal" style="MARGIN: 0in 0in 0pt; mso-list: l0 level1 lfo1; tab-stops: list .5in"><font face="Times New Roman" size="3">Promoting, motivating and enforcing responsible pet ownership.</font></li>
+    <li class="MsoNormal" style="MARGIN: 0in 0in 0pt; mso-list: l0 level1 lfo1; tab-stops: list .5in"><font face="Times New Roman" size="3">Providing animal-related services to the citizens of the City of <st1:city w:st="on"><st1:place w:st="on">Waterbury</st1:place></st1:city>.</font></li>
+    <li class="MsoNormal" style="MARGIN: 0in 0in 0pt; mso-list: l0 level1 lfo1; tab-stops: list .5in"><font face="Times New Roman" size="3">Educating the public through presentations and public relations.</font></li>
+    <li class="MsoNormal" style="MARGIN: 0in 0in 0pt; mso-list: l0 level1 lfo1; tab-stops: list .5in"><font face="Times New Roman" size="3">Responding to citizen questions regarding animals and providing the appropriate referrals as needed.</font></li>
+    <li class="MsoNormal" style="MARGIN: 0in 0in 0pt; mso-list: l0 level1 lfo1; tab-stops: list .5in"><font face="Times New Roman" size="3">Providing a lost and found service for returning lost pets to owners.</font></li>
+    <li class="MsoNormal" style="MARGIN: 0in 0in 0pt; mso-list: l0 level1 lfo1; tab-stops: list .5in"><font face="Times New Roman" size="3">Coordinating with local rescue groups to facilitate the adoption and rehabilitation of animals.</font></li>
+</ul>
+<p class="MsoNormal" style="MARGIN: 0in 0in 0pt 0.25in"><o:p><font face="Times New Roman" size="3">&nbsp;</font></o:p></p>

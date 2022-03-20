@@ -1,0 +1,7 @@
+<div class="Body-P"><span class="Body-C">Queen City Greyhounds</span><span class="Body-C0"> is a 501(c)(3) non-<wbr></wbr>profit, all-<wbr></wbr>volunteer corporation based in Cincinnati, OH. As a non-<wbr></wbr>profit, all donations go directly to the support of the dogs and our efforts to rescue greyhounds from racing tracks and find good adoptive homes for as many dogs as we can.</span></div>
+<p><span class="Body-C0">Queen City Greyhounds' mission is to find suitable homes for retired racers, raise funds for their placement, and inform the community about greyhounds as pets. <strong>Since our inception in May 2008, we have placed 217 retired racers in homes in the Cincinnati tri-state area; 55 of those adoptions have taken place in 2011.</strong></span></p>
+<div class="Body-P">
+<div class="Body-P"><span class="Body-C0">The organization is made up entirely of volunteers in Ohio, Kentucky and Indiana who are passionate about ensuring each and every greyhound we place into a &ldquo;forever home&rdquo; is a good fit; both for the greyhound, and for the adopting family. We rely on donations from the community, both of time and of monetary resources, to continue our work.<br />
+</span></div>
+<br />
+</div>

@@ -1,0 +1,24 @@
+<span id="lblShelterDescription">
+<p align="justify">&nbsp;</p>
+</span>
+<div align="center"><img width="550" height="89" src="http://www.porschesrescue.com/images/guineas_002.jpg" alt="" /></div>
+<span id="lblShelterDescription">
+<p align="justify"><span class="text"></span></p>
+<p align="justify"><span class="text"><br />
+At <em>Porsche's Small Animal Rescue</em>, we rehome all small animals; rabbits, guinea pigs, mice, rats, ferrets, chickens and more! These animals are rescued from pounds across NSW when there is no other option but to euthanase. Occasionally we take in surrendered animals.<br />
+<br />
+</span> </p>
+<p align="justify" class="text">The sad reality is that every day there are small animals being put down in NSW. We are a private, self funded shelter and due to space limitations, only a limited few can be saved at a time. When an animal from <em>Porsche's Small Animal Rescue</em> is rehomed, it makes space for another life to be saved. If you would like to help out by fostering a small animal while we find it a home, <a href="http://www.porschesrescue.com/foster.html">click here </a>to register your interest.<br />
+<br />
+</p>
+<p align="justify" class="text">It is important that every animal finds a family that suits its needs, and although a rabbit or guinea pig may be less work than a dog or cat, they require the same level of commitment. New homes will be screened prior to adoption to make sure they are suitable. If you would like to adopt a rescue animal, you can <a href="http://www.porschesrescue.com/view.html">view</a> our available pets.<br />
+<br />
+</p>
+<p align="justify" class="text">Please spread the word that any type of animal sold from a petshop is likely to be found in a rescue shelter or pound. Their lives are important, and it is only through families deciding to 'adopt' instead of 'purchasing' a pet, that a difference can be made to the suffering of these gorgeous, little creatures.<br />
+<br />
+</p>
+<p class="text">If you would like to board your pet for a short term, you can <a href="http://www.porschesrescue.com/boarding_form.html">enquire online</a>. The money raised from boarding goes towards rehoming animals less fortunate.<br />
+<br />
+</p>
+<p class="text">We also appreciate any donations, which can help with the huge costs associated with feeding and medical care.</p>
+</span>

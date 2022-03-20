@@ -1,0 +1,35 @@
+<table cellspacing="0" cellpadding="5" width="100%" border="0" name="">
+    <tbody>
+        <tr valign="top">
+            <td valign="top" width="50%"><font face="'comic sans ms'" size="4" editor_id="mce_editor_0">
+            <p editor_id="mce_editor_0"><font face="tahoma, 'trebuchet ms', sans-serif" editor_id="mce_editor_0"><strong editor_id="mce_editor_0">Most people&nbsp;do not know&nbsp;how desperate the situation is for millions of homeless companion animals, especially pit bulls- American Pit Bull Terriers, American Staffordshire Terriers, American Bulldogs- all these and more are often referred to as &quot;pit bulls.&quot; These dogs have more against them than any other kind of dog. They are regularly maligned by the media, feared and misunderstood by the public, too often owned by abusive or irresponsible individuals, innocent victims of kill policies in shelters, and the target of breed specific legislation and breed bans.&nbsp; In Ohio, a pending bill, HB 568, would euthanize innocent animals across the state. </strong></font></p>
+            <p editor_id="mce_editor_0"><font face="tahoma, 'trebuchet ms', sans-serif" editor_id="mce_editor_0"><strong editor_id="mce_editor_0">Every year over 20 million animals end up homeless, through no fault of their own.&nbsp;Over 15 million of them are killed (&quot;put to sleep&quot;&nbsp;or euthanized) in dog shelters. Roughly 30% of impounded pets are reclaimed, adopted or rescued. The remaining 70% are destroyed. The overwhelming majority of these animals are pit bulls.&nbsp; Only ONE out of every six hundred pit bulls born ever gets a loving home. Only one. </strong></font></p>
+            </font><br />
+            </td>
+            <td valign="top" width="50%"><font face="Tahoma" size="2"><font face="Tahoma" size="2" editor_id="mce_editor_0">
+            <p align="left" editor_id="mce_editor_0"><font size="7"><font face="tahoma, 'trebuchet ms', sans-serif" color="#9933cc"><strong><em editor_id="mce_editor_0">By some estimates, there are over <u>one million</u> Pit Bulls killed in shelters across the U.S. every </em></strong></font><font face="tahoma, 'trebuchet ms', sans-serif" color="#9933cc"><strong><em editor_id="mce_editor_0">single year. </em></strong></font></font></p>
+            </font></font><br />
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div class="building_block" id="pgbldblk9">
+<div class="blockbody" id="body_pgbldblk9">
+<table cellspacing="0" cellpadding="5" width="100%" border="0" name="">
+    <tbody>
+        <tr valign="top">
+            <td valign="top" width="100%">
+            <p editor_id="mce_editor_0"><font face="tahoma, 'trebuchet ms', sans-serif" size="4" editor_id="mce_editor_0"><strong>Bark Ark Bully Rescue</strong>&nbsp;was created&nbsp;for the purpose of&nbsp;rescuing pit bulls and pit bull mixes from shelters that are&nbsp;about to euthanize them. In addition, <strong>Bark Ark Bully Rescue</strong> exists to educate the public about pit bulls - the truth about pit bulls. <br />
+            <br />
+            </font></p>
+            <p editor_id="mce_editor_0"><font face="tahoma, 'trebuchet ms', sans-serif" size="4" editor_id="mce_editor_0">The pit bulls rescued by&nbsp;<strong>Bark Ark Bully Rescue</strong>&nbsp;are innocent victims, destined to die because of their breed(s) not because they have displayed negative or aggressive behavior, or because they are&nbsp;too medically&nbsp;compromised to be considered adoptable.&nbsp;Contrary to popular belief, perfectly healthy and loveable dogs and cats are euthanized every day simply because they have not been claimed or adopted. Pit bulls, in particular, often are not even given the chance for adoption. In many cases, we rescue an animal hours before it is scheduled to be put to sleep, giving the animal an opportunity to be adopted by a loving family and a second chance at life. <br />
+            <br />
+            </font></p>
+            <p editor_id="mce_editor_0"><font face="tahoma, 'trebuchet ms', sans-serif" size="4" editor_id="mce_editor_0"><strong>Bark Ark Bully Re</strong>scue&nbsp;is a non-profit organization located in the Cincinnati Ohio area. working to save the lives of dogs in high kill shelters, primarily in Ohio&nbsp; and neighboring states. We are a completely volunteer organization and we can't do it without you. Please consider volunteering, fostering, adopting or donating to help us. We could not continue our work if not for generous people like yourself. 100% of every donation given will help save the life of a deserving animal. </font></p>
+            <br />
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>

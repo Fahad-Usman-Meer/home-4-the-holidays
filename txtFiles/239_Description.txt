@@ -1,0 +1,119 @@
+<span id="ctl00_maincontent_lblShelterDescription"><fieldset><legend><strong>Our Mission Statement</strong></legend>To  promote responsible pet ownership through humane education, and to  provide shelter and care to domestic companion animals until a loving,  responsible home can be found, or lost pets are reunited with their  guardians. </fieldset><br />
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tbody>
+        <tr>
+            <td>At Carolina Animal  Rescue and Adoption (CARA) we are dedicated to finding permanent and  loving families for the homeless dogs and cats of North Carolina. CARA  began rescuing homeless animals from across N.C. in April 2003, and we  have placed countless animals in wonderful homes across the country.  CARA is dedicated to providing the best service possible to the animals  in our care and the families who adopt from us. We take pride in  adopting healthy animals and go to great lengths to pair each pet with  the perfect family.<br />
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>CARA is a 501(c)(3)  non-profit, volunteer organization that operates on individual and  corporate donations and fundraising proceeds. We do not receive any  funding from government agencies or national animal welfare agencies. We  are very fortunate to have a caring and dedicated team of volunteers,  board members, and supporters. </td>
+        </tr>
+        <tr>
+            <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="2"><strong><u>CARA Adoption Center:</u><br />
+            42 Deep River Rd.<br />
+            Sanford, NC 27330<br />
+            (919)774-9433<br />
+            <strong>E-mail:</strong><a href="mailto:cara@cara-nc.org">cara@cara-nc.org</a><br />
+            <strong>Hours of Operation:</strong> Open to the public Tuesday, Wednesday, Friday and Saturday 10:00am to 2:00pm or Thursday 3pm-7pm&nbsp; </strong></td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+</span>
+<table width="95%" cellspacing="0" border="0">
+    <tbody>
+        <tr>
+            <td colspan="4">
+            <p><u><strong>Mailing address is:</strong></u> </p>
+            <p>                                     </p>
+            <table cellspacing="0" cellpadding="1" border="0">
+                <tbody>
+                    <tr>
+                        <td><img border="0" src="http://www.cara-nc.org/site_images/cat_stamp.gif" alt="Cat Stamp" /> </td>
+                        <td>CARA <br />
+                        PO Box 2642 <br />
+                        Sanford, NC 27331-2642 </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>&nbsp;</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>                         </p>
+<table width="400" cellspacing="0" border="0">
+    <tbody>
+        <tr>
+            <td colspan="2"><strong><u>Board of Directors:</u></strong> </td>
+        </tr>
+        <tr>
+            <td width="150">Kim Godon<br />
+            </td>
+            <td>President</td>
+        </tr>
+        <tr>
+            <td>Laurie Trusdell<br />
+            </td>
+            <td>Treasurer/ Secretary<br />
+            </td>
+        </tr>
+        <tr>
+            <td>Lori Resnick</td>
+            <td>Operations/ Medical Coordinator<br />
+            </td>
+        </tr>
+        <tr>
+            <td>Abbey Lindauer<br />
+            </td>
+            <td>Operations/ Adoptions Coordinator<br />
+            </td>
+        </tr>
+        <tr>
+            <td>Eva Rogers</td>
+            <td>Fundraising Co-Chair<br />
+            </td>
+        </tr>
+        <tr>
+            <td>Crystal Stubits<br />
+            </td>
+            <td>Fundraising Co-Chair<br />
+            </td>
+        </tr>
+        <tr>
+            <td>Samantha Bowman<br />
+            </td>
+            <td>Admin Assistant<br />
+            </td>
+        </tr>
+        <tr>
+            <td>Jennifer Stiff</td>
+            <td>Volunteer Committee Chair</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="2">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>

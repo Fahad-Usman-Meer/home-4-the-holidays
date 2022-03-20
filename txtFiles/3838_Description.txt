@@ -1,0 +1,24 @@
+<table width="100%">
+    <tbody>
+        <tr>
+            <td colspan="3"><span id="lblShelterDescription">
+            <div style="FONT-SIZE: 1.5em">Since 1903, Bideawee has been dedicated to a simple mission: to shelter and care for homeless cats and dogs until they can be adopted. Bideawee -- the name comes from a Scottish phrase for &quot;stay a while&quot; -- is one of the nation's oldest and most respected humane organizations.
+            <p>&nbsp;</p>
+            Find your perfect dog and cat at one of our three locations - Manhattan, Wantagh and Westhampton. <strong>Check out our web site for pictures and profiles of our wonderful pets: <a target="blank" href="http://www.bideawee.org/">www.bideawee.org</a>. </strong>Bideawee staff will help you find your match.
+            <p>&nbsp;</p>
+            Have a pet already? Bideawee has two low-cost veterinary clinics (Manhattan and Westhampton). We also have dog trainers and behaviorists at each site that offer training classes and behavior consultation. Wantagh and Manhattan&nbsp;have new Learning Centers for pets and kids. Bideawee also has two pet cemetaries located in Long Island and a Retirement Home for Pets in Westhampton - Golden Years Retirement Home.</div>
+            </span>
+            <div align="left"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+    </tbody>
+</table>

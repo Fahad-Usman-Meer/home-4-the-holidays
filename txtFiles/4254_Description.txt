@@ -1,0 +1,10 @@
+<table width="100%">
+    <tbody>
+        <tr>
+            <td colspan="3"><span id="ctl00_maincontent_lblShelterDescription">
+            <p>Fluff Buddies is a 501(c)(3) non-profit group of dedicated volunteers. Our purpose&nbsp;is to provide shelter, food, medical care, and love to Siamese, Maine Coon, and other homeless felines until we find them loving, furever new homes.&nbsp;&nbsp;Our kitties are rescued from local high-kill shelters and the community and are housed in foster homes in Sacramento County, California.</p>
+            <p>Fluff Buddies holds regular adoption events at the Fair Oaks Petco (Madison at Hazel) every Saturday and Sunday&nbsp;from noon to 4pm.</p>
+            </span></td>
+        </tr>
+    </tbody>
+</table>

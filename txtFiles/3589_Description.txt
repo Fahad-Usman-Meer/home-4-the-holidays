@@ -1,0 +1,45 @@
+<p>
+<table width="100%">
+    <tbody>
+        <tr>
+            <td align="right">&nbsp;</td>
+            <td valign="top" nowrap="nowrap" align="right">
+            <div align="left"><span id="lblShelterContact"></span></div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3"><span id="lblShelterDescription">
+            <p align="center"><font face="Arial"><font face="Arial"><font face="Arial"></font></font></font></p>
+            <p>&nbsp;</p>
+            <p align="center"><strong>Fur the Love of Paws is an Charitable, 501c3 organization started by a group of dedicated animal lovers, with a combined 25+ years of rescue experience, who wanted to make a difference in the lives of homeless animals. Currently being operated by volunteers and foster homes, our goal is to provide a shelter for homeless, neglected and unwanted cats and eventually dogs and to open a center to provide sanctuary for animals where euthanasia is never an option for a healthy</strong> <strong>animal. <br />
+            </strong></p>
+            <h1 align="center"><em><font color="#339966" size="4">We are working tirelessly to raise funds for a new facility to operate in!</font></em></h1>
+            <p align="center"><br />
+            <strong>By opening a facility without having to rely on foster homes, we will be able to greatly increase the number of pets we can help. We will be able to offer shelter to those animals that may need some extra time before they are adoptable, and offer sanctuary for those who may never be ready.</strong> </p>
+            <p align="center">&nbsp;</p>
+            <p align="center"><font size="4"><u>If you would like to help, please visit our website <a href="http://www.furtheloveofpaws.com">www.furtheloveofpaws.com</a> for info.</u></font></p>
+            <p align="center"><u><font size="4">Also visit our myspace page <a href="http://www.myspace.com/forloveofpaws">www.myspace.com/forloveofpaws</a> </font></u></p>
+            <p align="center">&nbsp;</p>
+            <p align="center"><font style="BACKGROUND-COLOR: #ccffff"></font></p>
+            <font style="BACKGROUND-COLOR: #ccffff">
+            <h1 align="center"><em><font style="BACKGROUND-COLOR: #ffff99" color="#339966" size="5">Our Purpose</font></em></h1>
+            <p align="center"><font style="BACKGROUND-COLOR: #ffcc99" color="#000080"><strong>* To rescue and provide shelter, food and medical care for abandoned, abused, neglected and unwanted pets. To eventually re-home these pets into loving families. <br />
+            <br />
+            *To provide a loving, permanent home/sanctuary for geriatric, handicapped or otherwise less adoptable pets at our sanctuary that would not have other sheltering options available to them. <br />
+            <br />
+            *To support and conduct educational and informational activities to increase public awareness or animal overpopulation, neglect/abuse and proper pet care. <br />
+            <br />
+            *To provide educational/service learning opportunities for both youth and adult groups in all aspects of animal behavior and care, Either on site, or in schools, etc. <br />
+            <br />
+            *To provide therapy programming to assisted living, nursing homes, hospital and hospice facilities to educate and enhance the lives of elderly, infirmed or terminal patients. <br />
+            <br />
+            * to increase public awareness of the benefits of animals in our society and personal lives.</strong></font></p>
+            </font>
+            <p><font style="BACKGROUND-COLOR: #ffcc99" color="#000080"><strong></strong></font></p>
+            <strong><font style="BACKGROUND-COLOR: #ffcc99" color="#000080"><hr />
+            </font><font style="BACKGROUND-COLOR: #339966"><hr />
+            </font></strong></span></td>
+        </tr>
+    </tbody>
+</table>
+</p>

@@ -1,0 +1,28 @@
+<h2>About Fancy Cats </h2>
+<p> Fancy Cats Rescue Team is a 501(c)(3) non-profit organization. (United Way #98772) </p>
+<p>The Fancy Cats Rescue Team is a passionate leader in the animal rescue community with over 20 years experience. Founded in August 1997 by Cathy Awad, Fancy Cats now has <a href="http://www.fancycats.org/locations.asp">four PetSmart Adoption Centers</a> and +70 volunteers. </p>
+<p>Our organization is known for responsiveness to our donors, adopters, volunteers, and the public.</p>
+<h2>Our Mission</h2>
+<p> Our mission is to end needless euthanasia at shelters in the National Capital area by rescuing and finding suitable lifetime homes for our cats, promoting spaying and neutering, and educating the public on responsible pet ownership. </p>
+<h2>Felines Being Helped </h2>
+<p>On average, Fancy Cats helps +1,000 cats each year. Since our inception in 1997, we have found loving homes for +11,000 cats.</p>
+<p>As much as we wish could help every Feline, we are limited by our resources. As such, Fancy Cats' safety net for felines consists of the following: </p>
+<ul>
+    <li>We rescue cats on death row in local shelters.</li>
+    <li>We partner with other organizations to facilitate cat rescue.<br />
+    </li>
+    <li>We take owner-released cats as space permits.
+    <ul>
+        <li>Before acceptance, the owner-released cat must arrive with all medical work done (including sterilization, FeLV/FIV test, rabies and distemper shots that are current). </li>
+        <li>We also require a tax deductible donation in the amount of our choosing, depending on the cat's age and general health. </li>
+        <li>Before deciding to give up your feline, please visit our <a href="http://www.fancycats.org/rehoming.asp">rehoming</a> knowledgebase.</li>
+    </ul>
+    </li>
+    <li>We take strays as space permits.</li>
+    <li>We do not accept feral (wild) cats. (<a href="http://www.fancycats.org/resource_ferals.asp">Learn about ferals</a>)</li>
+    <li>We do not trap cats. </li>
+</ul>
+<h2>Our Volunteers</h2>
+<p>Our volunteers and staff are recognized for living our core values of integrity, respect, compassion and teamwork. They are responsive, dedicated, knowledgeable and helpful. Every year, our volunteers interact with over 7,000 community members. </p>
+<p>Most of our volunteers have full-time jobs, and/or are students, or retirees. They donate their non-working hours to help save homeless cats and kittens. </p>
+<p>Learn more about <a href="http://www.fancycats.org/OurPeople.asp">our people</a>, or different ways of <a href="http://www.fancycats.org/volinfo.asp">volunteering with Fancy Cats</a>.</p>

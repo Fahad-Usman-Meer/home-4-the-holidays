@@ -1,0 +1,29 @@
+<table cellspacing="0" cellpadding="2" width="100%" border="0">
+    <tbody>
+        <tr>
+            <td width="100%" bgcolor="#ccccff">
+            <p><strong><font face="Comic Sans MS" size="4">Who We Are</font></strong></p>
+            </td>
+        </tr>
+        <tr>
+            <td width="100%">
+            <p><strong><font face="Comic Sans MS" size="3">Mission Statement</font></strong></p>
+            <p class="MsoNormal"><span style="FONT-SIZE: 12pt"><font face="Comic Sans MS">In recognition of the bond between humans and animals, the Tri-County Humane Society exists to practice and promote humane principles, compassionate care, and the prevention of cruelty to animals.<o:p> </o:p></font></span></p>
+            <p class="MsoNormal"><span style="FONT-SIZE: 12pt"><font face="Comic Sans MS">This society serves the community, both animals and people, primarily by:<o:p> </o:p></font></span></p>
+            <ul>
+                <li>
+                <p class="MsoNormal" align="left"><span style="FONT-SIZE: 12pt"><font face="Comic Sans MS">providing quality care and adoption services for animals in need,<o:p> </o:p></font></span></p>
+                </li>
+                <li>
+                <p class="MsoNormal" align="left"><span style="FONT-SIZE: 12pt"><font face="Comic Sans MS">offering educational programs to encourage the awareness, understanding and practice of humane principles, and<o:p> </o:p></font></span></p>
+                </li>
+                <li>
+                <p class="MsoNormal" align="left"><font face="Comic Sans MS"><span style="FONT-SIZE: 12pt">handling questions and complaints regarding animal care and</span><span style="FONT-SIZE: 12pt"> </span><span style="FONT-SIZE: 12pt; mso-fareast-font-family: arial; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">behavior, including alleged cruelty, and neglect cases.</span> </font></p>
+                </li>
+            </ul>
+            <p class="MsoNormal" align="left"><font face="Comic Sans MS"><font size="2">Check us out on our website at </font><a href="http://www.tricountyhumanesociety.org"><font size="2">www.tricountyhumanesociety.org</font></a></font></p>
+            <p><font face="Comic Sans MS"><font face="Arial"><font face="Arial"></font></font></font></p>
+            </td>
+        </tr>
+    </tbody>
+</table>

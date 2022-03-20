@@ -1,0 +1,17 @@
+<table id="Table4" style="BORDER-LEFT-COLOR: red; BORDER-BOTTOM-COLOR: red; BORDER-TOP-COLOR: red; BORDER-RIGHT-COLOR: red" cellspacing="0" cellpadding="0" width="100%" border="0">
+    <tbody>
+        <tr>
+            <td class="NEW-PageText-Grey" align="left">Our mission is to ensure that one day all the animals in Lebanon will get the chance to live the life they deserve because it is their plant too... Through education and direct action, BETA rescues stray and abused animals, while combating abusive pet shops and the illegal trade in wildlife. <br />
+            <br />
+            Beirut for the Ethical Treatment of Animals (BETA) is a Lebanese Registered Charitable Organization (Charity # 205/AD). </td>
+        </tr>
+        <tr height="25">
+            <td>&nbsp;</td>
+        </tr>
+        <!--Body Ends-->
+        <tr height="20">
+            <td>&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+<!--Table(3) Ends-->

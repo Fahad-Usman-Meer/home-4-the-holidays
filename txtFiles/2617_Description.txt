@@ -1,0 +1,8 @@
+<span id="lblShelterDescription"><font face="arial"><font face="arial"><strong>The Knox County Humane Society</strong> was founded in 1887. A 501(c)3 charity, the Society provides for the rescue, rehabilitation, adoption, and care of stray, unwanted, or lost cats and dogs.<br />
+<br />
+<p>KCHS operates a shelter in Mount Vernon, OH which offers feline &amp; canine adoption services, a pet food pantry, and low-cost spay/neuter clinics to the community. <br />
+</p>
+<p><br />
+</p>
+<p>The Society receives less than 5% of its funding from government support. The Society supports itself largely through its own fundraising efforts, animal surrender <font face="arial"><font face="arial">and adoption fees, and donations. We do not receive funds or help from the Humane Society of the US or the American Humane Society. The Society relies on the generosity of volunteers and donors to maintain its programs. </font></font></p>
+</font></font></span>

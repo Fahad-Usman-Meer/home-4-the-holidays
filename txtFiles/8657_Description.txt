@@ -1,0 +1,11 @@
+<table class="contentpaneopen">
+    <tbody>
+        <tr>
+            <td valign="top">
+            <p>Through its province-wide network of 50 plus Communities, the Ontario SPCA is one of the largest, most responsive animal welfare organizations in the country, providing care and shelter for tens of thousands of animals every year. As a non-profit charitable organization, <span style="COLOR: #012645">the Ontario SPCA is unique amongst animal welfare organizations in Ontario: the Ontario SPCA Act mandates the Society to enforce</span> animal cruelty laws and provides Ontario SPCA Community investigators with police powers to do so.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<!--<span class="article_separator">&nbsp;</span>
+-->

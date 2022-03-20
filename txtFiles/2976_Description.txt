@@ -1,0 +1,13 @@
+<p align="center"><strong><font color="#339966" size="5">Second Chance Pet Adoption Rescue</font></strong> </p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 0pt; TEXT-ALIGN: center" align="left"><span style="COLOR: black; FONT-FAMILY: &quot;Arial&quot;,&quot;sans-serif&quot;"><font size="2">A no-kill, non-profit 501c3 organization dedicated to ending the suffering and killing of homeless, unwanted/abandoned, neglected and/or abused companion animals.</font></span></p>
+<br />
+<p class="MsoNormal" style="MARGIN: 0in 0in 0pt; TEXT-ALIGN: center" align="left"><span style="COLOR: black; FONT-FAMILY: &quot;Arial&quot;,&quot;sans-serif&quot;"></span><span style="COLOR: black; FONT-FAMILY: &quot;Arial&quot;,&quot;sans-serif&quot;"><font size="3"></font></span></p>
+<p class="MsoNormal" style="MARGIN: 0in 0in 0pt; TEXT-ALIGN: center" align="left"><span style="COLOR: black; FONT-FAMILY: &quot;Arial&quot;,&quot;sans-serif&quot;"><font size="3">Our members are knowledgeable, caring individuals from a number of professional fields. We are also animal lovers with rescued pets of our own and know how heartbreaking it is to see an abandoned, neglected or abused animal dumped along the side of the road or tied to a tree in an empty parking lot, or to see a mother cat scrounging for food around a dumpster as her starving kittens mew nearby. We see it all too often in our area. </font></span></p>
+<p><font size="3">Through our network we have begun to make a difference. But we need to do more and to continue to grow.- </font></p>
+<p><font size="3">We need to: </font></p>
+<ul>
+    <li><font size="3">Address the pet overpopulation problem. </font></li>
+    <li><font size="3">Educate the public on responsible and proper pet care. </font></li>
+    <li><font size="3">Care for, neuter/spay homeless, abandoned, and neglected pets to prepare them for adoption into responsible and loving forever households. </font></li>
+    <li><font size="3">Educate the public that pets are not part of today's &quot;disposable&quot; society.</font> </li>
+</ul>

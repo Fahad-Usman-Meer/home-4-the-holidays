@@ -1,0 +1,12 @@
+<span style="FONT-WEIGHT: bold">
+<p class="text3" style="PADDING-RIGHT: 24px; PADDING-LEFT: 28px; PADDING-TOP: 7px" align="center"><font style="BACKGROUND-COLOR: #ffff99" face="Verdana" color="#ff66ff" size="2"></font></p>
+<font style="BACKGROUND-COLOR: #ffff99" face="Verdana" color="#ff66ff" size="2">
+<div align="center">Our Mission Statement</div>
+<div align="justify">
+<p><font color="#ff99cc" size="2">Lil Paws Rescue is a group of volunteer dog lovers whose mission is to rescue, rehabilitate, and re-home neglected, surrendered and abused dogs. Whenever possible we also assist dogs who are unable to remain in their homes with their owners. We are located in <st1:state><st1:place>Ohio</st1:place></st1:state> and surrounding areas. </font></p>
+<p><font color="#ff99cc" size="2">All Lil Paws Rescue foster dogs are housed in foster homes where they are provided with an a family setting with lots of love and any medical attention that may be required to insure that they are in good health before adoption. They are all spayed or neutered, up-to-date on vaccinations, groomed, most have dentals and anything else they require before being placed in their new homes. Most of our dogs are also housetrained and taught basic obedience. </font></p>
+<p><font color="#ff99cc" size="2">All Lil Paws Rescue dogs are evaluated for temperament and personality. This helps us to place them in homes that are well suited to their needs and to the needs of their future owners. </font></p>
+<p><font color="#ff99cc" size="2">You can learn more about Lil Paws Rescue by emailing us at </font><a href="mailto:lilpawsrescue@yahoo.com"><font color="#ff99cc" size="2">lilpawsrescue@yahoo.com</font></a><font color="#ff99cc" size="2">.</font></p>
+<p><font color="#ff99cc">&nbsp;</font></p>
+</div>
+</font></span><br />

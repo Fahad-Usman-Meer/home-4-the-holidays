@@ -1,0 +1,4 @@
+<span class="homebody">Since 1937, the Lake Humane Society has operated as a private, non-profit organization dedicated to the welfare and protection of animals in Lake County and the surrounding metropolitan areas. Focusing on the relief of suffering and the prevention of cruelty and abuse to animals, the Lake Humane Society strives to inform and educate children and adults in the humane and respectful treatment of all living creatures.</span>
+<p><span class="homeheads">Our Mission</span><br />
+<span class="homebody">Provide a gentle and caring haven for the homeless, abandoned, and injured animals of Lake County and persevere in defending and protecting animal life through education, integrity, and leadership.</span></p>
+<p class="hometag"><strong>The Lake Humane Society&hellip;promoting and preserving animal welfare since 1937</strong> </p>

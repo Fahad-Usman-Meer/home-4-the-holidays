@@ -1,0 +1,41 @@
+<font color="#744d21">Coppell Humane Society (CHS)<!--
+mstheme--></font><!--mstheme-->
+<p><font size="2">We are a 501(c)3 non-profit, tax-exempt rescue organization dedicated to rescuing dogs and cats in the Dallas-Ft. Worth area. Donations are tax-deductible.</font></p>
+<p><font size="2">We are a foster home organization that has no paid staff.&nbsp;&nbsp;We keep the animals until they find their forever homes, no matter how long that takes.&nbsp; We believe in treating foster animals as one of our family until they become a part of your family.</font></p>
+<p>&nbsp;</p>
+<div align="center"><center><!--
+mstheme--><!--mstheme-->
+<table height="105" cellspacing="0" bordercolordark="#000000" cellpadding="0" width="410" bordercolorlight="#000000" border="1">
+    <tbody>
+        <tr>
+            <td valign="middle" align="center" width="406" bgcolor="#000080" height="34"><!--mstheme--><font face="Verdana, Arial, Helvetica"><!--
+mstheme--><font face="Verdana, Arial, Helvetica">
+            <p align="center"><font color="#ffffff" size="3"><strong>Mission Statement</strong></font><!--
+mstheme--></p>
+            <!--mstheme--></font></font></td>
+        </tr>
+        <tr>
+            <td valign="top" align="center" width="406" height="34"><!--mstheme--><font face="Verdana, Arial, Helvetica"><!--
+mstheme--><font face="Verdana, Arial, Helvetica">
+            <p align="center">&nbsp; </p>
+            <blockquote>
+            <p style="MARGIN: 0px; WORD-SPACING: 0px; TEXT-INDENT: 0px; LINE-HEIGHT: 100%" align="center"><font size="2">Our mission is to serve homeless, needy companion animals in the Dallas-Ft Worth metroplex and surrounding communities.</font></p>
+            </blockquote><!--mstheme--></font></font></td>
+        </tr>
+        <tr>
+            <td valign="top" align="center" width="406" height="45"><!--mstheme--><font face="Verdana, Arial, Helvetica"><!--
+mstheme--><font face="Verdana, Arial, Helvetica">&nbsp; <blockquote>
+            <p style="MARGIN: 0px; WORD-SPACING: 0px; TEXT-INDENT: 0px; LINE-HEIGHT: 100%" align="center"><font size="2">We accomplish this through rescue, rehabilitation, and permanent placement in suitable homes; while striving to reduce their numbers through public education.</font></p>
+            </blockquote><!--mstheme--></font></font></td>
+        </tr>
+        <tr>
+            <td valign="top" align="center" width="406" height="26"><!--mstheme--><font face="Verdana, Arial, Helvetica"><!--
+mstheme--><font face="Verdana, Arial, Helvetica">
+            <p align="center">&nbsp; </p>
+            <blockquote>
+            <p style="MARGIN: 0px; WORD-SPACING: 0px; TEXT-INDENT: 0px; LINE-HEIGHT: 100%" align="center"><font size="2">Achievement of our mission depends on honoring, valuing, and supporting the efforts and contributions of our volunteers, donors and adopters.</font></p>
+            </blockquote><!--mstheme--></font></font></td>
+        </tr>
+    </tbody>
+</table>
+</center></div>

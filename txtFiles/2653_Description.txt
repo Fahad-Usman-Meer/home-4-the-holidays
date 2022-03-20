@@ -1,0 +1,21 @@
+<span id="ctl00_maincontent_lblShelterDescription">
+<h3> 	Humane Society of Northeast Georgia<br />
+</h3>
+Serving Hall County and northeast Georgia since 1913, the Humane Society    of Northeast Georgia (HSNEGA) provides vital services to animals and    people alike. Our mission is to create a community recognized for    responsible for pet ownership and humane treatment of animals through    offering basic pet wellness and spay-neuter services, public education,    and placement of companion animals. <br />
+<br />
+A private, non-profit organization that receives no public or government    funding, HSNEGA receives no monies from national humane organizations    or county, state or federal government funds. Instead, we are  supported   solely by private donations, grants, bequests, investments,  and some   fees.<br />
+<br />
+HSNEGA is a limited admission shelter, meaning we take in healthy    animals from owners and other shelters and rescue groups as space    allows. We do not euthanize based on duration of stay or space. Instead,  rescued  animals stay with us until they find a new forever home. Our  programs   and services include:<br />
+<ul>
+    <li> 		Adoption of Companion Animals (all adopted animals are    spayed/neutered, microchiped, up-to-date on vaccinations, health &amp;    behavioral tested, etc.)</li>
+    <li> 		Spay-Neuter Center providing affordable spay-neuter surgery to the public</li>
+    <li> 		Low-cost Wellness Clinic including basic vaccinations and testing for dogs and cats</li>
+    <li> 		Intake of Owner-Relinquished Pets</li>
+    <li> 		Rescue of Displaced Animals from other shelters throughout northeast Georgia</li>
+    <li> 		Foster Care Program for animals with special needs</li>
+    <li> 		Owner Requested Euthanasia (for terminally ill or suffering animals)</li>
+    <li> 		Pet-Assisted Therapy</li>
+    <li> 		Behavior &amp; Training Classes</li>
+    <li> 		Educational Programs for Youth, Teens and Adults</li>
+</ul>
+</span>

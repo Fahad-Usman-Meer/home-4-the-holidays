@@ -1,0 +1,53 @@
+<p><img src="http://www.rexburgpolice.com/AnimalShelter/Images/Shelter.jpg" style="height:auto; width:100%" /><BR>
+
+The Rexburg Animal Shelter located at 490 W 4th North in Rexburg Idaho.</p>
+
+<p>Many people look to animal control and the shelter as a last resort when they have tried other options and been unsuccessful; we&#39;re working to change that image. Animal control and the shelter should be looked at as a resource; here you have people trained in handling animals and animal behaviors, people with the experience and references to help you and your animal with obedience training, to work past behavioral issues, or to help the neighbor quiet their noisy dog. The shelter is also here to help reunite lost animals with their families or to find new homes for those animals where their families can no longer provide the environment needed.<br />
+<br />
+In Rexburg we operate a low kill shelter, we put animals down but most of these animals will be due to the animal&#39;s temperament, age, or general health,&nbsp;but sadly in some cases because we have not been able to find loving homes for them. Most of the animals that we get at the shelter are lost, or abandoned, but some are turned in by their once loving family. If you feel that you and your companion are no longer compatible, call us and see if we can help first. If you decide that you cannot keep your companion though, be sure to tell the officer as much as you can about your pet, i.e. housebroken, likes to ride in cars, does not like baths, does not like other cats, gets along with other dogs, current on shots, likes to chew, etc. This will help us to find the right home, and may enable us to help your companion learn past any bad behaviors.<br />
+<br />
+There is a required spay/neuter for any animal that you adopt. Fees vary from $75+ dollars depending on the species of the animal you are considering adopting. This helps us cut down the deaths of animals each year due to over-population. Please spay or neuter you animals!<br />
+&nbsp;</p>
+
+<table align="center" cellpadding="1" cellspacing="1" style="width:75%">
+	<tbody>
+		<tr>
+			<td colspan="2" style="width: 100%; background-color: rgb(255, 255, 255);"><strong>Rexburg Animal Shelter</strong></td>
+		</tr>
+		<tr>
+			<td colspan="2" style="background-color: rgb(255, 255, 255);">490 West 4th North<br />
+			Rexburg, ID 83440<br />
+			<strong>(208) 359-3005</strong></td>
+		</tr>
+		<tr>
+			<td colspan="2" style="background-color: rgb(0, 0, 51);">&nbsp;<strong>Shelter Hours</strong></td>
+		</tr>
+		<tr>
+			<td style="width: 50%; background-color: rgb(204, 204, 204);">&nbsp;Monday</td>
+			<td style="width: 50%; background-color: rgb(204, 204, 204);">&nbsp;1-6pm</td>
+		</tr>
+		<tr>
+			<td style="width: 50%; background-color: rgb(204, 204, 204);">&nbsp;Tuesday</td>
+			<td style="width: 50%; background-color: rgb(204, 204, 204);">&nbsp;1-6pm</td>
+		</tr>
+		<tr>
+			<td style="width: 50%; background-color: rgb(204, 204, 204);">&nbsp;Wednesday</td>
+			<td style="width: 50%; background-color: rgb(204, 204, 204);">&nbsp;Closed</td>
+		</tr>
+		<tr>
+			<td style="width: 50%; background-color: rgb(204, 204, 204);">&nbsp;Thursday</td>
+			<td style="width: 50%; background-color: rgb(204, 204, 204);">&nbsp;Closed</td>
+		</tr>
+		<tr>
+			<td style="width: 50%; background-color: rgb(204, 204, 204);">&nbsp;Friday</td>
+			<td style="width: 50%; background-color: rgb(204, 204, 204);">&nbsp;1-6pm</td>
+		</tr>
+		<tr>
+			<td style="width: 50%; background-color: rgb(204, 204, 204);">&nbsp;2nd and 4th Saturday</td>
+			<td style="width: 50%; background-color: rgb(204, 204, 204);">&nbsp;1-4pm</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="background-color: rgb(0, 0, 51);">*Closed all holidays&nbsp;</td>
+		</tr>
+	</tbody>
+</table>

@@ -1,0 +1,11 @@
+<table cellpadding="0" cellspacing="0" style="width:700px">
+	<tbody>
+		<tr>
+			<td style="width:350px">4 Paws 4 Life Dog Rescue is a nonprofit organization dedicated to rescuing dogs from overpopulated, high-kill shelters and contributing to achieving a no-kill nation.<br />
+			<br />
+			We work with our community and other rescue partners to save dogs every single day. We provide them with temporary care, medical attention and forever homes.<br />
+			<br />
+			We believe every dog is special and every dog deserves a long, happy and healthy life. We believe in a no-kill nation. We believe in our community!&nbsp;&nbsp;</td>
+		</tr>
+	</tbody>
+</table>

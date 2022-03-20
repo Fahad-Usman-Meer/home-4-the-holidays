@@ -1,0 +1,4 @@
+<font face="Arial">
+<p><font color="#800080" size="5"><span style="COLOR: blue; FONT-FAMILY: Comic Sans MS">&nbsp;<font size="4">My Menagerie Pet Rescue, Inc. is a small group of dedicated volunteers in the middle Tennessee area who&nbsp;work to reduce the homeless and unwanted dog &amp; cat population in the middle Tennessee &amp; southern Kentucky areas.&nbsp; We work with local shelters, rescue groups and private individuals to help in placing lost, abandoned, abused &amp; neglected pets in loving, caring forever homes.</font></span></font></p>
+<p><font color="#800080" size="5"><span style="COLOR: blue; FONT-FAMILY: Comic Sans MS"></span>We are a 501(c)(3) all volunteer non-profit. All donations/contributions are tax deductible and used for the direct care of our rescues.</font></p>
+</font>

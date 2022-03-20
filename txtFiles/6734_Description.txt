@@ -1,0 +1,27 @@
+<p class="headline">Our Mission</p>
+<p class="quote">Once upon a time, not so very long ago,<br />
+A vision began to form of a world we might know<br />
+Where animals were sheltered and rescued from their pain<br />
+Where we might care for them with love the only gain<br />
+<br />
+To find them homes - surroundings filled with care,<br />
+Warmth, and food and kindness, and the love - it must be there<br />
+Each one a step along the road to the dream in sight<br />
+To a shelter for the animals - a place to spend the night<br />
+<br />
+We grieve for each one lost and vow to do our best<br />
+To save as many as we can before we take a rest<br />
+<br />
+As long as there's an animal frightened and alone<br />
+As long as there's an animal that doesn't have a home<br />
+<br />
+Till every one abandoned; 'till every animal stray<br />
+Till every nameless creature has a place to stay<br />
+So, the animals are rescued and their torment heard<br />
+One by one and life by life, we keep our solemn word</p>
+<p class="signature">(composed by a Second Chance Pet Adoption Volunteer)</p>
+<p class="news">This is the mission of Second Chance Pet Adoption. Our organization was founded in 1994 by a group of individuals seeing the need to help homeless cats in and around the Northwest Suburbs of Chicago. In 1995, Second Chance was licensed by the State of Illinois as an animal shelter. We are not-for-profit and all volunteer. Since inception, over 5000 animals have been rescued and helped.</p>
+<p class="news">Second Chance Pet Adoption rescues stray, abandoned, injured, or sick cats. Our foster cats are cared for by compassionate and devoted volunteers. In homes, our cats are socialized, learn to adjust to living with other animals and families. If sick, or the cat has medical needs, the foster home works with our veterinarians to nurse the cat to health. Our cats are given unconditional love until adopted into that pet's permanent home.</p>
+<p class="news">Second Chance relies on donations and volunteers from the community to support the organization (all donations are tax deductible in accordance with 501 (c) (3)). Please support our foster homes and our organization's efforts to help those cats still waiting for there Second Chance for love.</p>
+<p class="news">Second Chance Pet Adoption is a not-for-profit all volunteer rescue and fosterhome organization focused primarily on cats and kittens. Most of our foster homes and veterinarians are located in the Northwest Suburbs of Chicago.</p>
+<p class="news">All Second Chance cats are veterinarian checked, receive all necessary medical care and are placed into a foster home until they are adopted into a permanent home. Our foster homes provide the love, care, and attention these cats need so they can once again feel safe, secure, and accepting of their Second Chance for Love.</p>

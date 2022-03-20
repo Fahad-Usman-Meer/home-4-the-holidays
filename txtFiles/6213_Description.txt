@@ -1,0 +1,5 @@
+<span id="lblShelterDescription">&nbsp;
+<p>Anderson Animal Shelter is one of the most progressive Humane Societies of its kind. We serve over 2,550 animals a year.The shelter operates under a low-kill philosophy and is dedicated to eliminating the euthanasia of healthy, adoptable animals. Every adoptable animal at the shelter is cared for as long as it takes to locate a loving forever home.</p>
+<p>We are located at 1000 LaFox St (Rt 31) in South Elgin.&nbsp; You can view our adoptable animals at <a href="http://www.andersonanimalshelter.org/">www.andersonanimalshelter.org</a>.&nbsp; Feel free to contact us at <a href="mailto:neuteryourpets@andersonanimalshelter.org">neuteryourpets@andersonanimalshelter.org</a> or 847-697-2880.</p>
+<p>Our adoption hours are Mon 2-8pm, Tues 12-6pm, Wed Closed, Thurs 2-8pm, Fri 12-6pm, Sat/Sun 11-4pm.&nbsp; Please note we stop adoptions and showings a half hour before close each day.</p>
+</span>

@@ -1,0 +1,52 @@
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<td>
+			<p><strong>New Jersey Rescues the Felines</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td><img alt="" src="http://home.earthlink.net/imagelib/sitebuilder/layout/spacer.gif" style="width:20px" /></td>
+			<td><!--area Type="subhead" face="Arial, Helvetica, Verdana" size="3" color="#996633" style="1"-->
+			<p><img alt="Welcome
+            graphic" src="http://home.earthlink.net/imagelib/sitebuilder/layout/welcome_blue_purple.gif" /></p>
+			<!--/area Type="subhead"--></td>
+		</tr>
+	</tbody>
+</table>
+
+<table align="left" border="0" cellpadding="5" cellspacing="0">
+	<tbody>
+		<tr>
+			<td><img alt="" src="http://home.earthlink.net/imagelib/sitebuilder/layout/spacer.gif" style="width:10px" /></td>
+			<td><!--area Type="main" face="Verdana, Arial, Helvetica" size="2" color="#000000" style="0"-->
+			<p>&nbsp;</p>
+
+			<p>&nbsp;</p>
+			<!--/area Type="main"-->
+
+			<p>&nbsp;</p>
+
+			<p><br />
+			<strong>MISSION STATEMENT:<br />
+			<br />
+			<br />
+			<br />
+			We are a small group dedicated to the rescue and adoption of homeless cats.We are&nbsp;not a shelter. All of the cats we rescue are from high kill shelters,or TNR Projects many times we are their last hope for finding a new forever home. WE DO NOT TAKE IN OWNED/FOUND PETS. WE MAY BE ABLE TO HELP YOU FIND A HOME FOR YOUR PET All of the pets we rescue and adopt are non-feral, most have been home raised in a family setting with other pets and people. All of our pets are tested for FELV/FIV, given age related vaccines, wormed, and have been given protection against fleas. Those that are old enough have been spayed/neutered. Those that are not yet altered must be at the time of adoption,and are spayed/neutered by a local clinic and is included in any adoption fees. Our group also helps to educate the public about the benefit of owning and being owned by a rescued cat, the importance of spaying and neutering, and other aspects on how to be a responsible owner by providing the proper care and training. We ultimately hope to reduce the number of cats that require rescue, or are needlessly euthanized. </strong><br />
+			<br />
+			<br />
+			<strong>EVERY YEAR</strong> <strong>IN N.J. SHELTERS</strong></p>
+
+			<p><strong>6.5 PETS&nbsp;PER HOUR </strong></p>
+
+			<p><strong>156&nbsp;&nbsp;PER&nbsp;&nbsp;DAY&nbsp;&nbsp;</strong></p>
+
+			<p><strong>57,000&nbsp;PER YEAR</strong></p>
+
+			<p><strong><em>CAN&#39;T FIND HOMES&nbsp;&amp; ARE EUTHANIZED</em>&nbsp; </strong></p>
+			<!--"''"--></td>
+		</tr>
+	</tbody>
+</table>

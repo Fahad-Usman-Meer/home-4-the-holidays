@@ -1,0 +1,9 @@
+<table border="0" cellpadding="10" width="100%" align="center">
+    <tbody>
+        <tr>
+            <td>
+            <div align="justify"><span class="bio_name_small">Purebreds Plus Cat Rescue&copy;</span> is a 501(c)(3) non-profit charitable organization founded in 2007. We are an all volunteer organizations. 100% of our funding goes toward the cats&mdash;no one gets paid a salary. We cover the entire West Coast for many breeds and work in tandem with Purebred Cat Breed Rescue on a National basis. Our mission is to educate pet owners, breeders, and shelters about our breeds, and to place our cats with Forever Families who will give them the proper care and love they deserve. We carefully match cats with their Forever Families by evaluating each cat's personality, temperament, and special needs. Then we determine the best fit for both the cat and the new family. <span class="italic">Please note that we do NOT ship cats. </span>Adoption fee is $175 unless otherwise noted on the individual cat bio.&nbsp; This fee allows us to provide excellent vet care for the cats that really need it. The healthy kitties make it possible for the sick ones to be saved.</div>
+            </td>
+        </tr>
+    </tbody>
+</table>

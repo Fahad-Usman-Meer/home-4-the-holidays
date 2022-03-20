@@ -1,0 +1,11 @@
+<h2>About Us</h2>
+
+<p>Canine Adoption and Rescue League is a 501(c)(3) Private Non-Profit No-Kill Organization. We rely on donations and do not receive government, state, or city funding. We operate almost entirely by volunteers.</p>
+
+<p>Since 1996, Canine Adoption and Rescue League has rescued and placed thousands of unwanted, sick, abandoned, and homeless dogs. Dogs in our adoption program are placed in pre-screened, loving and secure homes. We make a lifetime commitment to all of our dogs.</p>
+
+<p>Canine Adoption and Rescue League receives hundreds of calls from people who must find a home for a stray, a litter of puppies or even a family pet.</p>
+
+<h2>Mission Statement</h2>
+
+<p>Canine Adoption and Rescue League&rsquo;s mission is to advocate for animal welfare, seeking to end the needless deaths of companion animals through our adoption, education, and outreach programs.</p>

@@ -1,0 +1,17 @@
+<table cellspacing="0" cellpadding="0" width="525" border="0">
+    <tbody>
+        <tr>
+            <td scope="col" bgcolor="#859271">
+            <div align="center"><a id="About" name="About"></a><span class="style9">ABOUT FELINE FRIENDZ </span></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <p><strong>Feline Friendz in Nebraska</strong> was founded in 2002 and is a 501(c)3 all volunteer rescue organization. We are a true no kill rescue operation. This means the only reason a cat would be put down is in the case of a serious/non curable medical condition. All cats in the care of <acronym title="Feline Friendz in Nebraska">FFiNE</acronym> will receive full veterinary care, including spay/neuter, all vaccinations and testing for feline leukemia and <acronym title="Feline Immunodeficiency Virus">FIV</acronym> infection. As a non-profit organization we rely heavily on private donations and volunteers to keep our mission on track. FFiNE is the only rescue group in the Omaha area dedicated solely to felines and <acronym title="Trap, Neuter, Return">TNR</acronym>.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+<div align="center"><strong><font size="5">&nbsp;Our Mission</font></strong></div>
+<div align="center"><strong>To improve the lives of homeless and feral cats and eliminate their breeding in the Omaha area through Trap-Neuter-Return (TNR), educate the public about the plight of stray and feral cats and the need to spay/neuter pets, support feral cat caretakers and gain recognition of the beneficial role they perform, and promote the adoption of long-term, caretaker-based solutions regarding feral cats.&nbsp; Tamable kittens and strays are placed in our adoption program.</strong></div>

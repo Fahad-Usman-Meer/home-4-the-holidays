@@ -1,0 +1,12 @@
+<p>The Steele County Humane Society is a non-profit organization. We are comprised of one paid employee and approximately 25 community volunteers. As indicated in our mission statement, our organization is dedicated to the following tasks:</p>
+
+<ul>
+	<li>Providing quality foster care for stray cats and dogs in the rural Steele County area. We occasionally will take surrendered animals, but only if space allows. Strays are our priority.</li>
+	<li>Encouraging the adoption of homeless cats and dogs.</li>
+	<li>Encouraging the spaying and neutering to reduce the pet overpopulation.</li>
+	<li>Assisting in the enforcement of the laws for prevention of cruelty to animals and to aid district and county societies and agencies in the enforcement of such laws.</li>
+	<li>Providing education to the general public on humane and ethical treatment of animals.</li>
+	<li>Bringing together and supporting others interested in developing the humane treatment and care of animals.</li>
+</ul>
+
+<p>The Steele County Humane Society does not have a shelter. All our pets stay at loving foster homes in the community until we find permanent homes for them. Potential adopters are very welcome to meet our animals in their foster home environment. Our foster families try to be flexible when scheduling visits, so that our animals have every opportunity to be adopted. Nights and weekends are usually not a problem.</p>

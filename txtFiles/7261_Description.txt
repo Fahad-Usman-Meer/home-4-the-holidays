@@ -1,0 +1,39 @@
+<!--[if gte mso 9]><xml>
+<w:WordDocument>
+<w:View>Normal</w:View>
+<w:Zoom>0</w:Zoom>
+<w:Compatibility>
+<w:BreakWrappedTables />
+<w:SnapToGridInCell />
+<w:WrapTextWithPunct />
+<w:UseAsianBreakRules />
+</w:Compatibility>
+<w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+</w:WordDocument>
+</xml><![endif]--><!--[if !mso]><object
+classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]--><!--[if gte mso 10]>
+<style>
+/* Style Definitions */
+table.MsoNormalTable
+{mso-style-name:"Table Normal";
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-style-noshow:yes;
+mso-style-parent:"";
+mso-padding-alt:0in 5.4pt 0in 5.4pt;
+mso-para-margin:0in;
+mso-para-margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-size:10.0pt;
+font-family:"Times New Roman";}
+</style>
+<![endif]-->
+<p>PAWS of Coronado manages the Coronado Animal Care Facility (ACF) for the city of Coronado and provides shelter and finds homes for orphaned cats and dogs relinquished by their humans, stray or abandoned animals, and animals rescued from abuse or neglect.</p>
+
+<p>PAWS of Coronado is a small grass roots organization committed to 100 percent placement of all adoptable animals. We envision a time when every homeless animal in our community can be cared for and a home and family found for those needing&nbsp;one.</p>
+
+<p>The caring hands and hearts of the ACF staff and PAWS volunteers help the animals thrive even in a facility environment. Our cats are extremely socialized, relaxed, trusting and loving in large part to our cat petting program and our dogs are well trained and socialized because of the dog walking program.</p>

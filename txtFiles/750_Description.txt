@@ -1,0 +1,4 @@
+<font face="Arial" color="#ff0000"><em>
+<p align="center"><font face="Comic Sans MS" color="#ff0000" size="3"><strong>Our Mission</strong></font></p>
+<p><font face="Arial" color="#ff0000"><strong><font face="Comic Sans MS" size="3">Save lives, keep our community informed on humane education, training and loving treatment of our companions, and finding the best fit for both the animals in our care and potential forever families! We are an all-volunteer, 501(c)3 non-profit animal rescue organization.</font></strong> </font></p>
+</em></font>

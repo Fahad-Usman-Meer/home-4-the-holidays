@@ -1,0 +1,30 @@
+<table border="0" cellspacing="1" summary="" cellpadding="1" width="590">
+    <tbody>
+        <tr>
+            <td>
+            <p align="center"><font color="#003366"><font face="Times New Roman"><font size="3"><strong><font size="4">Adopt a ready-made pet<br />
+            from Husky Rescue today!</font></strong><br />
+            &nbsp;<br />
+            </font></font></font><a target="_blank" href="http://rescue.shcnsw.org.au/"><font size="3" face="Times New Roman">Click</font></a><font color="#003366"><font size="3" face="Times New Roman"> here for dogs currently looking<br />
+            for homes, or talk to us about which<br />
+            dog will best suit your family.<br />
+            </font></font><font color="#003366" size="3" face="Times New Roman">&nbsp;<br />
+            </font><a href="http://rescue.shcnsw.org.au/"><font color="#003366" size="4" face="Times New Roman"><strong>http://rescue.shcnsw.org.au</strong></font></a><font face="Times New Roman"><font size="4"><strong>&nbsp;</strong><br />
+            </font></font><a href="mailto:rescue@shcnsw.org.au"><font color="#003366" size="4" face="Times New Roman"><strong>rescue@shcnsw.org.au</strong></font></a></p>
+            </td>
+            <td>
+            <p align="center"><font size="3" face="Times New Roman"><img alt="" width="260" height="170" src="http://www.shcnsw.org.au/Shcnsw/content/Image/site/shcnsw%20logo%20ex.png" /></font></p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+            <p align="justify"><font color="#993300" size="3" face="Times New Roman">&nbsp;<br />
+            </font><font color="#993300" size="3" face="Times New Roman">Free advice and support is available before, during and after an adoption, including tips on how to prepare for a new pet, basic care and nutrition advice, obedience training resources and fact sheets on starting with the essentials like toilet training.<br />
+            &nbsp;<font size="1"><font size="3"><br />
+            </font></font>Meet the dogs before you adopt - your beautiful new Siberian husky is waiting for you now, so send an email or pick up the phone today!<br />
+            &nbsp;<br />
+            </font><font face="Times New Roman"><font size="3"><font color="#993300">Husky Rescue is part of the Siberian Husky Club of New South Wales Inc., Australia.&nbsp; We are a not-for-profit organisation run by volunteers whose mission is to save Siberian huskies from euthanasia in pounds and shelters around the state, and place them in loving new homes where they can thrive as family pets.&nbsp; All Husky Rescue foster dogs are desexed, vaccinated, microchipped, lifetime registered, all-wormed, heart-wormed and flea/tick treated and are initially available for trial periods to make sure they settle in well at your home.</font><font color="#993300"></font></font></font></p>
+            </td>
+        </tr>
+    </tbody>
+</table>

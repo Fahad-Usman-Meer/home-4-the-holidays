@@ -1,0 +1,11 @@
+<table cellspacing="0" cellpadding="0" border="0">
+    <tbody>
+        <tr>
+            <td>
+            <p><font size="3"><font face="Comic Sans MS"><span style="FONT-SIZE: 8pt"><font color="#000000">Founded in July of 1975 in Superior, Wisconsin. The purpose of this society is the prevention of cruelty to animals, the relief of suffering among animals, and the extension of human education.<br />
+            <br />
+            </font></span><span style="FONT-SIZE: 8pt; FONT-FAMILY: Verdana">It is the policy of the Society to provide humane care and treatment for all animals needing protecting in the area served by the Society; to seek to return lost animals to their owners; to seek suitable homes for animals without owners; to provide humane euthanasia when necessary.&nbsp; No animal under the control of the Society may be disposed of except as here specifically provided.&nbsp; In its care and disposition of animals, the Society shall maintain the minimum standards prescribed by the Humane Society of the United States.</span></font></font></p>
+            </td>
+        </tr>
+    </tbody>
+</table>

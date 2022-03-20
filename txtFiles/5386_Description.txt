@@ -1,0 +1,3 @@
+<p><a href="http://www.mynewcat.org">http://www.mynewcat.org</a></p>
+
+<p>My New Cat is a 501(c)(3) nonprofit charity. Our mission is to find forever homes for homeless cats and educate the community about responsible pet ownership and care.</p>

@@ -1,0 +1,39 @@
+<span id="lblShelterDescription">
+<p style="text-align: left;">At Purr Paws Rescue, our mission is to help place homeless cats &amp; kittens in new homes while providing education to the community on spaying &amp; neutering their pets.&nbsp; <br />
+</p>
+<p style="text-align: left;"><br />
+</p>
+<p style="text-align: left;">Purr Paws Rescue does not have a stand alone shelter.&nbsp; All of our cats and kittens live with their foster families during the times that they are not at adoptions.<br />
+</p>
+<div style="text-align: left;"> </div>
+<p style="text-align: left;"><br />
+</p>
+<p style="text-align: left;">We are a 501(c)(3) tax-exempt non-profit corporation, recognized by the IRS.<br />
+</p>
+<div style="text-align: left;"> </div>
+<div style="text-align: left;"> </div>
+<p style="text-align: left;"><br />
+</p>
+<p style="text-align: left;">What does Purr Paws do?&nbsp; Before we place any cat or kitten in a new home, we: </p>
+<div style="text-align: left;"> </div>
+<ul style="text-align: left;">
+    <li>Spay or Neuter </li>
+    <li>Vaccinate for FVRCCP (Kitten Shots) </li>
+    <li>Vaccinate for Rabies (if &gt;3 months old) </li>
+    <li>Test for FIV/FeLV </li>
+    <li>Treat for worms / fleas / ear mites.<br />
+    </li>
+    <li>Any other treatment required to bring the cat or kitten to good health</li>
+</ul>
+Purr Paws is a no-kill organization.&nbsp; <br />
+<br />
+Cats or kittens are not euthanized just because of space limitations.&nbsp; <br />
+<br />
+Our foster homes work within their limits of how many fosters they can care for.&nbsp; <br />
+<br />
+Some of our foster homes have sanctuary foster cats that are otherwise unadoptables due to health issues, temperment issues, etc.&nbsp; <br />
+<br />
+And sometimes things can fall into place, where the right person and the right cat are at the right place together!&nbsp; (Yes, it happens!)<br />
+<br />
+These sanctuary foster cats stay with us until they are adopted or until they pass away.&nbsp; While they are here with us, they receive the same care as all of our other foster and personal pets.<br />
+</span>

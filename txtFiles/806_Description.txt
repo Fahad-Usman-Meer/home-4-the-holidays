@@ -1,0 +1,13 @@
+<p>The Humane Society of Greater Dayton is a nonprofit organization supported entirely by the generous contributions of the community. We have served Montgomery County for more than 100 years and are the oldest, most established animal-wellness center in the area.</p>
+
+<ul>
+	<li>We find homes for homeless pets.</li>
+	<li>We reunite lost pets with their families.</li>
+	<li>We reduce pet overpopulation, through proactive spay/neuter programs.</li>
+	<li>We work to eliminate animal abuse and neglect, through cruelty investigations and community action.</li>
+	<li>We serve as a resource for pet owners, to enhance the human-animal bond.</li>
+	<li>We collaborate with community organizations and companies, to make our programs more effective.</li>
+	<li>We strive to be the area&#39;s most proactive and effective animal-care agency.</li>
+</ul>
+
+<p>The Humane Society of Greater Dayton is committed to helping lost, abandoned and homeless animals, and to providing Dayton&#39;s families with the resources to become loving, lifelong pet owners.</p>

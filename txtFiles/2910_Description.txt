@@ -1,0 +1,7 @@
+<div style="MARGIN: 0in 0in 0pt"><font face="Verdana">Welcome to Williamson County Regional Animal Shelter, located in Georgetown TX! We are the largest open admission animal shelter in Williamson County. Approximately 7000 animals a year grace our doors. </font></div>
+<div style="MARGIN: 0in 0in 0pt"><font face="Verdana">Please check out our website </font><a href="http://www.wilcopets.org/"><font face="Verdana" color="#800080">www.wilcopets.org</font></a>&nbsp; a<font face="Verdana">nd help us to achieve our </font></div>
+<div style="MARGIN: 0in 0in 0pt"><font face="Verdana"><em>Vision</em>;</font></div>
+<ul style="MARGIN-TOP: 0in" type="square">
+    <li style="MARGIN: 0in 0in 0pt"><font face="Verdana">To save every healthy and behaviorally sound companion animal</font> </li>
+    <li style="MARGIN: 0in 0in 0pt"><font face="Verdana">To save all dogs and cats that are medically treatable and/or can be behaviorally rehabilitated.</font> </li>
+</ul>

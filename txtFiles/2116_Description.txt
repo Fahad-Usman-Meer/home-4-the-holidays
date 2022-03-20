@@ -1,0 +1,10 @@
+CBARPA has cats/kittens and other small animals available for viewing at Petsmart's Luv-a-Pet center located on Canal Drive in Kennewick. On most Saturdays we are available from 10:00 until 2:00 pm.<br />
+<br />
+<p> 	</p>
+<!--
+<p><img src="/images/banners/pets911/celebrity.gif" width="468" height="60"></p>
+<p><font face="Arial, Helvetica, sans-serif" color="#666666" size="2">&lt;a
+href=&quot;http://www.pets911.com/&quot;&gt;<br>
+&lt;img src=&quot;http://www.pets911.com/images/banners/pets911/celebrity.gif&quot; border=&quot;0&quot;&gt;&lt;/a&gt;</font></p>
+-->
+<p><img width="234" height="60" src="http://www.pets911.com/images/banners/pets911/adoption2-logo.gif" alt="pet adoption" /></p>

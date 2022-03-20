@@ -1,0 +1,172 @@
+<h3 align="center"><font color="#008080">Our Mission:</font></h3>
+<p align="center">The Burlington County Animal Shelter is a county facility supported by animal control contracts with local municipalities and the county taxpayers.</p>
+<p align="center">It is used as a shelter for stray dogs, cats and other small animals for a short term stay in accordance with Title 8, Chapter 23.</p>
+<p align="center">All stray animals not claimed by owners or adopted will be kept for at least the state-mandated 7 days. </p>
+<h3 align="center"><font color="#008080">Where We Are:</font></h3>
+<p align="center">
+<table>
+    <tbody>
+        <tr>
+            <th><font color="#003366">Burlington County Animal Shelter</font></th>
+        </tr>
+        <tr>
+            <td>
+            <p>County Facilities Complex - Woodlane Road<br />
+            35 Academy Drive<br />
+            Westampton, NJ 08060<br />
+            Phone for adoption info: <strong><font color="#ff0000">609-265-5073</font></strong></p>
+            <p><font face="Arial" color="#0000ff">http://www.petfinder.com/shelters/NJ148.html</font></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</p>
+<h3 align="center"><font color="#008080">Hours:</font></h3>
+<ul>
+    <li>
+    <div align="center"><em>Monday &amp; Thursday</em> 12pm - 7pm </div>
+    </li>
+    <li>
+    <div align="center"><em>Tuesday, Wednesday &amp; Friday</em> 12pm - 4pm </div>
+    </li>
+    <li>
+    <div align="center"><em>Saturday</em> 12pm - 3:30pm </div>
+    </li>
+    <li>
+    <div align="center"><em>Sundays &amp; Holidays</em> closed </div>
+    </li>
+</ul>
+<p align="center"><br />
+</p>
+<h3 align="center"><font color="#008080">Adoption Fees:</font></h3>
+<ul>
+    <li>
+    <div align="center">$75 for Dogs </div>
+    </li>
+    <li>
+    <div align="center">$100 for Puppies (under 6 months) </div>
+    </li>
+    <li>
+    <div align="center">$45 for Cats </div>
+    </li>
+    <li>
+    <div align="center">$60 for Kittens (under 6 months) <br />
+    See Shelter or Call for other rates.<br />
+    <font color="#ff6600">All pets will spayed or neutered before adoption.</font> </div>
+    </li>
+</ul>
+<h4 align="center"><font color="#008080">SHELTER WISH LIST:</font></h4>
+<p align="center"><font color="#993300">The Shelter appreciates donations of the following items:</font> </p>
+<ul>
+    <li>
+    <div align="center">NEWSPAPER </div>
+    </li>
+    <li>
+    <div align="center">Canned dog and cat food </div>
+    </li>
+    <li>
+    <div align="center">Dog and cat treats </div>
+    </li>
+    <li>
+    <div align="center">Kuranda Medium Dog Beds&nbsp; </div>
+    </li>
+    <li>
+    <div align="center">Food bowls- STAINLESS STEEL ONLY </div>
+    </li>
+    <li>
+    <div align="center">Rubber Toys for both cats and dogs </div>
+    </li>
+    <li>
+    <div align="center">Non-clumping cat litter </div>
+    </li>
+    <li>
+    <div align="center">Leashes </div>
+    </li>
+    <li>
+    <div align="center">Collars (all sizes) </div>
+    </li>
+    <li>
+    <div align="center">Blankets/sheets/towels </div>
+    </li>
+    <li>
+    <div align="center">Brooms </div>
+    </li>
+    <li>
+    <div align="center">Bleach </div>
+    </li>
+    <li>
+    <div align="center">Bounty Paper Towels </div>
+    </li>
+    <li>
+    <div align="center">Heartgard- All Sizes </div>
+    </li>
+    <li>
+    <div align="center">Frontline, Advantage</div>
+    </li>
+    <li>
+    <div align="center">Laundry Soap-regular and HE (High Efficiency) </div>
+    </li>
+    <li>
+    <div align="center">Dryer Sheets </div>
+    </li>
+    <li>
+    <div align="center">Fragrant Cleaning Products </div>
+    </li>
+    <li>
+    <div align="center">Dog crates </div>
+    </li>
+    <li>
+    <div align="center">Cat carriers </div>
+    </li>
+</ul>
+<h4 align="center"><font color="#008080">PLEASE VISIT THE SHELTER:</font></h4>
+<p align="center"><a class="p12" s_oc="null" href="http://www.google.com/maps?ie=UTF8&amp;oe=UTF-8&amp;hl=en&amp;q=&amp;om=1&amp;z=17&amp;ll=40.019785,-74.818139&amp;spn=0.003747,0.00913&amp;t=h">Google Map of Shelter</a> </p>
+<h4 align="center"><font color="#ff0f00">Directions from NJ north or south:</font></h4>
+<p align="center"><strong>From NJ Turnpike:</strong> </p>
+<ul>
+    <li>
+    <div align="center">Take exit 5. </div>
+    </li>
+    <li>
+    <div align="center">Go to traffic light, make right onto Route 541. </div>
+    </li>
+    <li>
+    <div align="center">Go thru first traffic light. </div>
+    </li>
+    <li>
+    <div align="center">Take jughandle before next light to Woodlane Road. </div>
+    </li>
+    <li>
+    <div align="center">Make right at stop sign. </div>
+    </li>
+    <li>
+    <div align="center">Make right at second traffic light (Pioneer Blvd). </div>
+    </li>
+    <li>
+    <div align="center">Make left onto Academy Drive. </div>
+    </li>
+    <li>
+    <div align="center">Follow signs to Animal Shelter </div>
+    </li>
+</ul>
+<p align="center"><strong>From Interstate 295:</strong> </p>
+<ul>
+    <li>
+    <div align="center">Take exit 45A. </div>
+    </li>
+    <li>
+    <div align="center">Make left at third traffic light(Irick Road). </div>
+    </li>
+    <li>
+    <div align="center">Make right at next traffic light(Woodlane Road). </div>
+    </li>
+    <li>
+    <div align="center">Make left at next traffic light(Pioneer Blvd). </div>
+    </li>
+    <li>
+    <div align="center">Make left on Academy Drive. </div>
+    </li>
+    <li>
+    <div align="center">Follow signs to Animal Shelter. </div>
+    </li>
+</ul>

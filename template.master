@@ -1,0 +1,134 @@
+<%@ MASTER LANGUAGE="VB" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/">
+<%@ Register TagPrefix="HWAC" TagName="LeftNav" src="~/_controls/h4thleftnav2.ascx" %>
+
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title></title>
+
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<link rel="stylesheet" href="http://join.home4theholidays.org/_css/thickbox.css" type="text/css" media="screen" />
+<link href="http://join.home4theholidays.org/_css/style2.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'127b4c89-1c34-4e68-b933-85623e8ca959'});</script>
+
+<!--[if IE 6]>
+<style type="text/css">
+#landing .lndg_fc, #Angel .lndg_fc{margin-right:7px;}
+#influne .lndg_fc .Likebtn{left:10px;}
+#Blog .blg_ttl .Likebtn{margin-left:395px}
+.clearer2{clear: none; height: 1px;}
+</style>
+<![endif]-->
+<style type="text/css">
+.clearer2{clear: both; height: 1px; overflow: hidden; margin-top:-1px;}
+</style>
+<asp:ContentPlaceHolder id="HeadContent" runat="server"/>
+<!-- Google Analytics -->
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-8531953-1', 'auto', {'allowLinker': true});
+  ga('require', 'linker');
+  ga('linker:autoLink', ['remembermethursday.org'] );
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+<!-- End Google Analytics -->
+<!-- Begin Bing Analytics -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5280918"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script><noscript><img src="//bat.bing.com/action/0?ti=5280918&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+<!-- End Bing Analytics -->
+</head>
+
+<body>
+ <script type="text/javascript" src="http://join.home4thehoidays.org/_js/wz_tooltip.js"></script>
+<! -- Header Start -->
+	
+
+
+ 
+
+
+
+<div id="Header"></div>
+
+
+<! -- Header End -->
+
+<div class="clearer"></div>
+<div id="Container">
+  <div class="brdcrmb"><a href="http://join.home4theholidays.org/invite.aspx">Invite Shelters</a> | <a href="http://join.home4theholidays.org/Contact.aspx">Contact Us</a> | <span class="st_sharethis_custom" displayText="">Share This Page</span> </div>
+  
+<! -- Header Image Start -->
+
+
+<div class="blog_hdr"><p><asp:contentplaceholder id="PageTitle" runat="server" /></p></div>
+<! -- Header Image End -->  
+
+<! -- Left Navigation Start -->   
+	
+
+
+
+      
+  <div class="left_cntnt">
+    	<div class="Blg_lt">
+          <img src="http://join.home4theholidays.org/_images/Pets-Adopted.gif" alt=""><br>
+
+                        <div class="count">
+                        <img src="http://join.home4theholidays.org/_images/counter.gif" alt="">
+ 						<small>Updated Weekly</small><div style="margin-left:12px;"></div></div>
+                   		
+                   		 <div class="clearer"></div>
+
+                  
+                  </div>
+         
+                  
+                 
+<div class="Blg_lt">
+          <HWAC:LeftNav runat="server"/>
+          	<asp:contentplaceholder id="Leftnav" runat="server"/>
+	          
+	      
+          
+   	</div>
+          	          		
+        
+        
+	          
+	          
+	          </div>
+  <! -- Left Navigation End --> 
+
+<! -- Main Body Start -->		
+	
+
+
+
+
+  <div class="right_cntnt" id="Blog">
+    <div class="blog_txt">
+
+             	<asp:contentplaceholder id="maincontent" runat="server" />
+    </div>								
+			  
+             </div>
+<! -- Main Body End --> 
+<div class="clearer2"></div>
+</div>
+
+	<! -- Footer Start -->
+	
+<div id="footer">
+  <ul>
+				  <li>&copy;2021 Helen Woodward Animal Center</li>
+
+				</ul>
+</div>	
+	<! -- Footer End -->
+
+</body>
+</html>
