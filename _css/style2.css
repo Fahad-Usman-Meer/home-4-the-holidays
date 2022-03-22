@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
-body{margin:0px; padding:0px; font-family:Verdana; font-size:12px; color:#666666; #0033CC; background-color:#0033CC;}
+/*body{margin:0px; padding:0px; font-family:Verdana; font-size:12px; color:#666666; #0033CC; background-color:#0033CC;}*/
 
 img, div, input, td { behavior: url("/_css/iepngfix.htc"); }
 
@@ -17,7 +17,7 @@ a{color:#0033CC; text-decoration:none}
 #TopBar .centr .login b{font-weight:normal}
 #TopBar .centr .icon{width:300px; float:right; text-align:right}
 
-#Header{width:950px; margin:0px auto}
+/*#Header{width:950px; margin:0px auto}
 #Header .logo{float:left; width:250px; padding:28px 0}
 #Header .hdr_rt{float:right; width:700px;}
 #Header .search{text-align:right; margin:28px 0 35px 0}
@@ -25,9 +25,9 @@ a{color:#0033CC; text-decoration:none}
 #Header .nav{text-align:right}
 #Header .nav img{margin:0 0 0 40px }
 
-#Header .nav{font-size:16px; color:#FFFFFF}
-
-#Container{width:930px; margin:0px auto; background:url(../_images/wt_crnr.gif) top no-repeat #FFFFFF; padding:0 10px;}
+#Header .nav{font-size:16px; color:#FFFFFF}*/
+/*
+#Container{width:930px; margin:0px auto; background:url(../_images/wt_crnr.gif) top no-repeat #FFFFFF; padding:0 10px;}*/
 .brdcrmb{text-align:center; padding:20px 0; font-size:11px; color:#666666}
 
 .indx_hdr_bg{background:url(../_images/index_hdr_bg.jpg) no-repeat; width:930px; height:352px; margin-bottom:35px;}
