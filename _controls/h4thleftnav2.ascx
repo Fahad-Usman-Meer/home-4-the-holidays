@@ -66,10 +66,10 @@
                         <li class="menu-has-children"><a href="http://join.home4theholidays.org/members">Member Homepage</a>
                             <ul>
                                 <li ID="lnkAdoptions" runat="server" Visible="false"><a href="http://join.home4theholidays.org/members/adoptions.aspx">Record Adoptions</a></li>
-                                <li ID="lnkVan" runat="server"     visible="true"><a href="http://join.home4theholidays.org/members/win.aspx">Win $25,000!</a></li>
-                                <li ID="lnkProfile" runat="server" Visible="true"><a href="http://join.home4theholidays.org/members/Profile.aspx">Edit Profile</a></li>
-                                <li ID="lnkAccount" runat="server" Visible="true"><a href="http://join.home4theholidays.org/members/Account.aspx">Edit Account</a></li>
-                                <li ID="lnkAdmin" runat="server"   Visible="true"><a href="http://join.home4theholidays.org/Admin">Admin</a></li>
+                                <li ID="lnkVan" runat="server"     visible="false"><a href="http://join.home4theholidays.org/members/win.aspx">Win $25,000!</a></li>
+                                <li ID="lnkProfile" runat="server" Visible="false"><a href="http://join.home4theholidays.org/members/Profile.aspx">Edit Profile</a></li>
+                                <li ID="lnkAccount" runat="server" Visible="false"><a href="http://join.home4theholidays.org/members/Account.aspx">Edit Account</a></li>
+                                <li ID="lnkAdmin" runat="server"   Visible="false"><a href="http://join.home4theholidays.org/Admin">Admin</a></li>
                                 
                                 <%--<asp:Label ID="lnkAdoptions" runat="server" Visible="false" Text="<li><a href=http://join.home4theholidays.org/members/adoptions.aspx>Record Adoptions</a></li>" />
                                 <asp:Label ID="lnkVan" runat="server" Visible="false" Text="<li><a href=http://join.home4theholidays.org/members/win.aspx>Win $25,000!</a></li>" />
