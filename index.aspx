@@ -20,7 +20,7 @@
 
 <%-- start banner Area --%>
 <asp:Content ID="Content1" ContentPlaceHolderID="PageTitle" runat="server">
-    <section id="divHomeCover" class="banner-area relative" style="background: rgba(0, 0, 0, 0) url(/img/banners/home_banner5.jpg) repeat scroll center center;">
+    <section id="divHomeCover" class="banner-area relative" style="background: rgba(0, 0, 0, 0) url(/img/banners/pet-dog-1.jpg) repeat scroll center center;">
         <div class="overlay overlay-bg"></div>
         <div class="container">
             <div class="row fullscreen align-items-center justify-content-between" style="height: 545px;">
