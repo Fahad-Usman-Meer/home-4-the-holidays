@@ -207,8 +207,6 @@
 
     End Sub
 
-
-
 </script>
 
 
@@ -274,6 +272,7 @@
             </div>
         </div>
     </section>
+     <%--End about-info Area--%>
 
     <section class="about-info-area">
         <div class="container">
@@ -1387,7 +1386,7 @@
         </div>
     </section>
 
-    <%--End about-info Area--%>
+   
 
     
 </asp:Content>
