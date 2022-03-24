@@ -105,23 +105,11 @@
                         </div>
                     </div>
 
-                    <%--<p align="center">
-                        <img src="_images/hp1.jpg" alt="" width="610" height="330" usemap="#Map" />
-                    </p>--%>
-
                 </div>
             </div>
         </div>
     </section>
     <%--End about-info Area--%>
-
-    <%--<map name="Map">
-        <area shape="rect" coords="33,22,286,86" href="how-to-make-your-camgaign-a-success.aspx">
-        <area shape="rect" coords="322,18,588,89" href="messaging-guidelines.aspx">
-        <area shape="rect" coords="24,123,286,204" href="templates.aspx">
-        <area shape="rect" coords="323,130,585,202" href="sharing-and-reporting-your-success.aspx">
-        <area shape="rect" coords="25,240,290,311" href="successful-campaign-example.aspx">
-    </map>--%>
 
 </asp:Content>
 
