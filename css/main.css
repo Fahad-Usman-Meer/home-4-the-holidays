@@ -1003,6 +1003,12 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 50px;
     }
 
+    .genric-btn.ee-large {
+        padding: 0 40px;
+        line-height: 64px;
+        font-size: larger;
+    }
+
     .genric-btn.large {
         line-height: 45px;
     }
