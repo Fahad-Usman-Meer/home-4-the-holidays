@@ -41,11 +41,9 @@
                                 <i class="lnr lnr-phone" style="padding-right: 1em;"></i>
                                 Contact Us
                             </a>
-                            <a>
-                                <span class="st_sharethis_custom" displaytext="">
-                                    <i class="fa fa-share" style="padding-right: 1em;"></i>
-                                    Share This Page
-                                </span>
+                            <a class="st_sharethis_custom" style="cursor:pointer;">
+                                <i class="fa fa-share" style="padding-right: 1em;"></i>
+                                Share This Page
                             </a>
                         </div>
                     </div>

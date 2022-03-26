@@ -67,7 +67,7 @@
     <!-- #region #header -->
     
     
-      <div class="Blg_lt">
+      <div class="">
           <HWAC:LeftNav runat="server" />
           <asp:ContentPlaceHolder ID="Leftnav" runat="server" />
       </div>
@@ -102,8 +102,8 @@
 
 <! -- Main Body Start -->		
 	
-  <div class="right_cntnt" id="Blog">
-      <div class="blog_txt">
+  <div class="" id="Blog">
+      <div class="">
           <asp:ContentPlaceHolder ID="maincontent" runat="server" />
       </div>
 
