@@ -36,7 +36,6 @@
         </div>
     </section>
 </asp:Content>
-
 <%-- End banner Area --%>
 
 <asp:Content ID="navigation" ContentPlaceHolderID="Leftnav" runat="server"></asp:Content>

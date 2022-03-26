@@ -140,10 +140,6 @@
                         <h1 class="mb-10">Blue&nbsp;Buffalo Home 4 The Holidays Member Login</h1>
                     </div>
 
-                    <div class="title">
-                        <h3 class="mb-10">Welcome  to the Blue Buffalo Home 4 the Holidays How-To Guide</h3>
-                    </div>
-
                     <p>Please enter your username and password below. If you are a new user, click <a href="register.aspx"><u>here</u></a> to register.</p>
 
                     <div class="whole-wrap">
