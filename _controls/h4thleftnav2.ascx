@@ -31,7 +31,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-lg-6 col-sm-6 col-6 header-top-right">
+                    <div class="col-lg-12 col-sm-12 col-12 header-top-right">
                         <div class="header-social">
                             <a href="http://join.home4theholidays.org/invite.aspx">
                                 <i class="fa fa-envelope" style="padding-right: 1em;"></i>

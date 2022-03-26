@@ -248,8 +248,6 @@
 <asp:Content ID="navigation" ContentPlaceHolderID="Leftnav" runat="server"></asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="maincontent" runat="Server">
 
-
-
     <%--Start about-info Area--%>
     <section class="about-info-area">
         <div class="container">
@@ -279,7 +277,7 @@
             <div class="row align-items-center ">
                 <div class="col-lg-12">
                     <div class="title text-center">
-                        <h1 class="mb-10">Register  my Pet Adoption Organization</h1>
+                        <h1 class="mb-10">Register my Pet Adoption Organization</h1>
                     </div>
                     <div class="whole-wrap">
                         <div class="container">
@@ -1386,7 +1384,4 @@
         </div>
     </section>
 
-   
-
-    
 </asp:Content>
