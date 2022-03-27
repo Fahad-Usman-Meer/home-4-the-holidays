@@ -279,7 +279,7 @@
                     <div class="title text-center">
                         <h1 class="mb-10">Register my Pet Adoption Organization</h1>
                     </div>
-                    <div class="whole-wrap">
+                    <div class="whole-wrap mb-20">
                         <div class="container">
                             <div class="section-top-border">
                                 <div class="row">
