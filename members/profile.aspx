@@ -1,214 +1,215 @@
-<% @ Page Language="VB" MasterPageFile="~/template.master" Title="Member Profile- Home 4 The Holidays" ViewStateEncryptionMode="Never" debug="true" %>
-<%@ import Namespace="System.Data" %>
-<%@ import Namespace="System.Data.SQLClient" %>
+<%@ Page Language="VB" MasterPageFile="~/template.master" Title="Member Profile- Home 4 The Holidays" ViewStateEncryptionMode="Never" Debug="true" %>
+
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="System.Data.SQLClient" %>
 
 <script runat="server">
-Sub Page_Load(obj as object, e as eventargs)
-if session("UserId")="" then response.Redirect("../login.aspx?ReturnURL=../home4theholidays/members/index.aspx")
-'Should always be member data, so get it with session id, and getreader class
-'populate fields
-if not page.ispostback then 'load fields
-	Dim db as New HWAC.databaseH4TH
-	Dim objReader as SQLDataReader
-	Dim StrSQL as String
-	StrSQL="SELECT  ShelterName, FName, LName, ContactPhone, MAddress, MCity, MState, MZip, MCountry, SAddress, SCity, SState, SZip, SCountry, ShelterPhone, Fax, Email, Website, ShowPublic, Facebook, Twitter, Blog, Lang, youtube, pintrest, capacity,Food_cat, Food_dog, Food_source, Vet, WhereVet, Animal_Focus, offsite_events, mobile_vehicle, work_with_retailers, which_retailers, want_adoption_retailer, pr_person, media_relations, place_ads, where_ads, want_marketing_retailer, attended_ACES, interested_ACES, IAMS_email_optin, participant_2012, Admin_Notes_2016, Admin_Notes_2017, Admin_Notes_2018,INPExNotes, Active, Completed, Calls, Resolution, ExecName, ExecTitle, Title FROM  dbo.tblH4THReg WHERE (ShelterID=" & session("UserID") & ")"
-	objReader=db.GetReader(strSQL)
-	if not objReader is nothing then 'has found data
-		With objReader
-		While .Read()'fill text boxes
-			tbOrg.text=.GetString(0)
-			tbFName.Text=.GetString(1)
-			tbLName.Text=.GetString(2)
-			tbPhone.Text=.GetString(3)
-			tbMAddress.Text=.GetString(4)
-			tbMCity.text=.GetString(5)
-			ddlMState.Items.FindByValue(.GetString(6)).Selected=True
-			tbMZip.Text=.GetString(7)
-			ddlMCountry.Items.Insert(0, new ListItem(.GetString(8),.GetString(8)))
-			tbSAddress.Text=.GetString(9)
-			tbSCity.text=.GetString(10)
-			ddlSState.Items.FindByValue(.GetString(11)).Selected=True
-			tbSZip.Text=.GetString(12)
-			ddlSCountry.Items.Insert(0, new ListItem(.GetString(13),.GetString(13)))
-			tbOrgPhone.Text=.GetString(14)
-			tbFax.text=.GetString(15)
-			tbEmail.Text=.GetString(16)
-			tbWebSite.Text=.GetString(17)
-			tbFax.text=.GetString(15)
-			tbEmail.Text=.GetString(16)
-			tbWebSite.Text=.GetString(17)
-			tbyoutube.text=.getstring(23)
-			tbpintrest.text=.getstring(24)
-			tbFacebook.text=.GetString(19)
-			tbTwitter.Text=.GetString(20)
-			tbBlog.Text=.GetString(21)
-			tbExecName.text=.item("ExecName") & ""
-			tbExecTitle.text=.item("ExecTitle") & ""
-			tbContactTitle.text=.item("Title") & ""
-			ddlLang.Items.Insert(0, new ListItem(.GetString(22),.GetString(22)))
-			'put check box values here .GetString(18)
-				if mid(.getstring(18),1,1)="1" then chkOrgPhone.Checked=True
-				if mid(.getstring(18),2,1)="1" then chkFax.Checked=True
-				if mid(.getstring(18),3,1)="1" then chkName.Checked=True
-				if mid(.getstring(18),4,1)="1" then chkContactPhone.Checked=True
-				if mid(.getstring(18),5,1)="1" then chkEmail.Checked=True
-				if mid(.getstring(18),6,1)="1" then chkShip.Checked=True
-				if mid(.getstring(18),7,1)="1" then chkMail.Checked=True
-			if .GetString(25)<>"" then ddlCapacity.Items.Insert(0, new ListItem(.GetString(25),.GetString(25)))
-			if .GetString(26)<>"" then ddlFood_dog.Items.Insert(0, new ListItem(.GetString(26),.GetString(26)))
-			if .GetString(27)<>"" then ddlFood_cat.Items.Insert(0, new ListItem(.GetString(27),.GetString(27)))
-			if .GetString(28)<>"" then ddlFood_source.Items.Insert(0, new ListItem(.GetString(28),.GetString(28)))
-			if .GetString(29)<>"" then ddlVet.Items.Insert(0, new ListItem(.GetString(29),.GetString(29)))
-			tbWhereVet.Text=.GetString(30)
-			'animal focus
-			if instr(.GetString(31), "Dogs")>0 then chkDog.checked=True
-			if instr(.GetString(31), "Cats")>0 then chkCat.checked=True
-			if instr(.GetString(31), "Reptiles")>0 then chkReptile.checked=True
-			if instr(.GetString(31), "Other")>0 then chkOther.checked=True
-				
-			if .GetString(32)<>"" then ddloffsite_events.Items.Insert(0, new ListItem(.GetString(32),.GetString(32)))
-			if .GetString(33)<>"" then ddlmobile_vehicle.Items.Insert(0, new ListItem(.GetString(33),.GetString(33)))
-			if .GetString(34)<>"" then ddlwork_with_retailers.Items.Insert(0, new ListItem(.GetString(34),.GetString(34)))
-			tbwhich_retailers.Text=.GetString(35)
-			if .GetString(36)<>"" then ddlwant_adoption_retailer.Items.Insert(0, new ListItem(.GetString(36),.GetString(36)))
-			if .GetString(37)<>"" then ddlpr_person.Items.Insert(0, new ListItem(.GetString(37),.GetString(37)))
-			if .GetString(38)<>"" then ddlMedia_relations.Items.Insert(0, new ListItem(.GetString(38),.GetString(38)))
-			if .GetString(39)<>"" then ddlPlace_ads.Items.Insert(0, new ListItem(.GetString(39),.GetString(39)))
-			tbWhere_ads.Text=.GetString(40)
-			if .GetString(41)<>"" then ddlWant_marketing_retailer.Items.Insert(0, new ListItem(.GetString(41),.GetString(41)))
-			if .GetString(42)<>"" then ddlAttended_aces.Items.Insert(0, new ListItem(.GetString(42),.GetString(42)))
-			if .GetString(43)<>"" then ddlInterested_aces.Items.Insert(0, new ListItem(.GetString(43),.GetString(43)))
-			'if .item("Iams_email_optin")=true then chkIams_optin.checked=true
-			'if .item("participant_2012")=true then chkParticipant_2012.checked=true
-			tbAdmin_notes.Text=.item("Admin_Notes_2016") & ""
-			tbAdmin_notes2017.Text=.item("Admin_Notes_2017") & ""
-			tbAdmin_notes2018.Text=.item("Admin_Notes_2018") & ""
-			tbINPExNotes.Text=.item("INPExNotes") & ""
-			if .item("Completed")=true then chkCompleted.checked=true
-			if .item("Active")=true then chkActive.checked=true
-			'ddlCalls.Items.Insert(0, new ListItem(.item("calls"),.item("calls")))
-			'ddlResolution.Items.Insert(0, new ListItem(.item("resolution"),.item("resolution")))
-			
-			'show admin fields if neccessary
-				if session("Admin")="@F@EWE$" then
-					'show admin fields
-					pnlAdmin.visible=true
-				end if
-		end While
-		end with
-	else' did not find data
-		lblmessage.text="Account data not found. Please try again later. Thanks!"
-		form1.visible=false
-		
-	end if 
-end if
+    Sub Page_Load(obj As Object, e As EventArgs)
+        If Session("UserId") = "" Then Response.Redirect("../login.aspx?ReturnURL=../home4theholidays/members/index.aspx")
+        'Should always be member data, so get it with session id, and getreader class
+        'populate fields
+        If Not Page.IsPostBack Then 'load fields
+            Dim db As New HWAC.DatabaseH4TH
+            Dim objReader As SqlDataReader
+            Dim StrSQL As String
+            StrSQL = "SELECT  ShelterName, FName, LName, ContactPhone, MAddress, MCity, MState, MZip, MCountry, SAddress, SCity, SState, SZip, SCountry, ShelterPhone, Fax, Email, Website, ShowPublic, Facebook, Twitter, Blog, Lang, youtube, pintrest, capacity,Food_cat, Food_dog, Food_source, Vet, WhereVet, Animal_Focus, offsite_events, mobile_vehicle, work_with_retailers, which_retailers, want_adoption_retailer, pr_person, media_relations, place_ads, where_ads, want_marketing_retailer, attended_ACES, interested_ACES, IAMS_email_optin, participant_2012, Admin_Notes_2016, Admin_Notes_2017, Admin_Notes_2018,INPExNotes, Active, Completed, Calls, Resolution, ExecName, ExecTitle, Title FROM  dbo.tblH4THReg WHERE (ShelterID=" & Session("UserID") & ")"
+            objReader = db.GetReader(StrSQL)
+            If Not objReader Is Nothing Then 'has found data
+                With objReader
+                    While .Read() 'fill text boxes
+                        tbOrg.Text = .GetString(0)
+                        tbFName.Text = .GetString(1)
+                        tbLName.Text = .GetString(2)
+                        tbPhone.Text = .GetString(3)
+                        tbMAddress.Text = .GetString(4)
+                        tbMCity.Text = .GetString(5)
+                        ddlMState.Items.FindByValue(.GetString(6)).Selected = True
+                        tbMZip.Text = .GetString(7)
+                        ddlMCountry.Items.Insert(0, New ListItem(.GetString(8), .GetString(8)))
+                        tbSAddress.Text = .GetString(9)
+                        tbSCity.Text = .GetString(10)
+                        ddlSState.Items.FindByValue(.GetString(11)).Selected = True
+                        tbSZip.Text = .GetString(12)
+                        ddlSCountry.Items.Insert(0, New ListItem(.GetString(13), .GetString(13)))
+                        tbOrgPhone.Text = .GetString(14)
+                        tbFax.Text = .GetString(15)
+                        tbEmail.Text = .GetString(16)
+                        tbWebsite.Text = .GetString(17)
+                        tbFax.Text = .GetString(15)
+                        tbEmail.Text = .GetString(16)
+                        tbWebsite.Text = .GetString(17)
+                        tbYouTube.Text = .GetString(23)
+                        tbPintrest.Text = .GetString(24)
+                        tbFacebook.Text = .GetString(19)
+                        tbTwitter.Text = .GetString(20)
+                        tbBlog.Text = .GetString(21)
+                        tbExecName.Text = .Item("ExecName") & ""
+                        tbExecTitle.Text = .Item("ExecTitle") & ""
+                        tbContactTitle.Text = .Item("Title") & ""
+                        ddlLang.Items.Insert(0, New ListItem(.GetString(22), .GetString(22)))
+                        'put check box values here .GetString(18)
+                        If Mid(.GetString(18), 1, 1) = "1" Then chkOrgPhone.Checked = True
+                        If Mid(.GetString(18), 2, 1) = "1" Then chkFax.Checked = True
+                        If Mid(.GetString(18), 3, 1) = "1" Then chkName.Checked = True
+                        If Mid(.GetString(18), 4, 1) = "1" Then chkContactPhone.Checked = True
+                        If Mid(.GetString(18), 5, 1) = "1" Then chkEmail.Checked = True
+                        If Mid(.GetString(18), 6, 1) = "1" Then chkShip.Checked = True
+                        If Mid(.GetString(18), 7, 1) = "1" Then chkMail.Checked = True
+                        If .GetString(25) <> "" Then ddlcapacity.Items.Insert(0, New ListItem(.GetString(25), .GetString(25)))
+                        If .GetString(26) <> "" Then ddlFood_dog.Items.Insert(0, New ListItem(.GetString(26), .GetString(26)))
+                        If .GetString(27) <> "" Then ddlFood_cat.Items.Insert(0, New ListItem(.GetString(27), .GetString(27)))
+                        If .GetString(28) <> "" Then ddlFood_source.Items.Insert(0, New ListItem(.GetString(28), .GetString(28)))
+                        If .GetString(29) <> "" Then ddlVet.Items.Insert(0, New ListItem(.GetString(29), .GetString(29)))
+                        tbWhereVet.Text = .GetString(30)
+                        'animal focus
+                        If InStr(.GetString(31), "Dogs") > 0 Then chkDog.Checked = True
+                        If InStr(.GetString(31), "Cats") > 0 Then chkCat.Checked = True
+                        If InStr(.GetString(31), "Reptiles") > 0 Then chkReptile.Checked = True
+                        If InStr(.GetString(31), "Other") > 0 Then chkOther.Checked = True
 
-End Sub
+                        If .GetString(32) <> "" Then ddloffsite_events.Items.Insert(0, New ListItem(.GetString(32), .GetString(32)))
+                        If .GetString(33) <> "" Then ddlmobile_vehicle.Items.Insert(0, New ListItem(.GetString(33), .GetString(33)))
+                        If .GetString(34) <> "" Then ddlwork_with_retailers.Items.Insert(0, New ListItem(.GetString(34), .GetString(34)))
+                        tbwhich_retailers.Text = .GetString(35)
+                        If .GetString(36) <> "" Then ddlwant_adoption_retailer.Items.Insert(0, New ListItem(.GetString(36), .GetString(36)))
+                        If .GetString(37) <> "" Then ddlpr_person.Items.Insert(0, New ListItem(.GetString(37), .GetString(37)))
+                        If .GetString(38) <> "" Then ddlmedia_relations.Items.Insert(0, New ListItem(.GetString(38), .GetString(38)))
+                        If .GetString(39) <> "" Then ddlplace_ads.Items.Insert(0, New ListItem(.GetString(39), .GetString(39)))
+                        tbwhere_ads.Text = .GetString(40)
+                        If .GetString(41) <> "" Then ddlwant_marketing_retailer.Items.Insert(0, New ListItem(.GetString(41), .GetString(41)))
+                        If .GetString(42) <> "" Then ddlattended_ACES.Items.Insert(0, New ListItem(.GetString(42), .GetString(42)))
+                        If .GetString(43) <> "" Then ddlinterested_ACES.Items.Insert(0, New ListItem(.GetString(43), .GetString(43)))
+                        'if .item("Iams_email_optin")=true then chkIams_optin.checked=true
+                        'if .item("participant_2012")=true then chkParticipant_2012.checked=true
+                        tbAdmin_notes.Text = .Item("Admin_Notes_2016") & ""
+                        tbAdmin_notes2017.Text = .Item("Admin_Notes_2017") & ""
+                        tbAdmin_notes2018.Text = .Item("Admin_Notes_2018") & ""
+                        tbINPExNotes.Text = .Item("INPExNotes") & ""
+                        If .Item("Completed") = True Then chkcompleted.Checked = True
+                        If .Item("Active") = True Then chkActive.Checked = True
+                        'ddlCalls.Items.Insert(0, new ListItem(.item("calls"),.item("calls")))
+                        'ddlResolution.Items.Insert(0, new ListItem(.item("resolution"),.item("resolution")))
 
-Sub btnUpdate_Click(obj as object, e as eventargs)
-'Update databaseH4TH h4th table with session, userid and fields 'call hwac.user.excecutenonquery
-	Dim strResult as String
-	Dim strSql as String
-	dim objUserDetails as New HWAC.UserDetails
-	Dim db as new HWAC.databaseH4TH
-		with objUserDetails
-		'Contact Details---------
-		.FName=replace(tbFName.text,"'","''")
-		.LName=replace(tbLName.Text,"'","''")
-		.ContactPhone=replace(tbPhone.Text,"'","''")
-		.Email=tbEmail.text
-		'Mailing Address----------
-			.BAddress=replace(tbMAddress.text,"'","''")
-			.BCity=replace(tbMCity.text,"'","''")
-			.BState=ddlMState.SelectedItem.Value
-			.BZip=replace(tbMZip.text,"'","''")
-			.BCountry=ddlMCountry.SelectedItem.Value
-		'Shipping address-------------
-			.SAddress=replace(tbSAddress.text,"'","''")
-			.SCity=replace(tbSCity.text,"'","''")
-			.SState=ddlSState.SelectedItem.Value
-			.SZip=replace(tbSZip.text,"'","''")
-			.SCountry=ddlSCountry.SelectedItem.Value
-		'Org Info---------------------
-		.Website=replace(tbWebsite.Text,"'","''")
-		.ShelterPhone=replace(tbOrgPhone.text,"'","''")
-		.Fax=replace(tbFax.text,"'","''")
-		.ShelterName=replace(tbOrg.text,"'","''")
-		.Facebook=replace(tbFacebook.Text,"'","''")
-		.Twitter=replace(tbTwitter.Text,"'","''")
-		.Blog=replace(tbBlog.Text,"'","''")
-		session("ShelterName")=.ShelterName
-		'showpublic values-----------------------
-			dim strShowPublic as String="0000000"
-				if  chkOrgPhone.Checked=True then mid(strShowPublic,1,1)="1"
-				if chkFax.Checked=True then mid(strShowPublic,2,1)="1"
-				if chkName.Checked=True then mid(strShowPublic,3,1)="1"
-				if chkContactPhone.Checked=True then mid(strShowPublic,4,1)="1"
-				if chkEmail.Checked=True then mid(strShowPublic,5,1)="1"
-				if chkShip.Checked=True then mid(strShowPublic,6,1)="1"
-				if chkMail.Checked=True then mid(strShowPublic,7,1)="1"
+                        'show admin fields if neccessary
+                        If Session("Admin") = "@F@EWE$" Then
+                            'show admin fields
+                            pnlAdmin.Visible = True
+                        End If
+                    End While
+                End With
+            Else ' did not find data
+                lblMessage.Text = "Account data not found. Please try again later. Thanks!"
+                form1.Visible = False
 
-dim Animal_Focus as string="" 'build animal focus text
-	if chkDog.checked then animal_focus="Dogs|"
-	if chkCat.checked then animal_focus &="Cats|"
-	if chkReptile.checked then animal_focus &="Reptiles|"
-	if chkOther.checked then animal_focus &="Other|"
-	if Animal_Focus<> "" then Animal_Focus=left(animal_focus,len(animal_focus)-1)
-Dim AdminNotes as string
-	if session("Admin")="@F@EWE$" then 
-		AdminNotes=replace(tbAdmin_notes.text, "'","''") & "-profile edited by staff:" & datetime.now.tostring()
-	else
-		AdminNotes=replace(tbAdmin_notes.text, "'","''") & "-profile edited by client:" & datetime.now.tostring()
-	end if
-	Dim AdminNotes2 as string
-	if not right(tbINPExNotes.text,8)="INPEx | " then 'new data in text box
-		AdminNotes2=replace(tbINPExNotes.text, "'","''") & " -- " & datetime.now.tostring() & " -edited by INPEx | "
-	else 
-		AdminNotes2=replace(tbINPExNotes.text, "'","''")
-	end if
-	Dim AdminNotes3 as string
-	if not right(tbAdmin_notes2017.Text,8)="Staff | " AND NOT tbAdmin_notes2017.Text="" then 'new data in text box
-		AdminNotes3=replace(tbAdmin_notes2017.Text, "'","''") & " -- " & datetime.now.tostring() & " -edited by Staff | "
-	else 
-		AdminNotes3=replace(tbAdmin_notes2017.Text, "'","''")
-	end if
-		Dim AdminNotes4 as string
-	if not right(tbAdmin_notes2018.Text,8)="Staff | " AND NOT tbAdmin_notes2018.Text="" then 'new data in text box
-		AdminNotes4=replace(tbAdmin_notes2018.Text, "'","''") & " -- " & datetime.now.tostring() & " -edited by Staff | "
-	else 
-		AdminNotes4=replace(tbAdmin_notes2018.Text, "'","''")
-	end if
+            End If
+        End If
 
-		strSql="UPDATE tblH4thReg Set FName='" & .FName & "', LName='" & .LName & "', ContactPhone='" &  .ContactPhone & "', Email='" & .Email & "', MAddress='" & .BAddress & "', MCity='" & .BCity & "', MState='" & .BState & "', MZip='" & .BZip & "', MCountry='" & .BCountry & "', SAddress='" & .SAddress & "', SCity='" & .SCity & "', SState='" & .SState & "', SZip='" & .SZip & "', SCountry='" & .SCountry & "', Website='" & .Website & "', ShelterPhone='" & .ShelterPhone & "', Fax='"	& .Fax & "', ShelterName='" & .ShelterName & "', ShowPublic='" & strShowpublic & "', Edited='" & now.tostring() & "', Facebook='" & .Facebook & "', Twitter='" & .Twitter & "', Blog='" &  .Blog & "', Lang='" & ddlLang.selectedItem.Value & "', youtube='" & tbYoutube.text & "', pintrest='" & tbPintrest.text & "', capacity='" & ddlCapacity.selectedItem.Value & "', Food_cat='" & ddlFood_cat.selectedItem.Value & "', Food_dog='" & ddlFood_dog.selectedItem.Value & "', Food_source='" & ddlFood_source.selectedItem.Value & "', Vet='" & ddlVet.selectedItem.Value & "', WhereVet='" & tbWhereVet.text & "', Animal_Focus='" & Animal_Focus & "', offsite_events='" & ddlOffsite_events.selectedItem.Value & "', mobile_vehicle='" & ddlmobile_vehicle.selectedItem.Value & "', work_with_retailers='" & ddlwork_with_retailers.selectedItem.Value & "', which_retailers='" & replace(tbWhich_retailers.text, "'","''") & "', want_adoption_retailer='" & ddlwant_adoption_retailer.selectedItem.Value & "', pr_person='" & ddlpr_person.selectedItem.Value & "', media_relations='" & ddlmedia_relations.selectedItem.Value & "', place_ads='" & ddlplace_ads.selectedItem.Value & "', where_ads='" & replace(tbWhere_ads.text, "'","''") & "', want_marketing_retailer='" & ddlwant_marketing_retailer.selectedItem.Value & "', attended_ACES='" & ddlAttended_ACES.selectedItem.Value & "', interested_ACES='" & ddlInterested_ACES.selectedItem.Value & "', IAMS_email_optin=" & iif(chkIams_optin.checked, "1","0") & ", participant_2012=" & iif(chkParticipant_2012.checked, "1","0") & ", Admin_Notes_2017='" & AdminNotes3 & "', Admin_Notes_2018='" & AdminNotes4 & "', Completed=" & iif(chkCompleted.checked, "1","0") & ", Active=" & iif(chkActive.checked, "1","0") & ", Calls='" & ddlcalls.selectedItem.Value & "', Resolution='" & ddlresolution.selectedItem.Value & "', ExecName='" & tbExecName.text & "', ExecTitle='" & tbExecTitle.text & "', Title='" & tbContactTitle.text & "' WHERE ShelterID=" & session("UserID")
-		end with
-		'lblmessage.text=strSQL
-		'exit sub
-	if db.ExecuteNonQuery(strSql) then 'successful
-	lblmessage.text="Profile updated!  <a href=""../shelter_details.aspx?ShelterID=" & session("UserId") & """ target=""_blank"">View Profile</a>"
-	form1.Visible=false
-	'email userid to me so that I can approve it
-		dim objMM as New HWAC.EmailMessage
-							with objMM
-							.MailTo="lonjones1972@gmail.com"
-							.From="Home 4 The Holidays <h4th@animalcenter.org>"
-							.Subject="H4TH Profile Edit"
-							.Body=session("ShelterName") & ", UserID:" & session("UserID") & " has edited their profile<br><br>"
-							end With
-							with objUserDetails
-							objMM.Body &=.FName & "<br>" & .LName & "<br>" & .ContactPhone & "<br>" & .Email & "<br>" & .BAddress & "<br>" & .BCity & "<br>" & .BState & "<br>" & .BZip & "<br>" & .BCountry & "<br>" & .SAddress & "<br>" & .SCity & "<br>" & .SState & "<br>" & .SZip & "<br>" & .SCountry & "<br>" & .Website &  "<br>" & .ShelterPhone & "<br>" & .Fax & "<br>" & .ShelterName & "<br>" & .Facebook & "<br>" & .Twitter & "<br>" & .Blog & "<br>" & ddlLang.selectedItem.Value  & "<br>" & request.ServerVariables("REMOTE_ADDR")
-							End With
-							objMM.Send_Email(objMM)
-	else 
-		lblmessage.text=strSQl
-	End if	
-End Sub
+    End Sub
+
+    Sub btnUpdate_Click(obj As Object, e As EventArgs)
+        'Update databaseH4TH h4th table with session, userid and fields 'call hwac.user.excecutenonquery
+        Dim strResult As String
+        Dim strSql As String
+        Dim objUserDetails As New HWAC.UserDetails
+        Dim db As New HWAC.DatabaseH4TH
+        With objUserDetails
+            'Contact Details---------
+            .FName = Replace(tbFName.Text, "'", "''")
+            .LName = Replace(tbLName.Text, "'", "''")
+            .ContactPhone = Replace(tbPhone.Text, "'", "''")
+            .Email = tbEmail.Text
+            'Mailing Address----------
+            .BAddress = Replace(tbMAddress.Text, "'", "''")
+            .BCity = Replace(tbMCity.Text, "'", "''")
+            .BState = ddlMState.SelectedItem.Value
+            .BZip = Replace(tbMZip.Text, "'", "''")
+            .BCountry = ddlMCountry.SelectedItem.Value
+            'Shipping address-------------
+            .SAddress = Replace(tbSAddress.Text, "'", "''")
+            .SCity = Replace(tbSCity.Text, "'", "''")
+            .SState = ddlSState.SelectedItem.Value
+            .SZip = Replace(tbSZip.Text, "'", "''")
+            .SCountry = ddlSCountry.SelectedItem.Value
+            'Org Info---------------------
+            .Website = Replace(tbWebsite.Text, "'", "''")
+            .ShelterPhone = Replace(tbOrgPhone.Text, "'", "''")
+            .Fax = Replace(tbFax.Text, "'", "''")
+            .ShelterName = Replace(tbOrg.Text, "'", "''")
+            .Facebook = Replace(tbFacebook.Text, "'", "''")
+            .Twitter = Replace(tbTwitter.Text, "'", "''")
+            .Blog = Replace(tbBlog.Text, "'", "''")
+            Session("ShelterName") = .ShelterName
+            'showpublic values-----------------------
+            Dim strShowPublic As String = "0000000"
+            If chkOrgPhone.Checked = True Then mid(strShowPublic, 1, 1) = "1"
+            If chkFax.Checked = True Then mid(strShowPublic, 2, 1) = "1"
+            If chkName.Checked = True Then mid(strShowPublic, 3, 1) = "1"
+            If chkContactPhone.Checked = True Then mid(strShowPublic, 4, 1) = "1"
+            If chkEmail.Checked = True Then mid(strShowPublic, 5, 1) = "1"
+            If chkShip.Checked = True Then mid(strShowPublic, 6, 1) = "1"
+            If chkMail.Checked = True Then mid(strShowPublic, 7, 1) = "1"
+
+            Dim Animal_Focus As String = "" 'build animal focus text
+            If chkDog.Checked Then Animal_Focus = "Dogs|"
+            If chkCat.Checked Then Animal_Focus &= "Cats|"
+            If chkReptile.Checked Then Animal_Focus &= "Reptiles|"
+            If chkOther.Checked Then Animal_Focus &= "Other|"
+            If Animal_Focus <> "" Then Animal_Focus = Left(Animal_Focus, Len(Animal_Focus) - 1)
+            Dim AdminNotes As String
+            If Session("Admin") = "@F@EWE$" Then
+                AdminNotes = Replace(tbAdmin_notes.Text, "'", "''") & "-profile edited by staff:" & DateTime.Now.ToString()
+            Else
+                AdminNotes = Replace(tbAdmin_notes.Text, "'", "''") & "-profile edited by client:" & DateTime.Now.ToString()
+            End If
+            Dim AdminNotes2 As String
+            If Not Right(tbINPExNotes.Text, 8) = "INPEx | " Then 'new data in text box
+                AdminNotes2 = Replace(tbINPExNotes.Text, "'", "''") & " -- " & DateTime.Now.ToString() & " -edited by INPEx | "
+            Else
+                AdminNotes2 = Replace(tbINPExNotes.Text, "'", "''")
+            End If
+            Dim AdminNotes3 As String
+            If Not Right(tbAdmin_notes2017.Text, 8) = "Staff | " And Not tbAdmin_notes2017.Text = "" Then 'new data in text box
+                AdminNotes3 = Replace(tbAdmin_notes2017.Text, "'", "''") & " -- " & DateTime.Now.ToString() & " -edited by Staff | "
+            Else
+                AdminNotes3 = Replace(tbAdmin_notes2017.Text, "'", "''")
+            End If
+            Dim AdminNotes4 As String
+            If Not Right(tbAdmin_notes2018.Text, 8) = "Staff | " And Not tbAdmin_notes2018.Text = "" Then 'new data in text box
+                AdminNotes4 = Replace(tbAdmin_notes2018.Text, "'", "''") & " -- " & DateTime.Now.ToString() & " -edited by Staff | "
+            Else
+                AdminNotes4 = Replace(tbAdmin_notes2018.Text, "'", "''")
+            End If
+
+            strSql = "UPDATE tblH4thReg Set FName='" & .FName & "', LName='" & .LName & "', ContactPhone='" & .ContactPhone & "', Email='" & .Email & "', MAddress='" & .BAddress & "', MCity='" & .BCity & "', MState='" & .BState & "', MZip='" & .BZip & "', MCountry='" & .BCountry & "', SAddress='" & .SAddress & "', SCity='" & .SCity & "', SState='" & .SState & "', SZip='" & .SZip & "', SCountry='" & .SCountry & "', Website='" & .Website & "', ShelterPhone='" & .ShelterPhone & "', Fax='" & .Fax & "', ShelterName='" & .ShelterName & "', ShowPublic='" & strShowPublic & "', Edited='" & Now.ToString() & "', Facebook='" & .Facebook & "', Twitter='" & .Twitter & "', Blog='" & .Blog & "', Lang='" & ddlLang.SelectedItem.Value & "', youtube='" & tbYouTube.Text & "', pintrest='" & tbPintrest.Text & "', capacity='" & ddlcapacity.SelectedItem.Value & "', Food_cat='" & ddlFood_cat.SelectedItem.Value & "', Food_dog='" & ddlFood_dog.SelectedItem.Value & "', Food_source='" & ddlFood_source.SelectedItem.Value & "', Vet='" & ddlVet.SelectedItem.Value & "', WhereVet='" & tbWhereVet.Text & "', Animal_Focus='" & Animal_Focus & "', offsite_events='" & ddloffsite_events.SelectedItem.Value & "', mobile_vehicle='" & ddlmobile_vehicle.SelectedItem.Value & "', work_with_retailers='" & ddlwork_with_retailers.SelectedItem.Value & "', which_retailers='" & Replace(tbwhich_retailers.Text, "'", "''") & "', want_adoption_retailer='" & ddlwant_adoption_retailer.SelectedItem.Value & "', pr_person='" & ddlpr_person.SelectedItem.Value & "', media_relations='" & ddlmedia_relations.SelectedItem.Value & "', place_ads='" & ddlplace_ads.SelectedItem.Value & "', where_ads='" & Replace(tbwhere_ads.Text, "'", "''") & "', want_marketing_retailer='" & ddlwant_marketing_retailer.SelectedItem.Value & "', attended_ACES='" & ddlattended_ACES.SelectedItem.Value & "', interested_ACES='" & ddlinterested_ACES.SelectedItem.Value & "', IAMS_email_optin=" & IIf(chkIams_optin.Checked, "1", "0") & ", participant_2012=" & IIf(chkParticipant_2012.Checked, "1", "0") & ", Admin_Notes_2017='" & AdminNotes3 & "', Admin_Notes_2018='" & AdminNotes4 & "', Completed=" & IIf(chkcompleted.Checked, "1", "0") & ", Active=" & IIf(chkActive.Checked, "1", "0") & ", Calls='" & ddlCalls.SelectedItem.Value & "', Resolution='" & ddlResolution.SelectedItem.Value & "', ExecName='" & tbExecName.Text & "', ExecTitle='" & tbExecTitle.Text & "', Title='" & tbContactTitle.Text & "' WHERE ShelterID=" & Session("UserID")
+        End With
+        'lblmessage.text=strSQL
+        'exit sub
+        If db.ExecuteNonQuery(strSql) Then 'successful
+            lblMessage.Text = "Profile updated!  <a href=""../shelter_details.aspx?ShelterID=" & Session("UserId") & """ target=""_blank"">View Profile</a>"
+            form1.Visible = False
+            'email userid to me so that I can approve it
+            Dim objMM As New HWAC.EmailMessage
+            With objMM
+                .MailTo = "lonjones1972@gmail.com"
+                .From = "Home 4 The Holidays <h4th@animalcenter.org>"
+                .Subject = "H4TH Profile Edit"
+                .Body = Session("ShelterName") & ", UserID:" & Session("UserID") & " has edited their profile<br><br>"
+            End With
+            With objUserDetails
+                objMM.Body &= .FName & "<br>" & .LName & "<br>" & .ContactPhone & "<br>" & .Email & "<br>" & .BAddress & "<br>" & .BCity & "<br>" & .BState & "<br>" & .BZip & "<br>" & .BCountry & "<br>" & .SAddress & "<br>" & .SCity & "<br>" & .SState & "<br>" & .SZip & "<br>" & .SCountry & "<br>" & .Website & "<br>" & .ShelterPhone & "<br>" & .Fax & "<br>" & .ShelterName & "<br>" & .Facebook & "<br>" & .Twitter & "<br>" & .Blog & "<br>" & ddlLang.SelectedItem.Value & "<br>" & Request.ServerVariables("REMOTE_ADDR")
+            End With
+            objMM.Send_Email(objMM)
+        Else
+            lblMessage.Text = strSql
+        End If
+    End Sub
 
 
 </script>
 
 
 <asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
-<link rel="stylesheet" href="../_css/thickbox.css" type="text/css" media="screen" />
+    <%--<link rel="stylesheet" href="../_css/thickbox.css" type="text/css" media="screen" />
 <link href="../_css/style2.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
 <!--
@@ -218,1221 +219,1402 @@ End Sub
 	font-weight: bold; 
  }
 -->
-</style>
-</asp:content>
+</style>--%>
+</asp:Content>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="PageTitle" Runat="Server" >
- Member Profile
-</asp:content>
 
-    
-<asp:content ID="navigation" contentplaceholderId="Leftnav" runat="server" ></asp:content>
-<asp:Content ID="Content3" ContentPlaceHolderID="maincontent" Runat="Server" >
- 
-<h1 class="grn_ttl_blg">Edit your profile<br></h1><div class="feature">
-                                                            <h3>Edit Profile</h3>
-                                                            <asp:Label ID="lblMessage" Font-Bold="true" ForeColor="#FF0000" runat="server"/>                                                          
-                                                            <p>Check the boxes next to the information you wish to display to the public</p>
-                                                            <table align="center">
-                                                              <tr>
-                                                                <td><form runat="server" id="form1">
-                                                                    <asp:ValidationSummary runat="server" ShowMessageBox="true" ShowSummary="false"  ID="VSum" HeaderText="Please fill out all the required fields appropriately" />                                                          
-                                                                    <asp:Panel id="pnlRegister" runat="server" > </asp:Panel>
-<table cellpadding="0" cellspacing="0">
-                                                                      <tr>
-                                                                        <td colspan="4" bgcolor="#0033FF"><h4 class="style2">Organization Information</h4></td>
-                                                                        <td nowrap>&nbsp;</td>
-                                                                      </tr>
-                                                                      <tr>
-                                                                        <td>&nbsp;</td>
-                                                                        <td><span class="style2">*</span></td>
-                                                                        <td nowrap>Organization Name: </td>
-                                                                        <td><asp:textbox id="tbOrg" runat="server" Width="275"/>                                                          
-                                                                            <asp:RequiredFieldValidator  ControlToValidate="tbOrg" ErrorMessage="*Organization name required" Display="Dynamic" runat="server" /></td>
-                                                                        <td>&nbsp;</td>
-                                                                      </tr>
-                                                                      <tr>
-                                                                        <td><asp:CheckBox ID="chkOrgPhone"  runat="server"/></td>
-                                                                        <td><span class="style2">*</span></td>
-                                                                        <td nowrap>Phone Number: </td>
-                                                                        <td><asp:textbox id="tbOrgPhone" runat="server" MaxLength="20"/>                                                          
-                                                                            <asp:RequiredFieldValidator  ControlToValidate="tbOrgPhone" ErrorMessage="*Phone number required" Display="Dynamic" runat="server" /></td>
-                                                                        <td>&nbsp;</td>
-                                                                      </tr>
-                                                                      <tr>
-                                                                        <td><asp:CheckBox ID="chkFax" runat="server" /></td>
-                                                                        <td>&nbsp;</td>
-                                                                        <td>Fax Number: </td>
-                                                                        <td><asp:textbox id="tbFax" runat="server" MaxLength="20"/></td>
-                                                                        <td>&nbsp;</td>
-                                                                      </tr>
-                                                                      <tr>
-                                                                        <td>&nbsp;</td>
-                                                                        <td>&nbsp;</td>
-                                                                        <td valign="top" nowrap>Website Address: </td>
-                                                                        <td><asp:TextBox  runat="server"  ID="tbWebsite" MaxLength="50" />
-                                                                          <asp:RegularExpressionValidator runat="server" ControlToValidate="tbWebsite" ErrorMessage="That is not a valid website address." ValidationExpression="www.*.*" Display="Dynamic" />
-                                                                          <br />
-                                                                          (ex. www.yourshelter.com)</td>
-                                                                        <td>&nbsp;</td>
-                                                                      </tr>
-                                                                      <tr>
-                                                                        <td>&nbsp;</td>
-                                                                        <td>&nbsp;</td>
-                                                                        <td valign="top" nowrap>Facebook Link:</td>
-                                                                        <td><asp:TextBox  runat="server"  ID="tbFacebook" MaxLength="250"  Width="200"/>
-                                                                          <br />
-                                                                        (ex. www.facebook.com/YourOrganizationName) </td>
-                                                                        <td>&nbsp;</td>
-                                                                      </tr>
-                                                                      <tr>
-                                                                        <td>&nbsp;</td>
-                                                                        <td>&nbsp;</td>
-                                                                        <td valign="top" nowrap>Twitter Link:</td>
-                                                                        <td><asp:TextBox  runat="server"  ID="tbTwitter" MaxLength="250"  Width="200"/>
-                                                                          <br />
-                                                                        (ex. www.twitter.com/YourOrg) </td>
-                                                                        <td>&nbsp;</td>
-                                                                      </tr>
-                                                                      <tr>
-                                                                        <td>&nbsp;</td>
-                                                                        <td>&nbsp;</td>
-                                                                        <td valign="top" nowrap>Blog Link:</td>
-                                                                        <td><asp:TextBox  runat="server"  ID="tbBlog" MaxLength="250"  Width="200"/>
-                                                                          <br />
-                                                                        (ex. www.YourBlog.com) </td>
-                                                                        <td>&nbsp;</td>
-                                                                      </tr>
-                                                                      <tr>
-                                                                        <td>&nbsp;</td>
-                                                                        <td>&nbsp;</td>
-                                                                        <td valign="top" nowrap>Youtube Channel:</td>
-                                                                        <td><asp:TextBox  runat="server"  ID="tbYouTube" MaxLength="250"  Width="200"/>
-                                                                          <br />
-                                                                        (ex. www.youtube.com.com/user/YourOrg) </td>
-                                                                        <td>&nbsp;</td>
-                                                                      </tr>
-                                                                      <tr>
-                                                                        <td>&nbsp;</td>
-                                                                        <td>&nbsp;</td>
-                                                                        <td valign="top" nowrap>Pinterest Address:</td>
-                                                                        <td><asp:TextBox  runat="server"  ID="tbPintrest" MaxLength="250"  Width="200"/> 
-                                                                          <br />
-                                                                          (ex. www.pinterest.com/Your Org)<br />
-                                                                          <br /></td>
-                                                                        <td>&nbsp;</td>
-                                                                      </tr>
-                                                                      <tr>
-                                                                        <td>&nbsp;</td>
-                                                                        <td>&nbsp;</td>
-                                                                        <td colspan="2" nowrap>Head of Organization 
-(President/Executive Director)</td>
-                                                                        <td>&nbsp;</td>
-                                                                      </tr>
-                                                                      <tr>
-                                                                        <td>&nbsp;</td>
-                                                                        <td>&nbsp;</td>
-                                                                        <td nowrap><blockquote>
-                                                                          <p>Name:</p>
-                                                                        </blockquote></td>
-                                                                        <td><asp:TextBox  runat="server"  ID="tbExecName" MaxLength="50"  Width="200"/></td>
-                                                                        <td>&nbsp;</td>
-                                                                      </tr>
-                                                                      <tr>
-                                                                        <td>&nbsp;</td>
-                                                                        <td>&nbsp;</td>
-                                                                        <td nowrap><blockquote>
-                                                                          <p>Title:</p>
-                                                                        </blockquote></td>
-                                                                        <td><asp:TextBox  runat="server"  ID="tbExecTitle" MaxLength="20"  Width="200"/></td>
-                                                                        <td>&nbsp;</td>
-                                                                      </tr>
-                                                                      <tr bgcolor="#0033FF">
-                                                                        <td colspan="5"><h4 class="style2">                                                                        Organization H4TH Contact Person</h4></td>
-                                                                      </tr>
-                                                                      <tr>
-                                                                        <td rowspan="2"><asp:CheckBox ID="chkName" runat="server" /></td>
-                                                                        <td><span class="style2">*</span></td>
-                                                                        <td height="30">First Name: </td>
-                                                                        <td><asp:TextBox ID="tbFName" runat="server" MaxLength="15"/>                                                          
-                                                                            <asp:RequiredFieldValidator  ControlToValidate="tbFName" ErrorMessage="*First name required" Display="Dynamic" runat="server" /></td>
-                                                                        <td rowspan="2">&nbsp;</td>
-                                                                      </tr>
-                                                                      <tr>
-                                                                        <td><span class="style2">*</span></td>
-                                                                        <td height="30"> Last Name: </td>
-                                                                        <td><asp:textbox id="tbLName" runat="server" MaxLength="15"/>                                                          
-                                                                            <asp:RequiredFieldValidator  ControlToValidate="tbLName" ErrorMessage="*Last name required" Display="Dynamic" runat="server" /></td>
-                                                                      </tr>
-                                                                      <tr>
-                                                                        <td>&nbsp;</td>
-                                                                        <td>&nbsp;</td>
-                                                                        <td>Title:</td>
-                                                                        <td><asp:textbox id="tbContactTitle" runat="server" MaxLength="20"/></td>
-                                                                        <td>&nbsp;</td>
-                                                                      </tr>
-                                                                      <tr>
-                                                                        <td><asp:CheckBox ID="chkContactPhone"  runat="server"/></td>
-                                                                        <td><span class="style2">*</span></td>
-                                                                        <td>Phone: </td>
-                                                                        <td><asp:textbox id="tbPhone" runat="server" MaxLength="20"/>                                                          
-                                                                            <asp:RequiredFieldValidator  ControlToValidate="tbPhone" ErrorMessage="*Phone required" Display="Dynamic" runat="server" /></td>
-                                                                        <td>&nbsp;</td>
-                                                                      </tr>
-                                                                      <tr>
-                                                                        <td><asp:CheckBox ID="chkEmail"  runat="server"/></td>
-                                                                        <td><span class="style2">*</span></td>
-                                                                        <td nowrap>Email Address: </td>
-                                                                        <td><asp:textbox id="tbEmail" runat="server" MaxLength="100"/>                                                          
-                                                                            <asp:RequiredFieldValidator runat="server" ControlToValidate="tbEmail" 	ErrorMessage="*Email is required" Display="Dynamic"/>                                                            
-                                                                            <asp:regularexpressionvalidator runat="server" controltovalidate="tbEmail" 
-					validationexpression="^(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\-+)|([A-Za-z0-9]+\.+)|([A-Za-z0-9]+\++))*[A-Za-z0-9]+@((\w+\-+)|(\w+\.))*\w{1,63}\.[a-zA-Z]{2,6}$" 
-					errormessage="*That is not a valid email" 
-					display="dynamic"/>              </td>
-                                                                        <td>&nbsp;</td>
-                                                                      </tr>
-                                                                      <tr>
-                                                                        <td>&nbsp;</td>
-                                                                        <td>&nbsp;</td>
-                                                                        <td nowrap>Language Preference:</td>
-                                                                        <td><asp:Dropdownlist runat="server" id="ddlLang">
-                                                                          <asp:ListItem value="English" Text="English"/>                                                                        
-                                                                          <asp:ListItem value="French" text="French"/>                                                                        
-</Asp:DropdownList></td>
-                                                                        <td>&nbsp;</td>
-                                                                      </tr>
-                                                                      <tr bgcolor="#0033FF">
-                                                                        <td colspan="5"><h4 class="style2">Shipping Address</h4></td>
-                                                                      </tr>
-                                                                      <tr>
-                                                                        <td rowspan="5"><asp:CheckBox ID="chkShip"  runat="server"/></td>
-                                                                        <td><span class="style2">*</span></td>
-                                                                        <td> Address: </td>
-                                                                        <td><asp:textbox id="tbSAddress" runat="server" MaxLength="50"/>                                                          
-                                                                            <asp:RequiredFieldValidator  ControlToValidate="tbSAddress" ErrorMessage="*Shipping address required" Display="Dynamic" runat="server" /></td>
-                                                                        <td rowspan="5">&nbsp;</td>
-                                                                      </tr>
-                                                                      <tr>
-                                                                        <td><span class="style2">*</span></td>
-                                                                        <td>City</td>
-                                                                        <td><asp:textbox id="tbSCity" runat="server" MaxLength="20"/>                                                          
-                                                                            <asp:RequiredFieldValidator  ControlToValidate="tbSCity" ErrorMessage="*City required" Display="Dynamic" runat="server" /></td>
-                                                                      </tr>
-                                                                      <tr>
-                                                                        <td><span class="style2">*</span></td>
-                                                                        <td>State/Province</td>
-                                                                        <td><asp:Dropdownlist runat="server" id="ddlSState">
-                                                                            <asp:ListItem value="" Text="Choose a State"/>                                                          
-                                                                            <asp:ListItem value="AK" text="AK"/>                                                          
-                                                                            <asp:ListItem value="AL" text="AL"/>                                                          
-                                                                            <asp:ListItem value="AR" text="AR"/>                                                          
-                                                                            <asp:ListItem value="AZ" text="AZ"/>                                                          
-                                                                            <asp:ListItem value="CA" text="CA"/>                                                          
-                                                                            <asp:ListItem value="CO" text="CO"/>                                                          
-                                                                            <asp:ListItem value="CT" text="CT"/>                                                          
-                                                                            <asp:ListItem value="DC" text="DC"/>                                                          
-                                                                            <asp:ListItem value="DE" text="DE"/>                                                          
-                                                                            <asp:ListItem value="FL" text="FL"/>                                                          
-                                                                            <asp:ListItem value="GA" text="GA"/>                                                          
-                                                                            <asp:ListItem value="HI" text="HI"/>                                                          
-                                                                            <asp:ListItem value="IA" text="IA"/>                                                          
-                                                                            <asp:ListItem value="ID" text="ID"/>                                                          
-                                                                            <asp:ListItem value="IL" text="IL"/>                                                          
-                                                                            <asp:ListItem value="IN" text="IN"/>                                                          
-                                                                            <asp:ListItem value="KS" text="KS"/>                                                          
-                                                                            <asp:ListItem value="KY" text="KY"/>                                                          
-                                                                            <asp:ListItem value="LA" text="LA"/>                                                          
-                                                                            <asp:ListItem value="MA" text="MA"/>                                                          
-                                                                            <asp:ListItem value="MD" text="MD"/>                                                          
-                                                                            <asp:ListItem value="ME" text="ME"/>                                                          
-                                                                            <asp:ListItem value="MI" text="MI"/>                                                          
-                                                                            <asp:ListItem value="MN" text="MN"/>                                                          
-                                                                            <asp:ListItem value="MO" text="MO"/>                                                          
-                                                                            <asp:ListItem value="MS" text="MS"/>                                                          
-                                                                            <asp:ListItem value="MT" text="MT"/>                                                          
-                                                                            <asp:ListItem value="NC" text="NC"/>                                                          
-                                                                            <asp:ListItem value="ND" text="ND"/>                                                          
-                                                                            <asp:ListItem value="NE" text="NE"/>                                                          
-                                                                            <asp:ListItem value="NH" text="NH"/>                                                          
-                                                                            <asp:ListItem value="NJ" text="NJ"/>                                                          
-                                                                            <asp:ListItem value="NM" text="NM"/>                                                          
-                                                                            <asp:ListItem value="NV" text="NV"/>                                                          
-                                                                            <asp:ListItem value="NY" text="NY"/>                                                          
-                                                                            <asp:ListItem value="OH" text="OH"/>                                                          
-                                                                            <asp:ListItem value="OK" text="OK"/>                                                          
-                                                                            <asp:ListItem value="OR" text="OR"/>                                                          
-                                                                            <asp:ListItem value="PA" text="PA"/>                                                          
-                                                                            <asp:ListItem value="RI" text="RI"/>                                                          
-                                                                            <asp:ListItem value="SC" text="SC"/>                                                          
-                                                                            <asp:ListItem value="SD" text="SD"/>                                                          
-                                                                            <asp:ListItem value="TN" text="TN"/>                                                          
-                                                                            <asp:ListItem value="TX" text="TX"/>                                                          
-                                                                            <asp:ListItem value="UT" text="UT"/>                                                          
-                                                                            <asp:ListItem value="VA" text="VA"/>                                                          
-                                                                            <asp:ListItem value="VT" text="VT"/>                                                          
-                                                                            <asp:ListItem value="WA" text="WA"/>                                                          
-                                                                            <asp:ListItem value="WI" text="WI"/>                                                          
-                                                                            <asp:ListItem value="WV" text="WV"/>                                                          
-                                                                            <asp:ListItem value="WY" text="WY"/>                                                          
-                                                                            <asp:Listitem Value="" Text="_____________"/>                                                          
-                                                                            <asp:ListItem text="US Territories" Value="" />                                                          
-                                                                            <asp:Listitem Value="" Text=" "/>                                                          
-                                                                            <asp:ListItem value="AS" text="AS"/>                                                          
-                                                                            <asp:ListItem value="FM" text="FM"/>                                                          
-                                                                            <asp:ListItem value="GU" text="GU"/>                                                          
-                                                                            <asp:ListItem value="MH" text="MH"/>                                                          
-                                                                            <asp:ListItem value="MP" text="MP"/>                                                          
-                                                                            <asp:ListItem value="PR" text="PR"/>                                                          
-                                                                            <asp:ListItem value="PW" text="PW"/>                                                          
-                                                                            <asp:ListItem value="VI" text="VI"/>                                                          
-                                                                            <asp:Listitem Value="" Text="_____________"/>                                                          
-                                                                            <asp:ListItem text="US Military" Value="" />                                                          
-                                                                            <asp:Listitem Value="" Text=" "/>                                                          
-                                                                            <asp:ListItem value="AA" text="AA"/>                                                          
-                                                                            <asp:ListItem value="AE" text="AE"/>                                                          
-                                                                            <asp:ListItem value="AP" text="AP"/>                                                          
-                                                                            <asp:Listitem Value="" Text="_____________"/>                                                          
-                                                                            <asp:ListItem text="Canada" Value="" />                                                          
-                                                                            <asp:Listitem Value="" Text=" "/>                                                          
-                                                                            <asp:ListItem value="AB" text="AB"/>                                                          
-                                                                            <asp:ListItem value="BC" text="BC"/>                                                          
-                                                                            <asp:ListItem value="MB" text="MB"/>                                                          
-                                                                            <asp:ListItem value="NB" text="NB"/>                                                          
-                                                                            <asp:ListItem value="NL" text="NL"/>                                                          
-                                                                            <asp:ListItem value="NS" text="NS"/>                                                          
-                                                                            <asp:ListItem value="NT" text="NT"/>                                                          
-                                                                            <asp:ListItem value="NU" text="NU"/>                                                          
-                                                                            <asp:ListItem value="ON" text="ON"/>                                                          
-                                                                            <asp:ListItem value="PE" text="PE"/>                                                          
-                                                                            <asp:ListItem value="QC" text="QC"/>                                                          
-                                                                            <asp:ListItem value="SK" text="SK"/>                                                          
-                                                                            <asp:ListItem value="YT" text="YT"/>                                                          
-                                                                            <asp:Listitem Value="" Text="_____________"/>                                                          
-                                                                            <asp:ListItem text="Other Countries" Value="" />                                                          
-                                                                            <asp:Listitem Value="" Text=" "/>                                                          
-                                                                            <asp:ListItem value="None" text="None"/>                                                          
-                </Asp:DropdownList>
-                                                                            <asp:RequiredFieldValidator ID="req_SState" ControlToValidate="ddlSState" ErrorMessage="*State is required. Select None if State does not apply to you"  runat="server" Display="Dynamic"/></td>
-                                                                      </tr>
-                                                                      <tr>
-                                                                        <td><span class="style2">*</span></td>
-                                                                        <td>Zip Code</td>
-                                                                        <td><asp:textbox id="tbSZip" runat="server" MaxLength="20"/></td>
-                                                                      </tr>
-                                                                      <tr>
-                                                                        <td valign="top"><span class="style2">*</span></td>
-                                                                        <td valign="top">Country</td>
-                                                                        <td><asp:DropdownList id="ddlSCountry" runat="server" >
-                                                                            <asp:ListItem text="United States"/>                                                          
-                                                                            <asp:ListItem text="Canada"/>                                                          
-                                                                            <asp:ListItem text="Mexico"/>                                                          
-                                                                            <asp:ListItem text="Afghanistan"/>                                                          
-                                                                            <asp:ListItem text="Albania"/>                                                          
-                                                                            <asp:ListItem text="Algeria"/>                                                          
-                                                                            <asp:ListItem text="American Samoa"/>                                                          
-                                                                            <asp:ListItem text="Andorra"/>                                                          
-                                                                            <asp:ListItem text="Angola"/>                                                          
-                                                                            <asp:ListItem text="Anguilla"/>                                                          
-                                                                            <asp:ListItem text="Antarctica"/>                                                          
-                                                                            <asp:ListItem text="Antigua and Barbuda"/>                                                          
-                                                                            <asp:ListItem text="Argentina"/>                                                          
-                                                                            <asp:ListItem text="Armenia"/>                                                          
-                                                                            <asp:ListItem text="Aruba"/>                                                          
-                                                                            <asp:ListItem text="Australia"/>                                                          
-                                                                            <asp:ListItem text="Austria"/>                                                          
-                                                                            <asp:ListItem text="Azerbaijan"/>                                                          
-                                                                            <asp:ListItem text="Bahamas"/>                                                          
-                                                                            <asp:ListItem text="Bahrain"/>                                                          
-                                                                            <asp:ListItem text="Bangladesh"/>                                                          
-                                                                            <asp:ListItem text="Barbados"/>                                                          
-                                                                            <asp:ListItem text="Belarus"/>                                                          
-                                                                            <asp:ListItem text="Belgium"/>                                                          
-                                                                            <asp:ListItem text="Belize"/>                                                          
-                                                                            <asp:ListItem text="Benin"/>                                                          
-                                                                            <asp:ListItem text="Bermuda"/>                                                          
-                                                                            <asp:ListItem text="Bhutan"/>                                                          
-                                                                            <asp:ListItem text="Bolivia"/>                                                          
-                                                                            <asp:ListItem text="Bosnia-Herzegovina"/>                                                          
-                                                                            <asp:ListItem text="Botswana"/>                                                          
-                                                                            <asp:ListItem text="Bouvet Island"/>                                                          
-                                                                            <asp:ListItem text="Brazil"/>                                                          
-                                                                            <asp:ListItem text="British Indian Ocean Territory"/>                                                          
-                                                                            <asp:ListItem text="Brunei"/>                                                          
-                                                                            <asp:ListItem text="Bulgaria"/>                                                          
-                                                                            <asp:ListItem text="Burkina Faso"/>                                                          
-                                                                            <asp:ListItem text="Burundi"/>                                                          
-                                                                            <asp:ListItem text="Cambodia"/>                                                          
-                                                                            <asp:ListItem text="Cameroon"/>                                                          
-                                                                            <asp:ListItem text="Cape Verde"/>                                                          
-                                                                            <asp:ListItem text="Cayman Islands"/>                                                          
-                                                                            <asp:ListItem text="Central African Republic"/>                                                          
-                                                                            <asp:ListItem text="Chad"/>                                                          
-                                                                            <asp:ListItem text="Chile"/>                                                          
-                                                                            <asp:ListItem text="China"/>                                                          
-                                                                            <asp:ListItem text="Christmas Island"/>                                                          
-                                                                            <asp:ListItem text="Cocos (Keeling) Islands"/>                                                          
-                                                                            <asp:ListItem text="Colombia"/>                                                          
-                                                                            <asp:ListItem text="Comoros"/>                                                          
-                                                                            <asp:ListItem text="Congo"/>                                                          
-                                                                            <asp:ListItem text="Cook Islands"/>                                                          
-                                                                            <asp:ListItem text="Costa Rica"/>                                                          
-                                                                            <asp:ListItem text="Croatia"/>                                                          
-                                                                            <asp:ListItem text="Cuba"/>                                                          
-                                                                            <asp:ListItem text="Cyprus"/>                                                          
-                                                                            <asp:ListItem text="Czech Republic"/>                                                          
-                                                                            <asp:ListItem text="Denmark"/>                                                          
-                                                                            <asp:ListItem text="Djibouti"/>                                                          
-                                                                            <asp:ListItem text="Dominica"/>                                                          
-                                                                            <asp:ListItem text="Dominican Republic"/>                                                          
-                                                                            <asp:ListItem text="East Timor"/>                                                          
-                                                                            <asp:ListItem text="Ecuador"/>                                                          
-                                                                            <asp:ListItem text="Educational"/>                                                          
-                                                                            <asp:ListItem text="Egypt"/>                                                          
-                                                                            <asp:ListItem text="El Salvador"/>                                                          
-                                                                            <asp:ListItem text="Equatorial Guinea"/>                                                          
-                                                                            <asp:ListItem text="Eritrea"/>                                                          
-                                                                            <asp:ListItem text="Estonia"/>                                                          
-                                                                            <asp:ListItem text="Ethiopia"/>                                                          
-                                                                            <asp:ListItem text="Falkland Islands"/>                                                          
-                                                                            <asp:ListItem text="Faroe Islands"/>                                                          
-                                                                            <asp:ListItem text="Fiji"/>                                                          
-                                                                            <asp:ListItem text="Finland"/>                                                          
-                                                                            <asp:ListItem text="Former Czechoslovakia"/>                                                          
-                                                                            <asp:ListItem text="Former USSR"/>                                                          
-                                                                            <asp:ListItem text="France"/>                                                          
-                                                                            <asp:ListItem text="French Guyana"/>                                                          
-                                                                            <asp:ListItem text="French Southern Territories"/>                                                          
-                                                                            <asp:ListItem text="Gabon"/>                                                          
-                                                                            <asp:ListItem text="Gambia"/>                                                          
-                                                                            <asp:ListItem text="Georgia"/>                                                          
-                                                                            <asp:ListItem text="Germany"/>                                                          
-                                                                            <asp:ListItem text="Ghana"/>                                                          
-                                                                            <asp:ListItem text="Gibraltar"/>                                                          
-                                                                            <asp:ListItem text="Great Britain"/>                                                          
-                                                                            <asp:ListItem text="Greece"/>                                                          
-                                                                            <asp:ListItem text="Greenland"/>                                                          
-                                                                            <asp:ListItem text="Grenada"/>                                                          
-                                                                            <asp:ListItem text="Guadeloupe (French)"/>                                                          
-                                                                            <asp:ListItem text="Guam (USA)"/>                                                          
-                                                                            <asp:ListItem text="Guatemala"/>                                                          
-                                                                            <asp:ListItem text="Guinea"/>                                                          
-                                                                            <asp:ListItem text="Guinea-Bissau"/>                                                          
-                                                                            <asp:ListItem text="Guyana"/>                                                          
-                                                                            <asp:ListItem text="Haiti"/>                                                          
-                                                                            <asp:ListItem text="Heard and McDonald Islands"/>                                                          
-                                                                            <asp:ListItem text="Holy See (Vatican City State)"/>                                                          
-                                                                            <asp:ListItem text="Honduras"/>                                                          
-                                                                            <asp:ListItem text="Hungary"/>                                                          
-                                                                            <asp:ListItem text="Iceland"/>                                                          
-                                                                            <asp:ListItem text="India"/>                                                          
-                                                                            <asp:ListItem text="Indonesia"/>                                                          
-                                                                            <asp:ListItem text="Iran"/>                                                          
-                                                                            <asp:ListItem text="Iraq"/>                                                          
-                                                                            <asp:ListItem text="Ireland"/>                                                          
-                                                                            <asp:ListItem text="Israel"/>                                                          
-                                                                            <asp:ListItem text="Italy"/>                                                          
-                                                                            <asp:ListItem text="Ivory Coast (Cote D'Ivoire)"/>                                                          
-                                                                            <asp:ListItem text="Jamaica"/>                                                          
-                                                                            <asp:ListItem text="Japan"/>                                                          
-                                                                            <asp:ListItem text="Jordan"/>                                                          
-                                                                            <asp:ListItem text="Kazakhstan"/>                                                          
-                                                                            <asp:ListItem text="Kenya"/>                                                          
-                                                                            <asp:ListItem text="Kiribati"/>                                                          
-                                                                            <asp:ListItem text="Kuwait"/>                                                          
-                                                                            <asp:ListItem text="Kyrgyz Republic (Kyrgyzstan)"/>                                                          
-                                                                            <asp:ListItem text="Laos"/>                                                          
-                                                                            <asp:ListItem text="Latvia"/>                                                          
-                                                                            <asp:ListItem text="Lebanon"/>                                                          
-                                                                            <asp:ListItem text="Lesotho"/>                                                          
-                                                                            <asp:ListItem text="Liberia"/>                                                          
-                                                                            <asp:ListItem text="Libya"/>                                                          
-                                                                            <asp:ListItem text="Liechtenstein"/>                                                          
-                                                                            <asp:ListItem text="Lithuania"/>                                                          
-                                                                            <asp:ListItem text="Luxembourg"/>                                                          
-                                                                            <asp:ListItem text="Macau"/>                                                          
-                                                                            <asp:ListItem text="Macedonia"/>                                                          
-                                                                            <asp:ListItem text="Madagascar"/>                                                          
-                                                                            <asp:ListItem text="Malawi"/>                                                          
-                                                                            <asp:ListItem text="Malaysia"/>                                                          
-                                                                            <asp:ListItem text="Maldives"/>                                                          
-                                                                            <asp:ListItem text="Mali"/>                                                          
-                                                                            <asp:ListItem text="Malta"/>                                                          
-                                                                            <asp:ListItem text="Marshall Islands"/>                                                          
-                                                                            <asp:ListItem text="Martinique (French)"/>                                                          
-                                                                            <asp:ListItem text="Mauritania"/>                                                          
-                                                                            <asp:ListItem text="Mauritius"/>                                                          
-                                                                            <asp:ListItem text="Mayotte"/>                                                          
-                                                                            <asp:ListItem text="Micronesia"/>                                                          
-                                                                            <asp:ListItem text="Moldavia"/>                                                          
-                                                                            <asp:ListItem text="Monaco"/>                                                          
-                                                                            <asp:ListItem text="Mongolia"/>                                                          
-                                                                            <asp:ListItem text="Montserrat"/>                                                          
-                                                                            <asp:ListItem text="Morocco"/>                                                          
-                                                                            <asp:ListItem text="Mozambique"/>                                                          
-                                                                            <asp:ListItem text="Myanmar"/>                                                          
-                                                                            <asp:ListItem text="Namibia"/>                                                          
-                                                                            <asp:ListItem text="Nauru"/>                                                          
-                                                                            <asp:ListItem text="Nepal"/>                                                          
-                                                                            <asp:ListItem text="Netherlands"/>                                                          
-                                                                            <asp:ListItem text="Netherlands Antilles"/>                                                          
-                                                                            <asp:ListItem text="New Caledonia (French)"/>                                                          
-                                                                            <asp:ListItem text="New Zealand"/>                                                          
-                                                                            <asp:ListItem text="Nicaragua"/>                                                          
-                                                                            <asp:ListItem text="Niger"/>                                                          
-                                                                            <asp:ListItem text="Nigeria"/>                                                          
-                                                                            <asp:ListItem text="Niue"/>                                                          
-                                                                            <asp:ListItem text="Norfolk Island"/>                                                          
-                                                                            <asp:ListItem text="Northern Mariana Islands"/>                                                          
-                                                                            <asp:ListItem text="North Korea"/>                                                          
-                                                                            <asp:ListItem text="Norway"/>                                                          
-                                                                            <asp:ListItem text="Oman"/>                                                          
-                                                                            <asp:ListItem text="Pakistan"/>                                                          
-                                                                            <asp:ListItem text="Palau"/>                                                          
-                                                                            <asp:ListItem text="Panama"/>                                                          
-                                                                            <asp:ListItem text="Papua New Guinea"/>                                                          
-                                                                            <asp:ListItem text="Paraguay"/>                                                          
-                                                                            <asp:ListItem text="Peru"/>                                                          
-                                                                            <asp:ListItem text="Philippines"/>                                                          
-                                                                            <asp:ListItem text="Pitcairn Island"/>                                                          
-                                                                            <asp:ListItem text="Poland"/>                                                          
-                                                                            <asp:ListItem text="Polynesia (French)"/>                                                          
-                                                                            <asp:ListItem text="Portugal"/>                                                          
-                                                                            <asp:ListItem text="Puerto Rico"/>                                                          
-                                                                            <asp:ListItem text="Qatar"/>                                                          
-                                                                            <asp:ListItem text="Reunion (French)"/>                                                          
-                                                                            <asp:ListItem text="Romania"/>                                                          
-                                                                            <asp:ListItem text="Russian Federation"/>                                                          
-                                                                            <asp:ListItem text="Rwanda"/>                                                          
-                                                                            <asp:ListItem text="Saint Helena"/>                                                          
-                                                                            <asp:ListItem text="Saint Kitts &amp; Nevis Anguilla"/>                                                          
-                                                                            <asp:ListItem text="Saint Lucia"/>                                                          
-                                                                            <asp:ListItem text="Saint Pierre and Miquelon"/>                                                          
-                                                                            <asp:ListItem text="Saint Tome and Principe"/>                                                          
-                                                                            <asp:ListItem text="Saint Vincent &amp; Grenadines"/>                                                          
-                                                                            <asp:ListItem text="Samoa"/>                                                          
-                                                                            <asp:ListItem text="San Marino"/>                                                          
-                                                                            <asp:ListItem text="Saudi Arabia"/>                                                          
-                                                                            <asp:ListItem text="Senegal"/>                                                          
-                                                                            <asp:ListItem text="Seychelles"/>                                                          
-                                                                            <asp:ListItem text="S. Georgia &amp; S. Sandwich Isls."/>                                                          
-                                                                            <asp:ListItem text="Sierra Leone"/>                                                          
-                                                                            <asp:ListItem text="Singapore"/>                                                          
-                                                                            <asp:ListItem text="Slovak Republic"/>                                                          
-                                                                            <asp:ListItem text="Slovenia"/>                                                          
-                                                                            <asp:ListItem text="Solomon Islands"/>                                                          
-                                                                            <asp:ListItem text="Somalia"/>                                                          
-                                                                            <asp:ListItem text="South Africa"/>                                                          
-                                                                            <asp:ListItem text="South Korea"/>                                                          
-                                                                            <asp:ListItem text="Spain"/>                                                          
-                                                                            <asp:ListItem text="Sri Lanka"/>                                                          
-                                                                            <asp:ListItem text="Sudan"/>                                                          
-                                                                            <asp:ListItem text="Suriname"/>                                                          
-                                                                            <asp:ListItem text="Svalbard and Jan Mayen Islands"/>                                                          
-                                                                            <asp:ListItem text="Swaziland"/>                                                          
-                                                                            <asp:ListItem text="Sweden"/>                                                          
-                                                                            <asp:ListItem text="Switzerland"/>                                                          
-                                                                            <asp:ListItem text="Syria"/>                                                          
-                                                                            <asp:ListItem text="Tadjikistan"/>                                                          
-                                                                            <asp:ListItem text="Taiwan"/>                                                          
-                                                                            <asp:ListItem text="Tanzania"/>                                                          
-                                                                            <asp:ListItem text="Thailand"/>                                                          
-                                                                            <asp:ListItem text="Togo"/>                                                          
-                                                                            <asp:ListItem text="Tokelau"/>                                                          
-                                                                            <asp:ListItem text="Tonga"/>                                                          
-                                                                            <asp:ListItem text="Trinidad and Tobago"/>                                                          
-                                                                            <asp:ListItem text="Tunisia"/>                                                          
-                                                                            <asp:ListItem text="Turkey"/>                                                          
-                                                                            <asp:ListItem text="Turkmenistan"/>                                                          
-                                                                            <asp:ListItem text="Turks and Caicos Islands"/>                                                          
-                                                                            <asp:ListItem text="Tuvalu"/>                                                          
-                                                                            <asp:ListItem text="Uganda"/>                                                          
-                                                                            <asp:ListItem text="Ukraine"/>                                                          
-                                                                            <asp:ListItem text="United Arab Emirates"/>                                                          
-                                                                            <asp:ListItem text="United Kingdom"/>                                                          
-                                                                            <asp:ListItem text="Uruguay"/>                                                          
-                                                                            <asp:ListItem text="USA Minor Outlying Islands"/>                                                          
-                                                                            <asp:ListItem text="Uzbekistan"/>                                                          
-                                                                            <asp:ListItem text="Vanuatu"/>                                                          
-                                                                            <asp:ListItem text="Venezuela"/>                                                          
-                                                                            <asp:ListItem text="Vietnam"/>                                                          
-                                                                            <asp:ListItem text="Virgin Islands (British)"/>                                                          
-                                                                            <asp:ListItem text="Virgin Islands (USA)"/>                                                          
-                                                                            <asp:ListItem text="Wallis and Futuna Islands"/>                                                          
-                                                                            <asp:ListItem text="Western Sahara"/>                                                          
-                                                                            <asp:ListItem text="Yemen"/>                                                          
-                                                                            <asp:ListItem text="Yugoslavia"/>                                                          
-                                                                            <asp:ListItem text="Zaire"/>                                                          
-                                                                            <asp:ListItem text="Zambia"/>                                                          
-                                                                            <asp:ListItem text="Zimbabwe"/>                                                          
-                </asp:DropDownList>
-                                                                            <asp:RequiredFieldValidator ID="req_SCountry" ControlToValidate="ddlSCountry" ErrorMessage="*Country is required" runat="server" Display="Dynamic"/></td>
-                                                                      </tr>
-                                                                  </table>
-<table cellpadding="0" cellspacing="0">
-                                                                      <tr bgcolor="#0033FF">
-                                                                        <td colspan="5" valign="top"><h4 class="style2">Mailing Address </h4></td>
-                                                                      </tr>
-                                                                      <tr>
-                                                                        <td rowspan="5"><asp:CheckBox ID="chkMail"  runat="server"/></td>
-                                                                        <td valign="top"><span class="style2">*</span></td>
-                                                                        <td valign="top">Address:</td>
-                                                                        <td><asp:textbox id="tbMAddress" runat="server" MaxLength="50"/>                                                          
-                                                                            <asp:RequiredFieldValidator  ControlToValidate="tbMAddress" ErrorMessage="*Mailing address required" Display="Dynamic" runat="server" /></td>
-                                                                        <td rowspan="5">&nbsp;</td>
-                                                                      </tr>
-                                                                      <tr>
-                                                                        <td><span class="style2">*</span></td>
-                                                                        <td>City: </td>
-                                                                        <td><asp:textbox id="tbMCity" runat="server" MaxLength="20"/>                                                          
-                                                                            <asp:RequiredFieldValidator  ControlToValidate="tbMCity" ErrorMessage="*City required" Display="Dynamic" runat="server" />              </td>
-                                                                      </tr>
-                                                                      <tr>
-                                                                        <td><span class="style2">*</span></td>
-                                                                        <td>State/Province</td>
-                                                                        <td><asp:Dropdownlist runat="server" id="ddlMState">
-                                                                            <asp:ListItem value="" Text="Choose a State"/>                                                          
-                                                                            <asp:ListItem value="AK" text="AK"/>                                                          
-                                                                            <asp:ListItem value="AL" text="AL"/>                                                          
-                                                                            <asp:ListItem value="AR" text="AR"/>                                                          
-                                                                            <asp:ListItem value="AZ" text="AZ"/>                                                          
-                                                                            <asp:ListItem value="CA" text="CA"/>                                                          
-                                                                            <asp:ListItem value="CO" text="CO"/>                                                          
-                                                                            <asp:ListItem value="CT" text="CT"/>                                                          
-                                                                            <asp:ListItem value="DC" text="DC"/>                                                          
-                                                                            <asp:ListItem value="DE" text="DE"/>                                                          
-                                                                            <asp:ListItem value="FL" text="FL"/>                                                          
-                                                                            <asp:ListItem value="GA" text="GA"/>                                                          
-                                                                            <asp:ListItem value="HI" text="HI"/>                                                          
-                                                                            <asp:ListItem value="IA" text="IA"/>                                                          
-                                                                            <asp:ListItem value="ID" text="ID"/>                                                          
-                                                                            <asp:ListItem value="IL" text="IL"/>                                                          
-                                                                            <asp:ListItem value="IN" text="IN"/>                                                          
-                                                                            <asp:ListItem value="KS" text="KS"/>                                                          
-                                                                            <asp:ListItem value="KY" text="KY"/>                                                          
-                                                                            <asp:ListItem value="LA" text="LA"/>                                                          
-                                                                            <asp:ListItem value="MA" text="MA"/>                                                          
-                                                                            <asp:ListItem value="MD" text="MD"/>                                                          
-                                                                            <asp:ListItem value="ME" text="ME"/>                                                          
-                                                                            <asp:ListItem value="MI" text="MI"/>                                                          
-                                                                            <asp:ListItem value="MN" text="MN"/>                                                          
-                                                                            <asp:ListItem value="MO" text="MO"/>                                                          
-                                                                            <asp:ListItem value="MS" text="MS"/>                                                          
-                                                                            <asp:ListItem value="MT" text="MT"/>                                                          
-                                                                            <asp:ListItem value="NC" text="NC"/>                                                          
-                                                                            <asp:ListItem value="ND" text="ND"/>                                                          
-                                                                            <asp:ListItem value="NE" text="NE"/>                                                          
-                                                                            <asp:ListItem value="NH" text="NH"/>                                                          
-                                                                            <asp:ListItem value="NJ" text="NJ"/>                                                          
-                                                                            <asp:ListItem value="NM" text="NM"/>                                                          
-                                                                            <asp:ListItem value="NV" text="NV"/>                                                          
-                                                                            <asp:ListItem value="NY" text="NY"/>                                                          
-                                                                            <asp:ListItem value="OH" text="OH"/>                                                          
-                                                                            <asp:ListItem value="OK" text="OK"/>                                                          
-                                                                            <asp:ListItem value="OR" text="OR"/>                                                          
-                                                                            <asp:ListItem value="PA" text="PA"/>                                                          
-                                                                            <asp:ListItem value="RI" text="RI"/>                                                          
-                                                                            <asp:ListItem value="SC" text="SC"/>                                                          
-                                                                            <asp:ListItem value="SD" text="SD"/>                                                          
-                                                                            <asp:ListItem value="TN" text="TN"/>                                                          
-                                                                            <asp:ListItem value="TX" text="TX"/>                                                          
-                                                                            <asp:ListItem value="UT" text="UT"/>                                                          
-                                                                            <asp:ListItem value="VA" text="VA"/>                                                          
-                                                                            <asp:ListItem value="VT" text="VT"/>                                                          
-                                                                            <asp:ListItem value="WA" text="WA"/>                                                          
-                                                                            <asp:ListItem value="WI" text="WI"/>                                                          
-                                                                            <asp:ListItem value="WV" text="WV"/>                                                          
-                                                                            <asp:ListItem value="WY" text="WY"/>                                                          
-                                                                            <asp:Listitem Value="" Text="_____________"/>                                                          
-                                                                            <asp:ListItem text="US Territories" Value="" />                                                          
-                                                                            <asp:Listitem Value="" Text=" "/>                                                          
-                                                                            <asp:ListItem value="AS" text="AS"/>                                                          
-                                                                            <asp:ListItem value="FM" text="FM"/>                                                          
-                                                                            <asp:ListItem value="GU" text="GU"/>                                                          
-                                                                            <asp:ListItem value="MH" text="MH"/>                                                          
-                                                                            <asp:ListItem value="MP" text="MP"/>                                                          
-                                                                            <asp:ListItem value="PR" text="PR"/>                                                          
-                                                                            <asp:ListItem value="PW" text="PW"/>                                                          
-                                                                            <asp:ListItem value="VI" text="VI"/>                                                          
-                                                                            <asp:Listitem Value="" Text="_____________"/>                                                          
-                                                                            <asp:ListItem text="US Military" Value="" />                                                          
-                                                                            <asp:Listitem Value="" Text=" "/>                                                          
-                                                                            <asp:ListItem value="AA" text="AA"/>                                                          
-                                                                            <asp:ListItem value="AE" text="AE"/>                                                          
-                                                                            <asp:ListItem value="AP" text="AP"/>                                                          
-                                                                            <asp:Listitem Value="" Text="_____________"/>                                                          
-                                                                            <asp:ListItem text="Canada" Value="" />                                                          
-                                                                            <asp:Listitem Value="" Text=" "/>                                                          
-                                                                            <asp:ListItem value="AB" text="AB"/>                                                          
-                                                                            <asp:ListItem value="BC" text="BC"/>                                                          
-                                                                            <asp:ListItem value="MB" text="MB"/>                                                          
-                                                                            <asp:ListItem value="NB" text="NB"/>                                                          
-                                                                            <asp:ListItem value="NL" text="NL"/>                                                          
-                                                                            <asp:ListItem value="NS" text="NS"/>                                                          
-                                                                            <asp:ListItem value="NT" text="NT"/>                                                          
-                                                                            <asp:ListItem value="NU" text="NU"/>                                                          
-                                                                            <asp:ListItem value="ON" text="ON"/>                                                          
-                                                                            <asp:ListItem value="PE" text="PE"/>                                                          
-                                                                            <asp:ListItem value="QC" text="QC"/>                                                          
-                                                                            <asp:ListItem value="SK" text="SK"/>                                                          
-                                                                            <asp:ListItem value="YT" text="YT"/>                                                          
-                                                                            <asp:Listitem Value="" Text="_____________"/>                                                          
-                                                                            <asp:ListItem text="Other Countries" Value="" />                                                          
-                                                                            <asp:Listitem Value="" Text=" "/>                                                          
-                                                                            <asp:ListItem value="None" text="None"/>                                                          
-                </Asp:DropdownList>
-                                                                            <asp:RequiredFieldValidator ID="req_MState" ControlToValidate="ddlMState" ErrorMessage="*State is required. Select None if State does not apply to you"  runat="server" Display="Dynamic"/>              </td>
-                                                                      </tr>
-                                                                      <tr>
-                                                                        <td><span class="style2">*</span></td>
-                                                                        <td>Zip Code</td>
-                                                                        <td><asp:textbox id="tbMZip" runat="server" MaxLength="20"/></td>
-                                                                      </tr>
-                                                                      <tr>
-                                                                        <td valign="top"><span class="style2">*</span></td>
-                                                                        <td valign="top">Country</td>
-                                                                        <td><asp:DropdownList id="ddlMCountry" runat="server" >
-                                                                            <asp:ListItem text="United States"/>                                                          
-                                                                            <asp:ListItem text="Canada"/>                                                          
-                                                                            <asp:ListItem text="Mexico"/>                                                          
-                                                                            <asp:ListItem text="Afghanistan"/>                                                          
-                                                                            <asp:ListItem text="Albania"/>                                                          
-                                                                            <asp:ListItem text="Algeria"/>                                                          
-                                                                            <asp:ListItem text="American Samoa"/>                                                          
-                                                                            <asp:ListItem text="Andorra"/>                                                          
-                                                                            <asp:ListItem text="Angola"/>                                                          
-                                                                            <asp:ListItem text="Anguilla"/>                                                          
-                                                                            <asp:ListItem text="Antarctica"/>                                                          
-                                                                            <asp:ListItem text="Antigua and Barbuda"/>                                                          
-                                                                            <asp:ListItem text="Argentina"/>                                                          
-                                                                            <asp:ListItem text="Armenia"/>                                                          
-                                                                            <asp:ListItem text="Aruba"/>                                                          
-                                                                            <asp:ListItem text="Australia"/>                                                          
-                                                                            <asp:ListItem text="Austria"/>                                                          
-                                                                            <asp:ListItem text="Azerbaijan"/>                                                          
-                                                                            <asp:ListItem text="Bahamas"/>                                                          
-                                                                            <asp:ListItem text="Bahrain"/>                                                          
-                                                                            <asp:ListItem text="Bangladesh"/>                                                          
-                                                                            <asp:ListItem text="Barbados"/>                                                          
-                                                                            <asp:ListItem text="Belarus"/>                                                          
-                                                                            <asp:ListItem text="Belgium"/>                                                          
-                                                                            <asp:ListItem text="Belize"/>                                                          
-                                                                            <asp:ListItem text="Benin"/>                                                          
-                                                                            <asp:ListItem text="Bermuda"/>                                                          
-                                                                            <asp:ListItem text="Bhutan"/>                                                          
-                                                                            <asp:ListItem text="Bolivia"/>                                                          
-                                                                            <asp:ListItem text="Bosnia-Herzegovina"/>                                                          
-                                                                            <asp:ListItem text="Botswana"/>                                                          
-                                                                            <asp:ListItem text="Bouvet Island"/>                                                          
-                                                                            <asp:ListItem text="Brazil"/>                                                          
-                                                                            <asp:ListItem text="British Indian Ocean Territory"/>                                                          
-                                                                            <asp:ListItem text="Brunei"/>                                                          
-                                                                            <asp:ListItem text="Bulgaria"/>                                                          
-                                                                            <asp:ListItem text="Burkina Faso"/>                                                          
-                                                                            <asp:ListItem text="Burundi"/>                                                          
-                                                                            <asp:ListItem text="Cambodia"/>                                                          
-                                                                            <asp:ListItem text="Cameroon"/>                                                          
-                                                                            <asp:ListItem text="Cape Verde"/>                                                          
-                                                                            <asp:ListItem text="Cayman Islands"/>                                                          
-                                                                            <asp:ListItem text="Central African Republic"/>                                                          
-                                                                            <asp:ListItem text="Chad"/>                                                          
-                                                                            <asp:ListItem text="Chile"/>                                                          
-                                                                            <asp:ListItem text="China"/>                                                          
-                                                                            <asp:ListItem text="Christmas Island"/>                                                          
-                                                                            <asp:ListItem text="Cocos (Keeling) Islands"/>                                                          
-                                                                            <asp:ListItem text="Colombia"/>                                                          
-                                                                            <asp:ListItem text="Comoros"/>                                                          
-                                                                            <asp:ListItem text="Congo"/>                                                          
-                                                                            <asp:ListItem text="Cook Islands"/>                                                          
-                                                                            <asp:ListItem text="Costa Rica"/>                                                          
-                                                                            <asp:ListItem text="Croatia"/>                                                          
-                                                                            <asp:ListItem text="Cuba"/>                                                          
-                                                                            <asp:ListItem text="Cyprus"/>                                                          
-                                                                            <asp:ListItem text="Czech Republic"/>                                                          
-                                                                            <asp:ListItem text="Denmark"/>                                                          
-                                                                            <asp:ListItem text="Djibouti"/>                                                          
-                                                                            <asp:ListItem text="Dominica"/>                                                          
-                                                                            <asp:ListItem text="Dominican Republic"/>                                                          
-                                                                            <asp:ListItem text="East Timor"/>                                                          
-                                                                            <asp:ListItem text="Ecuador"/>                                                          
-                                                                            <asp:ListItem text="Educational"/>                                                          
-                                                                            <asp:ListItem text="Egypt"/>                                                          
-                                                                            <asp:ListItem text="El Salvador"/>                                                          
-                                                                            <asp:ListItem text="Equatorial Guinea"/>                                                          
-                                                                            <asp:ListItem text="Eritrea"/>                                                          
-                                                                            <asp:ListItem text="Estonia"/>                                                          
-                                                                            <asp:ListItem text="Ethiopia"/>                                                          
-                                                                            <asp:ListItem text="Falkland Islands"/>                                                          
-                                                                            <asp:ListItem text="Faroe Islands"/>                                                          
-                                                                            <asp:ListItem text="Fiji"/>                                                          
-                                                                            <asp:ListItem text="Finland"/>                                                          
-                                                                            <asp:ListItem text="Former Czechoslovakia"/>                                                          
-                                                                            <asp:ListItem text="Former USSR"/>                                                          
-                                                                            <asp:ListItem text="France"/>                                                          
-                                                                            <asp:ListItem text="French Guyana"/>                                                          
-                                                                            <asp:ListItem text="French Southern Territories"/>                                                          
-                                                                            <asp:ListItem text="Gabon"/>                                                          
-                                                                            <asp:ListItem text="Gambia"/>                                                          
-                                                                            <asp:ListItem text="Georgia"/>                                                          
-                                                                            <asp:ListItem text="Germany"/>                                                          
-                                                                            <asp:ListItem text="Ghana"/>                                                          
-                                                                            <asp:ListItem text="Gibraltar"/>                                                          
-                                                                            <asp:ListItem text="Great Britain"/>                                                          
-                                                                            <asp:ListItem text="Greece"/>                                                          
-                                                                            <asp:ListItem text="Greenland"/>                                                          
-                                                                            <asp:ListItem text="Grenada"/>                                                          
-                                                                            <asp:ListItem text="Guadeloupe (French)"/>                                                          
-                                                                            <asp:ListItem text="Guam (USA)"/>                                                          
-                                                                            <asp:ListItem text="Guatemala"/>                                                          
-                                                                            <asp:ListItem text="Guinea"/>                                                          
-                                                                            <asp:ListItem text="Guinea-Bissau"/>                                                          
-                                                                            <asp:ListItem text="Guyana"/>                                                          
-                                                                            <asp:ListItem text="Haiti"/>                                                          
-                                                                            <asp:ListItem text="Heard and McDonald Islands"/>                                                          
-                                                                            <asp:ListItem text="Holy See (Vatican City State)"/>                                                          
-                                                                            <asp:ListItem text="Honduras"/>                                                          
-                                                                            <asp:ListItem text="Hungary"/>                                                          
-                                                                            <asp:ListItem text="Iceland"/>                                                          
-                                                                            <asp:ListItem text="India"/>                                                          
-                                                                            <asp:ListItem text="Indonesia"/>                                                          
-                                                                            <asp:ListItem text="Iran"/>                                                          
-                                                                            <asp:ListItem text="Iraq"/>                                                          
-                                                                            <asp:ListItem text="Ireland"/>                                                          
-                                                                            <asp:ListItem text="Israel"/>                                                          
-                                                                            <asp:ListItem text="Italy"/>                                                          
-                                                                            <asp:ListItem text="Ivory Coast (Cote D'Ivoire)"/>                                                          
-                                                                            <asp:ListItem text="Jamaica"/>                                                          
-                                                                            <asp:ListItem text="Japan"/>                                                          
-                                                                            <asp:ListItem text="Jordan"/>                                                          
-                                                                            <asp:ListItem text="Kazakhstan"/>                                                          
-                                                                            <asp:ListItem text="Kenya"/>                                                          
-                                                                            <asp:ListItem text="Kiribati"/>                                                          
-                                                                            <asp:ListItem text="Kuwait"/>                                                          
-                                                                            <asp:ListItem text="Kyrgyz Republic (Kyrgyzstan)"/>                                                          
-                                                                            <asp:ListItem text="Laos"/>                                                          
-                                                                            <asp:ListItem text="Latvia"/>                                                          
-                                                                            <asp:ListItem text="Lebanon"/>                                                          
-                                                                            <asp:ListItem text="Lesotho"/>                                                          
-                                                                            <asp:ListItem text="Liberia"/>                                                          
-                                                                            <asp:ListItem text="Libya"/>                                                          
-                                                                            <asp:ListItem text="Liechtenstein"/>                                                          
-                                                                            <asp:ListItem text="Lithuania"/>                                                          
-                                                                            <asp:ListItem text="Luxembourg"/>                                                          
-                                                                            <asp:ListItem text="Macau"/>                                                          
-                                                                            <asp:ListItem text="Macedonia"/>                                                          
-                                                                            <asp:ListItem text="Madagascar"/>                                                          
-                                                                            <asp:ListItem text="Malawi"/>                                                          
-                                                                            <asp:ListItem text="Malaysia"/>                                                          
-                                                                            <asp:ListItem text="Maldives"/>                                                          
-                                                                            <asp:ListItem text="Mali"/>                                                          
-                                                                            <asp:ListItem text="Malta"/>                                                          
-                                                                            <asp:ListItem text="Marshall Islands"/>                                                          
-                                                                            <asp:ListItem text="Martinique (French)"/>                                                          
-                                                                            <asp:ListItem text="Mauritania"/>                                                          
-                                                                            <asp:ListItem text="Mauritius"/>                                                          
-                                                                            <asp:ListItem text="Mayotte"/>                                                          
-                                                                            <asp:ListItem text="Micronesia"/>                                                          
-                                                                            <asp:ListItem text="Moldavia"/>                                                          
-                                                                            <asp:ListItem text="Monaco"/>                                                          
-                                                                            <asp:ListItem text="Mongolia"/>                                                          
-                                                                            <asp:ListItem text="Montserrat"/>                                                          
-                                                                            <asp:ListItem text="Morocco"/>                                                          
-                                                                            <asp:ListItem text="Mozambique"/>                                                          
-                                                                            <asp:ListItem text="Myanmar"/>                                                          
-                                                                            <asp:ListItem text="Namibia"/>                                                          
-                                                                            <asp:ListItem text="Nauru"/>                                                          
-                                                                            <asp:ListItem text="Nepal"/>                                                          
-                                                                            <asp:ListItem text="Netherlands"/>                                                          
-                                                                            <asp:ListItem text="Netherlands Antilles"/>                                                          
-                                                                            <asp:ListItem text="New Caledonia (French)"/>                                                          
-                                                                            <asp:ListItem text="New Zealand"/>                                                          
-                                                                            <asp:ListItem text="Nicaragua"/>                                                          
-                                                                            <asp:ListItem text="Niger"/>                                                          
-                                                                            <asp:ListItem text="Nigeria"/>                                                          
-                                                                            <asp:ListItem text="Niue"/>                                                          
-                                                                            <asp:ListItem text="Norfolk Island"/>                                                          
-                                                                            <asp:ListItem text="Northern Mariana Islands"/>                                                          
-                                                                            <asp:ListItem text="North Korea"/>                                                          
-                                                                            <asp:ListItem text="Norway"/>                                                          
-                                                                            <asp:ListItem text="Oman"/>                                                          
-                                                                            <asp:ListItem text="Pakistan"/>                                                          
-                                                                            <asp:ListItem text="Palau"/>                                                          
-                                                                            <asp:ListItem text="Panama"/>                                                          
-                                                                            <asp:ListItem text="Papua New Guinea"/>                                                          
-                                                                            <asp:ListItem text="Paraguay"/>                                                          
-                                                                            <asp:ListItem text="Peru"/>                                                          
-                                                                            <asp:ListItem text="Philippines"/>                                                          
-                                                                            <asp:ListItem text="Pitcairn Island"/>                                                          
-                                                                            <asp:ListItem text="Poland"/>                                                          
-                                                                            <asp:ListItem text="Polynesia (French)"/>                                                          
-                                                                            <asp:ListItem text="Portugal"/>                                                          
-                                                                            <asp:ListItem text="Puerto Rico"/>                                                          
-                                                                            <asp:ListItem text="Qatar"/>                                                          
-                                                                            <asp:ListItem text="Reunion (French)"/>                                                          
-                                                                            <asp:ListItem text="Romania"/>                                                          
-                                                                            <asp:ListItem text="Russian Federation"/>                                                          
-                                                                            <asp:ListItem text="Rwanda"/>                                                          
-                                                                            <asp:ListItem text="Saint Helena"/>                                                          
-                                                                            <asp:ListItem text="Saint Kitts &amp; Nevis Anguilla"/>                                                          
-                                                                            <asp:ListItem text="Saint Lucia"/>                                                          
-                                                                            <asp:ListItem text="Saint Pierre and Miquelon"/>                                                          
-                                                                            <asp:ListItem text="Saint Tome and Principe"/>                                                          
-                                                                            <asp:ListItem text="Saint Vincent &amp; Grenadines"/>                                                          
-                                                                            <asp:ListItem text="Samoa"/>                                                          
-                                                                            <asp:ListItem text="San Marino"/>                                                          
-                                                                            <asp:ListItem text="Saudi Arabia"/>                                                          
-                                                                            <asp:ListItem text="Senegal"/>                                                          
-                                                                            <asp:ListItem text="Seychelles"/>                                                          
-                                                                            <asp:ListItem text="S. Georgia &amp; S. Sandwich Isls."/>                                                          
-                                                                            <asp:ListItem text="Sierra Leone"/>                                                          
-                                                                            <asp:ListItem text="Singapore"/>                                                          
-                                                                            <asp:ListItem text="Slovak Republic"/>                                                          
-                                                                            <asp:ListItem text="Slovenia"/>                                                          
-                                                                            <asp:ListItem text="Solomon Islands"/>                                                          
-                                                                            <asp:ListItem text="Somalia"/>                                                          
-                                                                            <asp:ListItem text="South Africa"/>                                                          
-                                                                            <asp:ListItem text="South Korea"/>                                                          
-                                                                            <asp:ListItem text="Spain"/>                                                          
-                                                                            <asp:ListItem text="Sri Lanka"/>                                                          
-                                                                            <asp:ListItem text="Sudan"/>                                                          
-                                                                            <asp:ListItem text="Suriname"/>                                                          
-                                                                            <asp:ListItem text="Svalbard and Jan Mayen Islands"/>                                                          
-                                                                            <asp:ListItem text="Swaziland"/>                                                          
-                                                                            <asp:ListItem text="Sweden"/>                                                          
-                                                                            <asp:ListItem text="Switzerland"/>                                                          
-                                                                            <asp:ListItem text="Syria"/>                                                          
-                                                                            <asp:ListItem text="Tadjikistan"/>                                                          
-                                                                            <asp:ListItem text="Taiwan"/>                                                          
-                                                                            <asp:ListItem text="Tanzania"/>                                                          
-                                                                            <asp:ListItem text="Thailand"/>                                                          
-                                                                            <asp:ListItem text="Togo"/>                                                          
-                                                                            <asp:ListItem text="Tokelau"/>                                                          
-                                                                            <asp:ListItem text="Tonga"/>                                                          
-                                                                            <asp:ListItem text="Trinidad and Tobago"/>                                                          
-                                                                            <asp:ListItem text="Tunisia"/>                                                          
-                                                                            <asp:ListItem text="Turkey"/>                                                          
-                                                                            <asp:ListItem text="Turkmenistan"/>                                                          
-                                                                            <asp:ListItem text="Turks and Caicos Islands"/>                                                          
-                                                                            <asp:ListItem text="Tuvalu"/>                                                          
-                                                                            <asp:ListItem text="Uganda"/>                                                          
-                                                                            <asp:ListItem text="Ukraine"/>                                                          
-                                                                            <asp:ListItem text="United Arab Emirates"/>                                                          
-                                                                            <asp:ListItem text="United Kingdom"/>                                                          
-                                                                            <asp:ListItem text="Uruguay"/>                                                          
-                                                                            <asp:ListItem text="USA Minor Outlying Islands"/>                                                          
-                                                                            <asp:ListItem text="Uzbekistan"/>                                                          
-                                                                            <asp:ListItem text="Vanuatu"/>                                                          
-                                                                            <asp:ListItem text="Venezuela"/>                                                          
-                                                                            <asp:ListItem text="Vietnam"/>                                                          
-                                                                            <asp:ListItem text="Virgin Islands (British)"/>                                                          
-                                                                            <asp:ListItem text="Virgin Islands (USA)"/>                                                          
-                                                                            <asp:ListItem text="Wallis and Futuna Islands"/>                                                          
-                                                                            <asp:ListItem text="Western Sahara"/>                                                          
-                                                                            <asp:ListItem text="Yemen"/>                                                          
-                                                                            <asp:ListItem text="Yugoslavia"/>                                                          
-                                                                            <asp:ListItem text="Zaire"/>                                                          
-                                                                            <asp:ListItem text="Zambia"/>                                                          
-                                                                            <asp:ListItem text="Zimbabwe"/>                                                          
-                </asp:DropDownList>
-                                                                            <asp:RequiredFieldValidator ID="req_MCountry" ControlToValidate="ddlMCountry" ErrorMessage="*Country is required" runat="server" Display="Dynamic"/>              </td>
-                                                                      </tr>
-                                                                  </table>
-                                                            <br /><asp:Panel ID="pnlAdditional" runat="server" Visible="false">
-                                                            <table width="100%" cellpadding="0" cellspacing="0">
-                                                              <tr bgcolor="#0033FF">
-                                                                <td colspan="5" valign="top"><h4 class="style2">Additional Questions-Answering these questions will help us help you grow your business and save more lives</h4></td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td rowspan="29">&nbsp;</td>
-                                                                <td colspan="2" valign="top"><p style="margin:10px;"><strong>Organization Information</strong></p></td>
-                                                                <td>&nbsp;</td>
-                                                                <td rowspan="29">&nbsp;</td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td valign="top">&nbsp;</td>
-                                                                <td valign="top" nowrap="nowrap">Organization Capacity (average):</td>
-                                                                <td><asp:Dropdownlist runat="server" id="ddlcapacity">
-                                                                 <asp:ListItem value="" Text=""/>
-                                                                                                                                  
-                                                                  <asp:ListItem value="0-25" text="0-25"/>                                                                
-                                                                  <asp:ListItem value="25-55" text="26-55"/>
-                                                                  <asp:ListItem value="56-100" text="56-100"/>                                                                <asp:ListItem value="101+" text="101+"/>
-                                                                                                                                  
-</Asp:DropdownList></td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td valign="top">&nbsp;</td>
-                                                                <td valign="top">Primary Dog Food Brand Used:</td>
-                                                                <td><asp:Dropdownlist runat="server" id="ddlFood_dog">
-                               
-                                                                  <asp:ListItem value="" Text=""/>                                                                
-                                                                   
-                                                                    <asp:ListItem value="Blue Buffalo" text="Blue Buffalo"/>
-                                                            <asp:ListItem value="Beneful" text="Beneful"/>
-                                                                     <asp:ListItem value="Eukanuba" text="Eukanuba"/>
-                                                                  <asp:ListItem value="Iams" text="Iams"/>                                                                 <asp:ListItem value="Natura" text="Natura"/>
-                                                                  <asp:ListItem value="Purina Chows" text="Purina Chows"/>                                                                
-                                                                  <asp:ListItem value="Purina ONE" text="Purina ONE"/>                                                                
-                                                                  <asp:ListItem value="Pedigree" text="Pedigree"/>                                                                
-                                                                  <asp:ListItem value="Science Diet" text="Science Diet"/>                                                                
-                                                                  <asp:ListItem value="Store brands" text="Store brands"/>                                                                
-                                                                  <asp:ListItem value="Other" text="Other"/>                                                                
-                                                                                                                                  
-</Asp:DropdownList></td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td valign="top">&nbsp;</td>
-                                                                <td valign="top">Primary Cat Food Brand Used:</td>
-                                                                <td><asp:Dropdownlist runat="server" id="ddlFood_cat">
-                                                                  <asp:ListItem value="" Text=""/>                                                                 <asp:ListItem value="Eukanuba" text="Eukanuba"/>
-                                                                   <asp:ListItem value="Blue Buffalo" text="Blue Buffalo"/>
-                                                                   <asp:ListItem value="Fancy Feast" text="Fancy Feast"/>
-                                                                   <asp:ListItem value="Friskies" text="Friskies"/>
-                                                                  <asp:ListItem value="Iams" text="Iams"/>                                                                
-                                                                  <asp:ListItem value="Meow Mix" text="Meow Mix"/>                                                                 <asp:ListItem value="Natura" text="Natura"/>
-                                                                   <asp:ListItem value="Purina Chows" text="Purina Chows"/>                                                                
-                                                                  <asp:ListItem value="Science Diet" text="Science Diet"/>                                                                
-                                                                  <asp:ListItem value="Store brand" text="Store brand"/>
-                                                                   <asp:ListItem value="Whiskas" text="Whiskas"/>
-                                                                    <asp:ListItem value="Other" text="Other"/>                                                                
-                                                                                                                                  
-</Asp:DropdownList></td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td valign="top">&nbsp;</td>
-                                                                <td valign="top" nowrap="nowrap">Prmary Source of Funding for Food:</td>
-                                                                <td><asp:Dropdownlist runat="server" id="ddlFood_source">
-                                                             
-                                                                  <asp:ListItem value="" Text=""/>                                                                
-                                                                  <asp:ListItem value="Community Donations" text="Community Donations"/>                                                                
-                                                                  <asp:ListItem value="Corporate Donations" text="Corporate Donations"/>                                                                
-                                                                  <asp:ListItem value="Fundraisers" text="Fundraisers"/>                                                                
-                                                                  <asp:ListItem value="Other" text="Other"/>                                                                
-                                                                                                                                
-</Asp:DropdownList></td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td valign="top">&nbsp;</td>
-                                                                <td valign="top" nowrap="nowrap">Do you have a Veterinarian on staff?</td>
-                                                                <td><asp:Dropdownlist runat="server" id="ddlVet">
-                                                                  <asp:ListItem value="" Text=""/>                                                                
-                                                                  <asp:ListItem value="Yes" text="Yes"/>
-                                                                   <asp:ListItem value="No" text="No"/>                                                                
-                                                                                                                                  
-</Asp:DropdownList></td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td valign="top">&nbsp;</td>
-                                                                <td valign="top">If no, how do you get Veterinary Services?</td>
-                                                                <td><asp:textbox id="tbWhereVet" runat="server" MaxLength="250"/></td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td valign="top">&nbsp;</td>
-                                                                <td valign="top">Which animals do you help?</td>
-                                                                <td><asp:CheckBox ID="chkDog"  runat="server" Text='Dogs'/>
-                                                                <asp:CheckBox ID="chkCat"  runat="server" Text='Cats'/>
-                                                                <asp:CheckBox ID="chkReptile"  runat="server" Text='Reptiles'/>
-                                                                <asp:CheckBox ID="chkOther"  runat="server" Text='Other'/></td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td valign="top">&nbsp;</td>
-                                                                <td valign="top">Do you have experience with offsite adoption events?</td>
-                                                                <td><asp:Dropdownlist runat="server" id="ddloffsite_events">
-                                                                  <asp:ListItem value="" Text=""/>                                                                
-                                                                  <asp:ListItem value="Yes" text="Yes"/>                                                                
-                                                                  <asp:ListItem value="No" text="No"/>                                                                
-</Asp:DropdownList></td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td valign="top">&nbsp;</td>
-                                                                <td valign="top">Do you have a mobile adoption vehicle?</td>
-                                                                <td><asp:Dropdownlist runat="server" id="ddlmobile_vehicle">
-                                                                  <asp:ListItem value="" Text=""/>                                                                
-                                                                  <asp:ListItem value="Yes" text="Yes"/>                                                                
-                                                                  <asp:ListItem value="No" text="No"/>                                                                
-</Asp:DropdownList></td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td valign="top">&nbsp;</td>
-                                                                <td valign="top">Have you worked with local retailers for adoption events?</td>
-                                                                <td><asp:Dropdownlist runat="server" id="ddlwork_with_retailers">
-                                                                 <asp:ListItem value="" Text=""/>                                                                
-                                                                  <asp:ListItem value="Yes" text="Yes"/>
-                                                                   <asp:ListItem value="No" text="No"/>                                                                
-</Asp:DropdownList></td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td>&nbsp;</td>
-                                                                <td>If Yes, whom?</td>
-                                                                <td><asp:textbox id="tbwhich_retailers" runat="server" MaxLength="250"/></td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td>&nbsp;</td>
-                                                                <td valign="middle"><p>&nbsp;</p>                                                                </td>
-                                                                <td><asp:Dropdownlist runat="server" id="ddlwant_adoption_retailer" Visible="false">
-                                                                    <asp:ListItem value="" Text=""/>                                                                
-                                                                  <asp:ListItem value="Yes" text="Yes"/>
-                                                                   <asp:ListItem value="No" text="No"/>                                                            
-                                                                </Asp:DropdownList></td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td colspan="2"><p  style="margin:10px;"><strong>Marketing</strong></p></td>
-                                                                <td>&nbsp;</td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td>&nbsp;</td>
-                                                                <td>Do you have a Public Relations person (volunteer, part/full time?</td>
-                                                                <td><asp:Dropdownlist runat="server" id="ddlpr_person">
-                                                                   <asp:ListItem value="" Text=""/>                                                                
-                                                                  <asp:ListItem value="Yes" text="Yes"/>
-                                                                   <asp:ListItem value="No" text="No"/>                                                                
-</Asp:DropdownList></td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td valign="top">&nbsp;</td>
-                                                                <td valign="top">Do you have a relationship with your local media (TV, newspaper, etc)?</td>
-                                                                <td><asp:Dropdownlist runat="server" id="ddlmedia_relations">
-                                                                  <asp:ListItem value="" Text=""/>                                                                
-                                                                  <asp:ListItem value="Yes" text="Yes"/>
-                                                                   <asp:ListItem value="No" text="No"/>                                                                
-</Asp:DropdownList></td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td valign="top">&nbsp;</td>
-                                                                <td valign="top">Do you place ads on a regular basis?</td>
-                                                                <td><asp:Dropdownlist runat="server" id="ddlplace_ads">
-                                                                   <asp:ListItem value="" Text=""/>                                                                
-                                                                  <asp:ListItem value="Yes" text="Yes"/>
-                                                                   <asp:ListItem value="No" text="No"/>                                                                
-</Asp:DropdownList></td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td valign="top">&nbsp;</td>
-                                                                <td valign="top">If yes, where?</td>
-                                                                <td><asp:textbox id="tbwhere_ads" runat="server" MaxLength="250"/></td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td valign="top">&nbsp;</td>
-                                                                <td valign="top">If no, are you interested in being teamed with a local retailer?</td>
-                                                                <td><asp:Dropdownlist runat="server" id="ddlwant_marketing_retailer">
-                                                                   <asp:ListItem value="" Text=""/>                                                                
-                                                                  <asp:ListItem value="Yes" text="Yes"/>
-                                                                   <asp:ListItem value="No" text="No"/>                                                                
-</Asp:DropdownList></td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td valign="top">&nbsp;</td>
-                                                                <td valign="top">Have you attended an <a href="http://www.animalcentero.org/ACESConference" target="_blank">ACES International Conference</a>?</td>
-                                                             <td><asp:Dropdownlist runat="server" id="ddlattended_ACES">
-                                                                   <asp:ListItem value="" Text=""/>                                                                
-                                                                  <asp:ListItem value="Yes" text="Yes"/>
-                                                                   <asp:ListItem value="No" text="No"/>                                                                
-</Asp:DropdownList></td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td valign="top">&nbsp;</td>
-                                                                <td valign="top">Are you interested in attending an <a href="http://www.animalcentero.org/ACESConference" target="_blank">ACES International Conference</a>?</td>
-                                                                <td><asp:Dropdownlist runat="server" id="ddlinterested_ACES">
-                                                                  <asp:ListItem value="" Text=""/>                                                                
-                                                                  <asp:ListItem value="Yes" text="Yes"/>
-                                                                   <asp:ListItem value="No" text="No"/>
-</Asp:DropdownList></td>
-                                                              </tr>
-                                                              
-                                                              <tr>
-                                                                <td valign="middle"><asp:CheckBox ID="chkIams_optin"  runat="server" Visible="false"/></td>
-                                                                <td colspan="2" valign="top">&nbsp;</td>
-                                                              </tr>
-                                                            </table>
-                                                            </asp:Panel>
-                                                            <asp:Panel ID="pnlAdmin" runat="server" Visible="false">
-                                                            <table width="100%" cellpadding="0" cellspacing="0">
-                                                              <tr bgcolor="#0033FF">
-                                                                <td colspan="5" valign="top"><h4 class="style2">Admin</h4></td>
-                                                              </tr>
-                                                              <tr>
-                                                                
-                                                                <td valign="top">&nbsp;</td>
-                                                                <td valign="top" nowrap="nowrap"><!--2012 Participant--></td>
-                                                                <td><asp:CheckBox ID="chkParticipant_2012"  runat="server" Visible="false"/></td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td valign="top">&nbsp;</td>
-                                                                <td valign="top" nowrap="nowrap"><!--Completed--></td>
-                                                                <td><asp:CheckBox ID="chkcompleted"  runat="server" Visible="false"/></td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td valign="top">&nbsp;</td>
-                                                                <td valign="top" nowrap="nowrap"><!--Number Of Calls--></td>
-                                                                <td><asp:Dropdownlist runat="server" id="ddlCalls" Visible="false">
-                                                                    <asp:ListItem value="0" Text="0"/>
-                                                                    <asp:ListItem value="1" Text="1"/>                                                                <asp:ListItem value="2" Text="2"/>
-                                                                    <asp:ListItem value="3" Text="3"/>
-                                                                    <asp:ListItem value="4" Text="4"/>
-                                                                    <asp:ListItem value="5" Text="5"/>
-                                                                                     
-</Asp:DropdownList></td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td valign="top">&nbsp;</td>
-                                                                <td valign="top" nowrap="nowrap"><!--Status--></td>
-                                                                <td><asp:Dropdownlist runat="server" id="ddlResolution" Visible="false">
-                                                                  <asp:ListItem value="" Text=""/>                                                                
-<asp:ListItem value="Contacted-Participating" text="Contacted-Participating"/>                                       
-<asp:ListItem value="Contacted-NOT Participating-Not Interested" text="Contacted-NOT Participating-Not Interested"/>       
-<asp:ListItem value="Contacted-NOT Participating-Using Another Program" text="Contacted-NOT Participating-Using Another Program"/>
-<asp:ListItem value="Contacted-NOT Participating-Shelter Closed/Not Operating" text="Contacted-NOT Participating-Shelter Closed/Not Operating"/>
-<asp:ListItem value="No Contact-Wrong Number" text="No Contact-Wrong Number"/>                                       
-<asp:ListItem value="No Contact-No Answer" text="No Contact-No Answer"/>                                       
-<asp:ListItem value="No Contact-Disconnected Number" text="No Contact-Disconnected Number"/>
-<asp:ListItem value="No Contact-Left Message" text="No Contact-Left Message"/>  
-<asp:ListItem value="Duplicate-Deleting Account" text="Duplicate-Deleting Account"/>                                                             
-</Asp:DropdownList></td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td valign="top">&nbsp;</td>
-                                                                <td valign="top" nowrap="nowrap">Active</td>
-                                                                <td><asp:CheckBox ID="chkActive"  runat="server" /></td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td valign="top">&nbsp;</td>
-                                                                <td valign="top" nowrap="nowrap">&nbsp;</td>
-                                                                <td>&nbsp;</td>
-                                                              </tr>
-																 <tr>
-                                                                <td valign="top">&nbsp;</td>
-                                                                <td valign="top" nowrap="nowrap">2018 Admin Notes </td>
-                                                                <td><asp:TextBox ID="tbAdmin_notes2018" runat="server" MaxLength="4000" Width="450" Height="200" TextMode="MultiLine"/></td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td valign="top">&nbsp;</td>
-                                                                <td valign="top" nowrap="nowrap">2017 Admin Notes </td>
-                                                                <td><asp:TextBox ID="tbAdmin_notes2017" runat="server" MaxLength="4000" Width="450" Height="200" TextMode="MultiLine"/></td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td valign="top">&nbsp;</td>
-                                                                <td valign="top" nowrap="nowrap">INPEx Notes</td>
-                                                                <td><asp:TextBox ID="tbINPExNotes" runat="server" MaxLength="4000" Width="450" Height="200" TextMode="MultiLine"/></td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td valign="top">&nbsp;</td>
-                                                                <td valign="top" nowrap="nowrap">2016 Admin Notes </td>
-                                                                <td><asp:textbox id="tbAdmin_notes" runat="server" MaxLength="4000" Width="450" Height="200" TextMode="MultiLine"/></td>
-                                                              </tr>
-                                                              <tr>
-                                                                <td valign="top">&nbsp;</td>
-                                                                <td valign="top" nowrap="nowrap">&nbsp;</td>
-                                                                <td>&nbsp;</td>
-                                                              </tr>
-                                                            </table>
-                                                            </asp:Panel>
-                                                            <p>&nbsp;</p>
-                                                            <table>
-                                                                      <tr>
-                                                                        <td><asp:button  ID="btnUpdate" OnClick="btnUpdate_Click" runat="server" Text="Update Profile"/></td>
-                                                                      </tr>
-                                                                  </table>
-                                                                </form></td>
-                                                              </tr>
-                                                            </table>
-													      </div>
-</asp:content>
+<%-- start banner Area --%>
+<asp:Content ID="Content1" ContentPlaceHolderID="PageTitle" runat="Server">
+    <section class="relative my-banner" style="background: url(/img/banners/family-with-dog-porch-banner-2.jpg) center; background-size: cover;">
+        <div class="overlay overlay-bg"></div>
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="about-content col-lg-12">
+                    <h1 class="text-white">Member Profile
+                    </h1>
+                    <p class="text-white link-nav">
+                        <a href="/index.aspx">Member Home </a>
+                        <span class="lnr lnr-arrow-right"></span>
+                        <a>Member Profile</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</asp:Content>
+<%-- End banner Area --%>
+
+
+
+<asp:Content ID="navigation" ContentPlaceHolderID="Leftnav" runat="server"></asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="maincontent" runat="Server">
+
+    <section class="about-info-area">
+        <div class="container">
+            <div class="row align-items-center ">
+                <div class="col-lg-12">
+                    <div class="title text-center">
+                        <h1 class="mb-10">Edit your profile</h1>
+                    </div>
+                    <p>
+                        <asp:Label ID="lblMessage" Font-Bold="true" ForeColor="#FF0000" runat="server" />
+                    </p>
+                    <p>Check the boxes next to the information you wish to display to the public</p>
+                    <div class="whole-wrap mb-20">
+                        <div class="container">
+                            <div class="section">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12">
+
+
+                                        <form runat="server" id="form1">
+
+                                            <asp:ValidationSummary runat="server" ShowMessageBox="true" ShowSummary="false" ID="VSum" HeaderText="Please fill out all the required fields appropriately" />
+                                            <asp:Panel ID="pnlRegister" runat="server"></asp:Panel>
+
+                                            <div class="section-top-border">
+                                                <h3 class="mb-10">Organization Information</h3>
+
+                                                <div class="row mt-10">
+                                                    <div class="col-lg-3 col-md-3">
+                                                        *Organization Name:
+                                                    </div>
+                                                    <div class="col-lg-9 col-md-9">
+                                                        <asp:TextBox ID="tbOrg" runat="server" MaxLength="100" CssClass="single-input" placeholder="Organization Name" />
+                                                        <asp:RequiredFieldValidator ControlToValidate="tbOrg" CssClass="errorMsg" ErrorMessage="*Organization name required" Display="Dynamic" runat="server" />
+                                                    </div>
+                                                </div>
+
+                                                <div class="row mt-10">
+                                                    <div class="col-lg-3 col-md-3">
+                                                        <asp:CheckBox ID="chkOrgPhone" runat="server" />
+                                                        *Phone Number:
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3">
+                                                        <asp:TextBox ID="tbOrgPhone" runat="server" MaxLength="20" CssClass="single-input" placeholder="Phone Number" />
+                                                        <asp:RequiredFieldValidator ControlToValidate="tbOrgPhone" CssClass="errorMsg" ErrorMessage="*Phone number required" Display="Dynamic" runat="server" />
+                                                    </div>
+
+                                                    <div class="col-lg-3 col-md-3">
+                                                        <asp:CheckBox ID="chkFax" runat="server" />
+                                                        Fax Number:
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3">
+                                                        <asp:TextBox ID="tbFax" runat="server" MaxLength="20" CssClass="single-input" placeholder="Fax Number" />
+                                                    </div>
+                                                </div>
+
+                                                <div class="row mt-10">
+                                                    <div class="col-lg-3 col-md-3">
+                                                        Website Address:
+                                                    </div>
+                                                    <div class="col-lg-9 col-md-9">
+                                                        <asp:TextBox runat="server" ID="tbWebsite" MaxLength="50" CssClass="single-input" placeholder="i.e., www.yourshelter.com" />
+                                                    </div>
+                                                </div>
+
+                                                <div class="row mt-10">
+                                                    <div class="col-lg-3 col-md-3">
+                                                        Facebook Link:
+                                                    </div>
+                                                    <div class="col-lg-9 col-md-9">
+                                                        <asp:TextBox runat="server" ID="tbFacebook" MaxLength="250" CssClass="single-input" placeholder="i.e., www.facebook.com/YourOrganizationName" />
+                                                    </div>
+                                                </div>
+
+                                                <div class="row mt-10">
+                                                    <div class="col-lg-3 col-md-3">
+                                                        Twitter Link:
+                                                    </div>
+                                                    <div class="col-lg-9 col-md-9">
+                                                        <asp:TextBox runat="server" ID="tbTwitter" MaxLength="250" CssClass="single-input" placeholder="i.e.,  www.twitter.com/YourOrganizationName" />
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="row mt-10">
+                                                    <div class="col-lg-3 col-md-3">
+                                                        Pinterest Link:
+                                                    </div>
+                                                    <div class="col-lg-9 col-md-9">
+                                                        <asp:TextBox runat="server" ID="tbPintrest" MaxLength="250" CssClass="single-input" placeholder="Pinterest Link" />
+                                                    </div>
+                                                </div>
+
+                                                <div class="row mt-10">
+                                                    <div class="col-lg-3 col-md-3">
+                                                        Youtube Channel:
+                                                    </div>
+                                                    <div class="col-lg-9 col-md-9">
+                                                        <asp:TextBox runat="server" ID="tbYouTube" MaxLength="250" CssClass="single-input" placeholder="i.e., www.youtube.com.com/user/YourOrg" />
+                                                    </div>
+                                                </div>
+
+                                                <div class="row mt-10">
+                                                    <div class="col-lg-3 col-md-3">
+                                                        Blog Link:
+                                                    </div>
+                                                    <div class="col-lg-9 col-md-9">
+                                                        <asp:TextBox runat="server" ID="tbBlog" MaxLength="250" CssClass="single-input" placeholder="i.e., www.YourBlog.com" />
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="section-top-border">
+                                                <div class="mb-10">
+                                                    <h3 class="mb-10" style="display: inline;">Head of Organization</h3>
+                                                    <h5 style="display: inline;">(President/Executive Director):</h5>
+                                                </div>
+
+                                                <div class="row mt-10">
+                                                    <div class="col-lg-2 col-md-2">
+                                                        Name:
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4">
+                                                        <asp:TextBox runat="server" ID="tbExecName" MaxLength="50" CssClass="single-input" placeholder="Name" />
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2">
+                                                        Title:
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4">
+                                                        <asp:TextBox runat="server" ID="tbExecTitle" MaxLength="20" CssClass="single-input" placeholder="Title" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="section-top-border">
+
+                                                <h3 class="mb-10">Organization H4TH Contact Person</h3>
+
+                                                <div class="row mt-10">
+                                                    <div class="col-lg-3 col-md-3">
+                                                        <asp:CheckBox ID="chkName" runat="server" />
+                                                        *First Name:
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3">
+                                                        <asp:TextBox ID="tbFName" runat="server" MaxLength="20" CssClass="single-input" placeholder="First Name" />
+                                                        <asp:RequiredFieldValidator ControlToValidate="tbFName" CssClass="errorMsg" ErrorMessage="*First name required" Display="Dynamic" runat="server" />
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2">
+                                                        *Last Name:
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4">
+                                                        <asp:TextBox ID="tbLName" runat="server" MaxLength="20" CssClass="single-input" placeholder="Last Name" />
+                                                        <asp:RequiredFieldValidator ControlToValidate="tbLName" CssClass="errorMsg" ErrorMessage="*Last name required" Display="Dynamic" runat="server" />
+                                                    </div>
+                                                </div>
+
+                                                <div class="row mt-10">
+                                                    <div class="col-lg-3 col-md-3">
+                                                        <asp:CheckBox ID="chkContactPhone" runat="server" />
+                                                        *Phone:
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3">
+                                                        <asp:TextBox ID="tbPhone" runat="server" MaxLength="20" CssClass="single-input" placeholder="Phone" />
+                                                        <asp:RequiredFieldValidator ControlToValidate="tbPhone" CssClass="errorMsg" ErrorMessage="*Phone required" Display="Dynamic" runat="server" />
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2">
+                                                        Title:
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4">
+                                                        <asp:TextBox ID="tbContactTitle" runat="server" MaxLength="20" CssClass="single-input" placeholder="Title" />
+                                                    </div>
+                                                </div>
+
+                                                <div class="row mt-10">
+                                                    <div class="col-lg-3 col-md-3">
+                                                        Language Preference:
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3">
+                                                        <asp:DropDownList runat="server" ID="ddlLang" CssClass="single-input nice-select">
+                                                            <asp:ListItem Value="English" Text="English" />
+                                                            <asp:ListItem Value="French" Text="French" />
+                                                        </asp:DropDownList>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row mt-10">
+                                                    <div class="col-lg-3 col-md-3">
+                                                        <asp:CheckBox ID="chkEmail" runat="server" />
+                                                        *Email Address:
+                                                    </div>
+                                                    <div class="col-lg-9 col-md-9">
+                                                        <asp:TextBox ID="tbEmail" runat="server" MaxLength="100" CssClass="single-input" placeholder="Email Address" />
+                                                        <asp:RequiredFieldValidator runat="server" ControlToValidate="tbEmail" CssClass="errorMsg" ErrorMessage="*Email is required" Display="Dynamic" />
+                                                        <asp:RegularExpressionValidator runat="server" ControlToValidate="tbEmail"
+                                                            ValidationExpression="^(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\-+)|([A-Za-z0-9]+\.+)|([A-Za-z0-9]+\++))*[A-Za-z0-9]+@((\w+\-+)|(\w+\.))*\w{1,63}\.[a-zA-Z]{2,6}$"
+                                                            ErrorMessage="*That is not a valid email"
+                                                            Display="dynamic" />
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="section-top-border">
+
+                                                <h3 class="mb-10">Shipping Address</h3>
+
+                                                <div class="row mt-10">
+                                                    <div class="col-lg-2 col-md-2">
+                                                        <asp:CheckBox ID="chkShip" runat="server" />
+                                                        *Address:
+                                                    </div>
+                                                    <div class="col-lg-10 col-md-10">
+                                                        <asp:TextBox ID="tbSAddress" runat="server" MaxLength="50" CssClass="single-input" placeholder="Shipping Address" />
+                                                        <asp:RequiredFieldValidator ControlToValidate="tbSAddress" CssClass="errorMsg" ErrorMessage="*Shipping address required" Display="Dynamic" runat="server" />
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-10">
+                                                    <div class="col-lg-2 col-md-2">
+                                                        *City:
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4">
+                                                        <asp:TextBox ID="tbSCity" runat="server" MaxLength="20" CssClass="single-input" placeholder="City" />
+                                                        <asp:RequiredFieldValidator ControlToValidate="tbSCity" CssClass="errorMsg" ErrorMessage="*City required" Display="Dynamic" runat="server" />
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2">
+                                                        *State/Province:
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4">
+                                                        <asp:DropDownList runat="server" ID="ddlSState" CssClass="single-input dropdown-scrollable nice-select">
+                                                            <asp:ListItem Value="" Text="Choose a State" />
+                                                            <asp:ListItem Value="AK" Text="AK" />
+                                                            <asp:ListItem Value="AL" Text="AL" />
+                                                            <asp:ListItem Value="AR" Text="AR" />
+                                                            <asp:ListItem Value="AZ" Text="AZ" />
+                                                            <asp:ListItem Value="CA" Text="CA" />
+                                                            <asp:ListItem Value="CO" Text="CO" />
+                                                            <asp:ListItem Value="CT" Text="CT" />
+                                                            <asp:ListItem Value="DC" Text="DC" />
+                                                            <asp:ListItem Value="DE" Text="DE" />
+                                                            <asp:ListItem Value="FL" Text="FL" />
+                                                            <asp:ListItem Value="GA" Text="GA" />
+                                                            <asp:ListItem Value="HI" Text="HI" />
+                                                            <asp:ListItem Value="IA" Text="IA" />
+                                                            <asp:ListItem Value="ID" Text="ID" />
+                                                            <asp:ListItem Value="IL" Text="IL" />
+                                                            <asp:ListItem Value="IN" Text="IN" />
+                                                            <asp:ListItem Value="KS" Text="KS" />
+                                                            <asp:ListItem Value="KY" Text="KY" />
+                                                            <asp:ListItem Value="LA" Text="LA" />
+                                                            <asp:ListItem Value="MA" Text="MA" />
+                                                            <asp:ListItem Value="MD" Text="MD" />
+                                                            <asp:ListItem Value="ME" Text="ME" />
+                                                            <asp:ListItem Value="MI" Text="MI" />
+                                                            <asp:ListItem Value="MN" Text="MN" />
+                                                            <asp:ListItem Value="MO" Text="MO" />
+                                                            <asp:ListItem Value="MS" Text="MS" />
+                                                            <asp:ListItem Value="MT" Text="MT" />
+                                                            <asp:ListItem Value="NC" Text="NC" />
+                                                            <asp:ListItem Value="ND" Text="ND" />
+                                                            <asp:ListItem Value="NE" Text="NE" />
+                                                            <asp:ListItem Value="NH" Text="NH" />
+                                                            <asp:ListItem Value="NJ" Text="NJ" />
+                                                            <asp:ListItem Value="NM" Text="NM" />
+                                                            <asp:ListItem Value="NV" Text="NV" />
+                                                            <asp:ListItem Value="NY" Text="NY" />
+                                                            <asp:ListItem Value="OH" Text="OH" />
+                                                            <asp:ListItem Value="OK" Text="OK" />
+                                                            <asp:ListItem Value="OR" Text="OR" />
+                                                            <asp:ListItem Value="PA" Text="PA" />
+                                                            <asp:ListItem Value="RI" Text="RI" />
+                                                            <asp:ListItem Value="SC" Text="SC" />
+                                                            <asp:ListItem Value="SD" Text="SD" />
+                                                            <asp:ListItem Value="TN" Text="TN" />
+                                                            <asp:ListItem Value="TX" Text="TX" />
+                                                            <asp:ListItem Value="UT" Text="UT" />
+                                                            <asp:ListItem Value="VA" Text="VA" />
+                                                            <asp:ListItem Value="VT" Text="VT" />
+                                                            <asp:ListItem Value="WA" Text="WA" />
+                                                            <asp:ListItem Value="WI" Text="WI" />
+                                                            <asp:ListItem Value="WV" Text="WV" />
+                                                            <asp:ListItem Value="WY" Text="WY" />
+                                                            <asp:ListItem Value="" Text="_____________" />
+                                                            <asp:ListItem Text="US Territories" Value="" />
+                                                            <asp:ListItem Value="" Text=" " />
+                                                            <asp:ListItem Value="AS" Text="AS" />
+                                                            <asp:ListItem Value="FM" Text="FM" />
+                                                            <asp:ListItem Value="GU" Text="GU" />
+                                                            <asp:ListItem Value="MH" Text="MH" />
+                                                            <asp:ListItem Value="MP" Text="MP" />
+                                                            <asp:ListItem Value="PR" Text="PR" />
+                                                            <asp:ListItem Value="PW" Text="PW" />
+                                                            <asp:ListItem Value="VI" Text="VI" />
+                                                            <asp:ListItem Value="" Text="_____________" />
+                                                            <asp:ListItem Text="US Military" Value="" />
+                                                            <asp:ListItem Value="" Text=" " />
+                                                            <asp:ListItem Value="AA" Text="AA" />
+                                                            <asp:ListItem Value="AE" Text="AE" />
+                                                            <asp:ListItem Value="AP" Text="AP" />
+                                                            <asp:ListItem Value="" Text="_____________" />
+                                                            <asp:ListItem Text="Canada" Value="" />
+                                                            <asp:ListItem Value="" Text=" " />
+                                                            <asp:ListItem Value="AB" Text="AB" />
+                                                            <asp:ListItem Value="BC" Text="BC" />
+                                                            <asp:ListItem Value="MB" Text="MB" />
+                                                            <asp:ListItem Value="NB" Text="NB" />
+                                                            <asp:ListItem Value="NL" Text="NL" />
+                                                            <asp:ListItem Value="NS" Text="NS" />
+                                                            <asp:ListItem Value="NT" Text="NT" />
+                                                            <asp:ListItem Value="NU" Text="NU" />
+                                                            <asp:ListItem Value="ON" Text="ON" />
+                                                            <asp:ListItem Value="PE" Text="PE" />
+                                                            <asp:ListItem Value="QC" Text="QC" />
+                                                            <asp:ListItem Value="SK" Text="SK" />
+                                                            <asp:ListItem Value="YT" Text="YT" />
+                                                            <asp:ListItem Value="" Text="_____________" />
+                                                            <asp:ListItem Text="Other Countries" Value="" />
+                                                            <asp:ListItem Value="" Text=" " />
+                                                            <asp:ListItem Value="None" Text="None" />
+                                                        </asp:DropDownList>
+                                                        <asp:RequiredFieldValidator ID="req_SState" CssClass="errorMsg" ControlToValidate="ddlSState" ErrorMessage="*State is required. Select None if State does not apply to you" runat="server" Display="Dynamic" />
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="row mt-10">
+                                                    <div class="col-lg-2 col-md-2">
+                                                        *Zip Code:
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4">
+                                                        <asp:TextBox ID="tbSZip" runat="server" MaxLength="15" CssClass="single-input" placeholder="Zip Code" />
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2">
+                                                        *Country:
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4">
+                                                        <asp:DropDownList ID="ddlSCountry" runat="server" CssClass="single-input dropdown-scrollable nice-select">
+                                                            <asp:ListItem Text="United States" />
+                                                            <asp:ListItem Text="Canada" />
+                                                            <asp:ListItem Text="Mexico" />
+                                                            <asp:ListItem Text="Afghanistan" />
+                                                            <asp:ListItem Text="Albania" />
+                                                            <asp:ListItem Text="Algeria" />
+                                                            <asp:ListItem Text="American Samoa" />
+                                                            <asp:ListItem Text="Andorra" />
+                                                            <asp:ListItem Text="Angola" />
+                                                            <asp:ListItem Text="Anguilla" />
+                                                            <asp:ListItem Text="Antarctica" />
+                                                            <asp:ListItem Text="Antigua and Barbuda" />
+                                                            <asp:ListItem Text="Argentina" />
+                                                            <asp:ListItem Text="Armenia" />
+                                                            <asp:ListItem Text="Aruba" />
+                                                            <asp:ListItem Text="Australia" />
+                                                            <asp:ListItem Text="Austria" />
+                                                            <asp:ListItem Text="Azerbaijan" />
+                                                            <asp:ListItem Text="Bahamas" />
+                                                            <asp:ListItem Text="Bahrain" />
+                                                            <asp:ListItem Text="Bangladesh" />
+                                                            <asp:ListItem Text="Barbados" />
+                                                            <asp:ListItem Text="Belarus" />
+                                                            <asp:ListItem Text="Belgium" />
+                                                            <asp:ListItem Text="Belize" />
+                                                            <asp:ListItem Text="Benin" />
+                                                            <asp:ListItem Text="Bermuda" />
+                                                            <asp:ListItem Text="Bhutan" />
+                                                            <asp:ListItem Text="Bolivia" />
+                                                            <asp:ListItem Text="Bosnia-Herzegovina" />
+                                                            <asp:ListItem Text="Botswana" />
+                                                            <asp:ListItem Text="Bouvet Island" />
+                                                            <asp:ListItem Text="Brazil" />
+                                                            <asp:ListItem Text="British Indian Ocean Territory" />
+                                                            <asp:ListItem Text="Brunei" />
+                                                            <asp:ListItem Text="Bulgaria" />
+                                                            <asp:ListItem Text="Burkina Faso" />
+                                                            <asp:ListItem Text="Burundi" />
+                                                            <asp:ListItem Text="Cambodia" />
+                                                            <asp:ListItem Text="Cameroon" />
+                                                            <asp:ListItem Text="Cape Verde" />
+                                                            <asp:ListItem Text="Cayman Islands" />
+                                                            <asp:ListItem Text="Central African Republic" />
+                                                            <asp:ListItem Text="Chad" />
+                                                            <asp:ListItem Text="Chile" />
+                                                            <asp:ListItem Text="China" />
+                                                            <asp:ListItem Text="Christmas Island" />
+                                                            <asp:ListItem Text="Cocos (Keeling) Islands" />
+                                                            <asp:ListItem Text="Colombia" />
+                                                            <asp:ListItem Text="Comoros" />
+                                                            <asp:ListItem Text="Congo" />
+                                                            <asp:ListItem Text="Cook Islands" />
+                                                            <asp:ListItem Text="Costa Rica" />
+                                                            <asp:ListItem Text="Croatia" />
+                                                            <asp:ListItem Text="Cuba" />
+                                                            <asp:ListItem Text="Cyprus" />
+                                                            <asp:ListItem Text="Czech Republic" />
+                                                            <asp:ListItem Text="Denmark" />
+                                                            <asp:ListItem Text="Djibouti" />
+                                                            <asp:ListItem Text="Dominica" />
+                                                            <asp:ListItem Text="Dominican Republic" />
+                                                            <asp:ListItem Text="East Timor" />
+                                                            <asp:ListItem Text="Ecuador" />
+                                                            <asp:ListItem Text="Educational" />
+                                                            <asp:ListItem Text="Egypt" />
+                                                            <asp:ListItem Text="El Salvador" />
+                                                            <asp:ListItem Text="Equatorial Guinea" />
+                                                            <asp:ListItem Text="Eritrea" />
+                                                            <asp:ListItem Text="Estonia" />
+                                                            <asp:ListItem Text="Ethiopia" />
+                                                            <asp:ListItem Text="Falkland Islands" />
+                                                            <asp:ListItem Text="Faroe Islands" />
+                                                            <asp:ListItem Text="Fiji" />
+                                                            <asp:ListItem Text="Finland" />
+                                                            <asp:ListItem Text="Former Czechoslovakia" />
+                                                            <asp:ListItem Text="Former USSR" />
+                                                            <asp:ListItem Text="France" />
+                                                            <asp:ListItem Text="French Guyana" />
+                                                            <asp:ListItem Text="French Southern Territories" />
+                                                            <asp:ListItem Text="Gabon" />
+                                                            <asp:ListItem Text="Gambia" />
+                                                            <asp:ListItem Text="Georgia" />
+                                                            <asp:ListItem Text="Germany" />
+                                                            <asp:ListItem Text="Ghana" />
+                                                            <asp:ListItem Text="Gibraltar" />
+                                                            <asp:ListItem Text="Great Britain" />
+                                                            <asp:ListItem Text="Greece" />
+                                                            <asp:ListItem Text="Greenland" />
+                                                            <asp:ListItem Text="Grenada" />
+                                                            <asp:ListItem Text="Guadeloupe (French)" />
+                                                            <asp:ListItem Text="Guam (USA)" />
+                                                            <asp:ListItem Text="Guatemala" />
+                                                            <asp:ListItem Text="Guinea" />
+                                                            <asp:ListItem Text="Guinea-Bissau" />
+                                                            <asp:ListItem Text="Guyana" />
+                                                            <asp:ListItem Text="Haiti" />
+                                                            <asp:ListItem Text="Heard and McDonald Islands" />
+                                                            <asp:ListItem Text="Holy See (Vatican City State)" />
+                                                            <asp:ListItem Text="Honduras" />
+                                                            <asp:ListItem Text="Hungary" />
+                                                            <asp:ListItem Text="Iceland" />
+                                                            <asp:ListItem Text="India" />
+                                                            <asp:ListItem Text="Indonesia" />
+                                                            <asp:ListItem Text="Iran" />
+                                                            <asp:ListItem Text="Iraq" />
+                                                            <asp:ListItem Text="Ireland" />
+                                                            <asp:ListItem Text="Israel" />
+                                                            <asp:ListItem Text="Italy" />
+                                                            <asp:ListItem Text="Ivory Coast (Cote D'Ivoire)" />
+                                                            <asp:ListItem Text="Jamaica" />
+                                                            <asp:ListItem Text="Japan" />
+                                                            <asp:ListItem Text="Jordan" />
+                                                            <asp:ListItem Text="Kazakhstan" />
+                                                            <asp:ListItem Text="Kenya" />
+                                                            <asp:ListItem Text="Kiribati" />
+                                                            <asp:ListItem Text="Kuwait" />
+                                                            <asp:ListItem Text="Kyrgyz Republic (Kyrgyzstan)" />
+                                                            <asp:ListItem Text="Laos" />
+                                                            <asp:ListItem Text="Latvia" />
+                                                            <asp:ListItem Text="Lebanon" />
+                                                            <asp:ListItem Text="Lesotho" />
+                                                            <asp:ListItem Text="Liberia" />
+                                                            <asp:ListItem Text="Libya" />
+                                                            <asp:ListItem Text="Liechtenstein" />
+                                                            <asp:ListItem Text="Lithuania" />
+                                                            <asp:ListItem Text="Luxembourg" />
+                                                            <asp:ListItem Text="Macau" />
+                                                            <asp:ListItem Text="Macedonia" />
+                                                            <asp:ListItem Text="Madagascar" />
+                                                            <asp:ListItem Text="Malawi" />
+                                                            <asp:ListItem Text="Malaysia" />
+                                                            <asp:ListItem Text="Maldives" />
+                                                            <asp:ListItem Text="Mali" />
+                                                            <asp:ListItem Text="Malta" />
+                                                            <asp:ListItem Text="Marshall Islands" />
+                                                            <asp:ListItem Text="Martinique (French)" />
+                                                            <asp:ListItem Text="Mauritania" />
+                                                            <asp:ListItem Text="Mauritius" />
+                                                            <asp:ListItem Text="Mayotte" />
+                                                            <asp:ListItem Text="Micronesia" />
+                                                            <asp:ListItem Text="Moldavia" />
+                                                            <asp:ListItem Text="Monaco" />
+                                                            <asp:ListItem Text="Mongolia" />
+                                                            <asp:ListItem Text="Montserrat" />
+                                                            <asp:ListItem Text="Morocco" />
+                                                            <asp:ListItem Text="Mozambique" />
+                                                            <asp:ListItem Text="Myanmar" />
+                                                            <asp:ListItem Text="Namibia" />
+                                                            <asp:ListItem Text="Nauru" />
+                                                            <asp:ListItem Text="Nepal" />
+                                                            <asp:ListItem Text="Netherlands" />
+                                                            <asp:ListItem Text="Netherlands Antilles" />
+                                                            <asp:ListItem Text="New Caledonia (French)" />
+                                                            <asp:ListItem Text="New Zealand" />
+                                                            <asp:ListItem Text="Nicaragua" />
+                                                            <asp:ListItem Text="Niger" />
+                                                            <asp:ListItem Text="Nigeria" />
+                                                            <asp:ListItem Text="Niue" />
+                                                            <asp:ListItem Text="Norfolk Island" />
+                                                            <asp:ListItem Text="Northern Mariana Islands" />
+                                                            <asp:ListItem Text="North Korea" />
+                                                            <asp:ListItem Text="Norway" />
+                                                            <asp:ListItem Text="Oman" />
+                                                            <asp:ListItem Text="Pakistan" />
+                                                            <asp:ListItem Text="Palau" />
+                                                            <asp:ListItem Text="Panama" />
+                                                            <asp:ListItem Text="Papua New Guinea" />
+                                                            <asp:ListItem Text="Paraguay" />
+                                                            <asp:ListItem Text="Peru" />
+                                                            <asp:ListItem Text="Philippines" />
+                                                            <asp:ListItem Text="Pitcairn Island" />
+                                                            <asp:ListItem Text="Poland" />
+                                                            <asp:ListItem Text="Polynesia (French)" />
+                                                            <asp:ListItem Text="Portugal" />
+                                                            <asp:ListItem Text="Puerto Rico" />
+                                                            <asp:ListItem Text="Qatar" />
+                                                            <asp:ListItem Text="Reunion (French)" />
+                                                            <asp:ListItem Text="Romania" />
+                                                            <asp:ListItem Text="Russian Federation" />
+                                                            <asp:ListItem Text="Rwanda" />
+                                                            <asp:ListItem Text="Saint Helena" />
+                                                            <asp:ListItem Text="Saint Kitts &amp; Nevis Anguilla" />
+                                                            <asp:ListItem Text="Saint Lucia" />
+                                                            <asp:ListItem Text="Saint Pierre and Miquelon" />
+                                                            <asp:ListItem Text="Saint Tome and Principe" />
+                                                            <asp:ListItem Text="Saint Vincent &amp; Grenadines" />
+                                                            <asp:ListItem Text="Samoa" />
+                                                            <asp:ListItem Text="San Marino" />
+                                                            <asp:ListItem Text="Saudi Arabia" />
+                                                            <asp:ListItem Text="Senegal" />
+                                                            <asp:ListItem Text="Seychelles" />
+                                                            <asp:ListItem Text="S. Georgia &amp; S. Sandwich Isls." />
+                                                            <asp:ListItem Text="Sierra Leone" />
+                                                            <asp:ListItem Text="Singapore" />
+                                                            <asp:ListItem Text="Slovak Republic" />
+                                                            <asp:ListItem Text="Slovenia" />
+                                                            <asp:ListItem Text="Solomon Islands" />
+                                                            <asp:ListItem Text="Somalia" />
+                                                            <asp:ListItem Text="South Africa" />
+                                                            <asp:ListItem Text="South Korea" />
+                                                            <asp:ListItem Text="Spain" />
+                                                            <asp:ListItem Text="Sri Lanka" />
+                                                            <asp:ListItem Text="Sudan" />
+                                                            <asp:ListItem Text="Suriname" />
+                                                            <asp:ListItem Text="Svalbard and Jan Mayen Islands" />
+                                                            <asp:ListItem Text="Swaziland" />
+                                                            <asp:ListItem Text="Sweden" />
+                                                            <asp:ListItem Text="Switzerland" />
+                                                            <asp:ListItem Text="Syria" />
+                                                            <asp:ListItem Text="Tadjikistan" />
+                                                            <asp:ListItem Text="Taiwan" />
+                                                            <asp:ListItem Text="Tanzania" />
+                                                            <asp:ListItem Text="Thailand" />
+                                                            <asp:ListItem Text="Togo" />
+                                                            <asp:ListItem Text="Tokelau" />
+                                                            <asp:ListItem Text="Tonga" />
+                                                            <asp:ListItem Text="Trinidad and Tobago" />
+                                                            <asp:ListItem Text="Tunisia" />
+                                                            <asp:ListItem Text="Turkey" />
+                                                            <asp:ListItem Text="Turkmenistan" />
+                                                            <asp:ListItem Text="Turks and Caicos Islands" />
+                                                            <asp:ListItem Text="Tuvalu" />
+                                                            <asp:ListItem Text="Uganda" />
+                                                            <asp:ListItem Text="Ukraine" />
+                                                            <asp:ListItem Text="United Arab Emirates" />
+                                                            <asp:ListItem Text="United Kingdom" />
+                                                            <asp:ListItem Text="Uruguay" />
+                                                            <asp:ListItem Text="USA Minor Outlying Islands" />
+                                                            <asp:ListItem Text="Uzbekistan" />
+                                                            <asp:ListItem Text="Vanuatu" />
+                                                            <asp:ListItem Text="Venezuela" />
+                                                            <asp:ListItem Text="Vietnam" />
+                                                            <asp:ListItem Text="Virgin Islands (British)" />
+                                                            <asp:ListItem Text="Virgin Islands (USA)" />
+                                                            <asp:ListItem Text="Wallis and Futuna Islands" />
+                                                            <asp:ListItem Text="Western Sahara" />
+                                                            <asp:ListItem Text="Yemen" />
+                                                            <asp:ListItem Text="Yugoslavia" />
+                                                            <asp:ListItem Text="Zaire" />
+                                                            <asp:ListItem Text="Zambia" />
+                                                            <asp:ListItem Text="Zimbabwe" />
+                                                        </asp:DropDownList>
+                                                        <asp:RequiredFieldValidator ID="req_SCountry" CssClass="errorMsg" ControlToValidate="ddlSCountry" ErrorMessage="*Country is required" runat="server" Display="Dynamic" />
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <asp:Panel runat="server" ID="pnlMailing" Visible="false">
+                                                <div class="section-top-border">
+                                                    <h3 class="mb-10">Mailing Address</h3>
+
+                                                    <div class="row mt-10">
+                                                        <div class="col-lg-2 col-md-2">
+                                                            <asp:CheckBox ID="chkMail" runat="server" />
+                                                            *Address:
+                                                        </div>
+                                                        <div class="col-lg-10 col-md-10">
+                                                            <asp:TextBox ID="tbMAddress" runat="server" MaxLength="50" CssClass="single-input" placeholder="Address" />
+                                                            <asp:RequiredFieldValidator ControlToValidate="tbMAddress" CssClass="errorMsg" ErrorMessage="*Mailing address required" Display="Dynamic" runat="server" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mt-10">
+                                                        <div class="col-lg-2 col-md-2">
+                                                            *City:
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4">
+                                                            <asp:TextBox ID="tbMCity" runat="server" MaxLength="20" CssClass="single-input" placeholder="City" />
+                                                            <asp:RequiredFieldValidator ControlToValidate="tbMCity" CssClass="errorMsg" ErrorMessage="*City required" Display="Dynamic" runat="server" />
+                                                        </div>
+                                                        <div class="col-lg-2 col-md-2">
+                                                            *State/Province:
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4">
+                                                            <asp:DropDownList runat="server" ID="ddlMState" CssClass="single-input dropdown-scrollable nice-select">
+                                                                <asp:ListItem Value="" Text="Choose a State" />
+                                                                <asp:ListItem Value="AK" Text="AK" />
+                                                                <asp:ListItem Value="AL" Text="AL" />
+                                                                <asp:ListItem Value="AR" Text="AR" />
+                                                                <asp:ListItem Value="AZ" Text="AZ" />
+                                                                <asp:ListItem Value="CA" Text="CA" />
+                                                                <asp:ListItem Value="CO" Text="CO" />
+                                                                <asp:ListItem Value="CT" Text="CT" />
+                                                                <asp:ListItem Value="DC" Text="DC" />
+                                                                <asp:ListItem Value="DE" Text="DE" />
+                                                                <asp:ListItem Value="FL" Text="FL" />
+                                                                <asp:ListItem Value="GA" Text="GA" />
+                                                                <asp:ListItem Value="HI" Text="HI" />
+                                                                <asp:ListItem Value="IA" Text="IA" />
+                                                                <asp:ListItem Value="ID" Text="ID" />
+                                                                <asp:ListItem Value="IL" Text="IL" />
+                                                                <asp:ListItem Value="IN" Text="IN" />
+                                                                <asp:ListItem Value="KS" Text="KS" />
+                                                                <asp:ListItem Value="KY" Text="KY" />
+                                                                <asp:ListItem Value="LA" Text="LA" />
+                                                                <asp:ListItem Value="MA" Text="MA" />
+                                                                <asp:ListItem Value="MD" Text="MD" />
+                                                                <asp:ListItem Value="ME" Text="ME" />
+                                                                <asp:ListItem Value="MI" Text="MI" />
+                                                                <asp:ListItem Value="MN" Text="MN" />
+                                                                <asp:ListItem Value="MO" Text="MO" />
+                                                                <asp:ListItem Value="MS" Text="MS" />
+                                                                <asp:ListItem Value="MT" Text="MT" />
+                                                                <asp:ListItem Value="NC" Text="NC" />
+                                                                <asp:ListItem Value="ND" Text="ND" />
+                                                                <asp:ListItem Value="NE" Text="NE" />
+                                                                <asp:ListItem Value="NH" Text="NH" />
+                                                                <asp:ListItem Value="NJ" Text="NJ" />
+                                                                <asp:ListItem Value="NM" Text="NM" />
+                                                                <asp:ListItem Value="NV" Text="NV" />
+                                                                <asp:ListItem Value="NY" Text="NY" />
+                                                                <asp:ListItem Value="OH" Text="OH" />
+                                                                <asp:ListItem Value="OK" Text="OK" />
+                                                                <asp:ListItem Value="OR" Text="OR" />
+                                                                <asp:ListItem Value="PA" Text="PA" />
+                                                                <asp:ListItem Value="RI" Text="RI" />
+                                                                <asp:ListItem Value="SC" Text="SC" />
+                                                                <asp:ListItem Value="SD" Text="SD" />
+                                                                <asp:ListItem Value="TN" Text="TN" />
+                                                                <asp:ListItem Value="TX" Text="TX" />
+                                                                <asp:ListItem Value="UT" Text="UT" />
+                                                                <asp:ListItem Value="VA" Text="VA" />
+                                                                <asp:ListItem Value="VT" Text="VT" />
+                                                                <asp:ListItem Value="WA" Text="WA" />
+                                                                <asp:ListItem Value="WI" Text="WI" />
+                                                                <asp:ListItem Value="WV" Text="WV" />
+                                                                <asp:ListItem Value="WY" Text="WY" />
+                                                                <asp:ListItem Value="" Text="_____________" />
+                                                                <asp:ListItem Text="US Territories" Value="" />
+                                                                <asp:ListItem Value="" Text=" " />
+                                                                <asp:ListItem Value="AS" Text="AS" />
+                                                                <asp:ListItem Value="FM" Text="FM" />
+                                                                <asp:ListItem Value="GU" Text="GU" />
+                                                                <asp:ListItem Value="MH" Text="MH" />
+                                                                <asp:ListItem Value="MP" Text="MP" />
+                                                                <asp:ListItem Value="PR" Text="PR" />
+                                                                <asp:ListItem Value="PW" Text="PW" />
+                                                                <asp:ListItem Value="VI" Text="VI" />
+                                                                <asp:ListItem Value="" Text="_____________" />
+                                                                <asp:ListItem Text="US Military" Value="" />
+                                                                <asp:ListItem Value="" Text=" " />
+                                                                <asp:ListItem Value="AA" Text="AA" />
+                                                                <asp:ListItem Value="AE" Text="AE" />
+                                                                <asp:ListItem Value="AP" Text="AP" />
+                                                                <asp:ListItem Value="" Text="_____________" />
+                                                                <asp:ListItem Text="Canada" Value="" />
+                                                                <asp:ListItem Value="" Text=" " />
+                                                                <asp:ListItem Value="AB" Text="AB" />
+                                                                <asp:ListItem Value="BC" Text="BC" />
+                                                                <asp:ListItem Value="MB" Text="MB" />
+                                                                <asp:ListItem Value="NB" Text="NB" />
+                                                                <asp:ListItem Value="NL" Text="NL" />
+                                                                <asp:ListItem Value="NS" Text="NS" />
+                                                                <asp:ListItem Value="NT" Text="NT" />
+                                                                <asp:ListItem Value="NU" Text="NU" />
+                                                                <asp:ListItem Value="ON" Text="ON" />
+                                                                <asp:ListItem Value="PE" Text="PE" />
+                                                                <asp:ListItem Value="QC" Text="QC" />
+                                                                <asp:ListItem Value="SK" Text="SK" />
+                                                                <asp:ListItem Value="YT" Text="YT" />
+                                                                <asp:ListItem Value="" Text="_____________" />
+                                                                <asp:ListItem Text="Other Countries" Value="" />
+                                                                <asp:ListItem Value="" Text=" " />
+                                                                <asp:ListItem Value="None" Text="None" />
+                                                            </asp:DropDownList>
+                                                            <asp:RequiredFieldValidator ID="req_MState" CssClass="errorMsg" ControlToValidate="ddlMState" ErrorMessage="*State is required. Select None if State does not apply to you" runat="server" Display="Dynamic" />
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mt-10">
+                                                        <div class="col-lg-2 col-md-2">
+                                                            *Zip Code:
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4">
+                                                            <asp:TextBox ID="tbMZip" runat="server" MaxLength="15" CssClass="single-input" placeholder="Zip Code" />
+                                                        </div>
+                                                        <div class="col-lg-2 col-md-2">
+                                                            *Country:
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4">
+                                                            <asp:DropDownList ID="ddlMCountry" runat="server" CssClass="single-input dropdown-scrollable nice-select">
+                                                                <asp:ListItem Text="United States" />
+                                                                <asp:ListItem Text="Canada" />
+                                                                <asp:ListItem Text="Mexico" />
+                                                                <asp:ListItem Text="Afghanistan" />
+                                                                <asp:ListItem Text="Albania" />
+                                                                <asp:ListItem Text="Algeria" />
+                                                                <asp:ListItem Text="American Samoa" />
+                                                                <asp:ListItem Text="Andorra" />
+                                                                <asp:ListItem Text="Angola" />
+                                                                <asp:ListItem Text="Anguilla" />
+                                                                <asp:ListItem Text="Antarctica" />
+                                                                <asp:ListItem Text="Antigua and Barbuda" />
+                                                                <asp:ListItem Text="Argentina" />
+                                                                <asp:ListItem Text="Armenia" />
+                                                                <asp:ListItem Text="Aruba" />
+                                                                <asp:ListItem Text="Australia" />
+                                                                <asp:ListItem Text="Austria" />
+                                                                <asp:ListItem Text="Azerbaijan" />
+                                                                <asp:ListItem Text="Bahamas" />
+                                                                <asp:ListItem Text="Bahrain" />
+                                                                <asp:ListItem Text="Bangladesh" />
+                                                                <asp:ListItem Text="Barbados" />
+                                                                <asp:ListItem Text="Belarus" />
+                                                                <asp:ListItem Text="Belgium" />
+                                                                <asp:ListItem Text="Belize" />
+                                                                <asp:ListItem Text="Benin" />
+                                                                <asp:ListItem Text="Bermuda" />
+                                                                <asp:ListItem Text="Bhutan" />
+                                                                <asp:ListItem Text="Bolivia" />
+                                                                <asp:ListItem Text="Bosnia-Herzegovina" />
+                                                                <asp:ListItem Text="Botswana" />
+                                                                <asp:ListItem Text="Bouvet Island" />
+                                                                <asp:ListItem Text="Brazil" />
+                                                                <asp:ListItem Text="British Indian Ocean Territory" />
+                                                                <asp:ListItem Text="Brunei" />
+                                                                <asp:ListItem Text="Bulgaria" />
+                                                                <asp:ListItem Text="Burkina Faso" />
+                                                                <asp:ListItem Text="Burundi" />
+                                                                <asp:ListItem Text="Cambodia" />
+                                                                <asp:ListItem Text="Cameroon" />
+                                                                <asp:ListItem Text="Cape Verde" />
+                                                                <asp:ListItem Text="Cayman Islands" />
+                                                                <asp:ListItem Text="Central African Republic" />
+                                                                <asp:ListItem Text="Chad" />
+                                                                <asp:ListItem Text="Chile" />
+                                                                <asp:ListItem Text="China" />
+                                                                <asp:ListItem Text="Christmas Island" />
+                                                                <asp:ListItem Text="Cocos (Keeling) Islands" />
+                                                                <asp:ListItem Text="Colombia" />
+                                                                <asp:ListItem Text="Comoros" />
+                                                                <asp:ListItem Text="Congo" />
+                                                                <asp:ListItem Text="Cook Islands" />
+                                                                <asp:ListItem Text="Costa Rica" />
+                                                                <asp:ListItem Text="Croatia" />
+                                                                <asp:ListItem Text="Cuba" />
+                                                                <asp:ListItem Text="Cyprus" />
+                                                                <asp:ListItem Text="Czech Republic" />
+                                                                <asp:ListItem Text="Denmark" />
+                                                                <asp:ListItem Text="Djibouti" />
+                                                                <asp:ListItem Text="Dominica" />
+                                                                <asp:ListItem Text="Dominican Republic" />
+                                                                <asp:ListItem Text="East Timor" />
+                                                                <asp:ListItem Text="Ecuador" />
+                                                                <asp:ListItem Text="Educational" />
+                                                                <asp:ListItem Text="Egypt" />
+                                                                <asp:ListItem Text="El Salvador" />
+                                                                <asp:ListItem Text="Equatorial Guinea" />
+                                                                <asp:ListItem Text="Eritrea" />
+                                                                <asp:ListItem Text="Estonia" />
+                                                                <asp:ListItem Text="Ethiopia" />
+                                                                <asp:ListItem Text="Falkland Islands" />
+                                                                <asp:ListItem Text="Faroe Islands" />
+                                                                <asp:ListItem Text="Fiji" />
+                                                                <asp:ListItem Text="Finland" />
+                                                                <asp:ListItem Text="Former Czechoslovakia" />
+                                                                <asp:ListItem Text="Former USSR" />
+                                                                <asp:ListItem Text="France" />
+                                                                <asp:ListItem Text="French Guyana" />
+                                                                <asp:ListItem Text="French Southern Territories" />
+                                                                <asp:ListItem Text="Gabon" />
+                                                                <asp:ListItem Text="Gambia" />
+                                                                <asp:ListItem Text="Georgia" />
+                                                                <asp:ListItem Text="Germany" />
+                                                                <asp:ListItem Text="Ghana" />
+                                                                <asp:ListItem Text="Gibraltar" />
+                                                                <asp:ListItem Text="Great Britain" />
+                                                                <asp:ListItem Text="Greece" />
+                                                                <asp:ListItem Text="Greenland" />
+                                                                <asp:ListItem Text="Grenada" />
+                                                                <asp:ListItem Text="Guadeloupe (French)" />
+                                                                <asp:ListItem Text="Guam (USA)" />
+                                                                <asp:ListItem Text="Guatemala" />
+                                                                <asp:ListItem Text="Guinea" />
+                                                                <asp:ListItem Text="Guinea-Bissau" />
+                                                                <asp:ListItem Text="Guyana" />
+                                                                <asp:ListItem Text="Haiti" />
+                                                                <asp:ListItem Text="Heard and McDonald Islands" />
+                                                                <asp:ListItem Text="Holy See (Vatican City State)" />
+                                                                <asp:ListItem Text="Honduras" />
+                                                                <asp:ListItem Text="Hungary" />
+                                                                <asp:ListItem Text="Iceland" />
+                                                                <asp:ListItem Text="India" />
+                                                                <asp:ListItem Text="Indonesia" />
+                                                                <asp:ListItem Text="Iran" />
+                                                                <asp:ListItem Text="Iraq" />
+                                                                <asp:ListItem Text="Ireland" />
+                                                                <asp:ListItem Text="Israel" />
+                                                                <asp:ListItem Text="Italy" />
+                                                                <asp:ListItem Text="Ivory Coast (Cote D'Ivoire)" />
+                                                                <asp:ListItem Text="Jamaica" />
+                                                                <asp:ListItem Text="Japan" />
+                                                                <asp:ListItem Text="Jordan" />
+                                                                <asp:ListItem Text="Kazakhstan" />
+                                                                <asp:ListItem Text="Kenya" />
+                                                                <asp:ListItem Text="Kiribati" />
+                                                                <asp:ListItem Text="Kuwait" />
+                                                                <asp:ListItem Text="Kyrgyz Republic (Kyrgyzstan)" />
+                                                                <asp:ListItem Text="Laos" />
+                                                                <asp:ListItem Text="Latvia" />
+                                                                <asp:ListItem Text="Lebanon" />
+                                                                <asp:ListItem Text="Lesotho" />
+                                                                <asp:ListItem Text="Liberia" />
+                                                                <asp:ListItem Text="Libya" />
+                                                                <asp:ListItem Text="Liechtenstein" />
+                                                                <asp:ListItem Text="Lithuania" />
+                                                                <asp:ListItem Text="Luxembourg" />
+                                                                <asp:ListItem Text="Macau" />
+                                                                <asp:ListItem Text="Macedonia" />
+                                                                <asp:ListItem Text="Madagascar" />
+                                                                <asp:ListItem Text="Malawi" />
+                                                                <asp:ListItem Text="Malaysia" />
+                                                                <asp:ListItem Text="Maldives" />
+                                                                <asp:ListItem Text="Mali" />
+                                                                <asp:ListItem Text="Malta" />
+                                                                <asp:ListItem Text="Marshall Islands" />
+                                                                <asp:ListItem Text="Martinique (French)" />
+                                                                <asp:ListItem Text="Mauritania" />
+                                                                <asp:ListItem Text="Mauritius" />
+                                                                <asp:ListItem Text="Mayotte" />
+                                                                <asp:ListItem Text="Micronesia" />
+                                                                <asp:ListItem Text="Moldavia" />
+                                                                <asp:ListItem Text="Monaco" />
+                                                                <asp:ListItem Text="Mongolia" />
+                                                                <asp:ListItem Text="Montserrat" />
+                                                                <asp:ListItem Text="Morocco" />
+                                                                <asp:ListItem Text="Mozambique" />
+                                                                <asp:ListItem Text="Myanmar" />
+                                                                <asp:ListItem Text="Namibia" />
+                                                                <asp:ListItem Text="Nauru" />
+                                                                <asp:ListItem Text="Nepal" />
+                                                                <asp:ListItem Text="Netherlands" />
+                                                                <asp:ListItem Text="Netherlands Antilles" />
+                                                                <asp:ListItem Text="New Caledonia (French)" />
+                                                                <asp:ListItem Text="New Zealand" />
+                                                                <asp:ListItem Text="Nicaragua" />
+                                                                <asp:ListItem Text="Niger" />
+                                                                <asp:ListItem Text="Nigeria" />
+                                                                <asp:ListItem Text="Niue" />
+                                                                <asp:ListItem Text="Norfolk Island" />
+                                                                <asp:ListItem Text="Northern Mariana Islands" />
+                                                                <asp:ListItem Text="North Korea" />
+                                                                <asp:ListItem Text="Norway" />
+                                                                <asp:ListItem Text="Oman" />
+                                                                <asp:ListItem Text="Pakistan" />
+                                                                <asp:ListItem Text="Palau" />
+                                                                <asp:ListItem Text="Panama" />
+                                                                <asp:ListItem Text="Papua New Guinea" />
+                                                                <asp:ListItem Text="Paraguay" />
+                                                                <asp:ListItem Text="Peru" />
+                                                                <asp:ListItem Text="Philippines" />
+                                                                <asp:ListItem Text="Pitcairn Island" />
+                                                                <asp:ListItem Text="Poland" />
+                                                                <asp:ListItem Text="Polynesia (French)" />
+                                                                <asp:ListItem Text="Portugal" />
+                                                                <asp:ListItem Text="Puerto Rico" />
+                                                                <asp:ListItem Text="Qatar" />
+                                                                <asp:ListItem Text="Reunion (French)" />
+                                                                <asp:ListItem Text="Romania" />
+                                                                <asp:ListItem Text="Russian Federation" />
+                                                                <asp:ListItem Text="Rwanda" />
+                                                                <asp:ListItem Text="Saint Helena" />
+                                                                <asp:ListItem Text="Saint Kitts &amp; Nevis Anguilla" />
+                                                                <asp:ListItem Text="Saint Lucia" />
+                                                                <asp:ListItem Text="Saint Pierre and Miquelon" />
+                                                                <asp:ListItem Text="Saint Tome and Principe" />
+                                                                <asp:ListItem Text="Saint Vincent &amp; Grenadines" />
+                                                                <asp:ListItem Text="Samoa" />
+                                                                <asp:ListItem Text="San Marino" />
+                                                                <asp:ListItem Text="Saudi Arabia" />
+                                                                <asp:ListItem Text="Senegal" />
+                                                                <asp:ListItem Text="Seychelles" />
+                                                                <asp:ListItem Text="S. Georgia &amp; S. Sandwich Isls." />
+                                                                <asp:ListItem Text="Sierra Leone" />
+                                                                <asp:ListItem Text="Singapore" />
+                                                                <asp:ListItem Text="Slovak Republic" />
+                                                                <asp:ListItem Text="Slovenia" />
+                                                                <asp:ListItem Text="Solomon Islands" />
+                                                                <asp:ListItem Text="Somalia" />
+                                                                <asp:ListItem Text="South Africa" />
+                                                                <asp:ListItem Text="South Korea" />
+                                                                <asp:ListItem Text="Spain" />
+                                                                <asp:ListItem Text="Sri Lanka" />
+                                                                <asp:ListItem Text="Sudan" />
+                                                                <asp:ListItem Text="Suriname" />
+                                                                <asp:ListItem Text="Svalbard and Jan Mayen Islands" />
+                                                                <asp:ListItem Text="Swaziland" />
+                                                                <asp:ListItem Text="Sweden" />
+                                                                <asp:ListItem Text="Switzerland" />
+                                                                <asp:ListItem Text="Syria" />
+                                                                <asp:ListItem Text="Tadjikistan" />
+                                                                <asp:ListItem Text="Taiwan" />
+                                                                <asp:ListItem Text="Tanzania" />
+                                                                <asp:ListItem Text="Thailand" />
+                                                                <asp:ListItem Text="Togo" />
+                                                                <asp:ListItem Text="Tokelau" />
+                                                                <asp:ListItem Text="Tonga" />
+                                                                <asp:ListItem Text="Trinidad and Tobago" />
+                                                                <asp:ListItem Text="Tunisia" />
+                                                                <asp:ListItem Text="Turkey" />
+                                                                <asp:ListItem Text="Turkmenistan" />
+                                                                <asp:ListItem Text="Turks and Caicos Islands" />
+                                                                <asp:ListItem Text="Tuvalu" />
+                                                                <asp:ListItem Text="Uganda" />
+                                                                <asp:ListItem Text="Ukraine" />
+                                                                <asp:ListItem Text="United Arab Emirates" />
+                                                                <asp:ListItem Text="United Kingdom" />
+                                                                <asp:ListItem Text="Uruguay" />
+                                                                <asp:ListItem Text="USA Minor Outlying Islands" />
+                                                                <asp:ListItem Text="Uzbekistan" />
+                                                                <asp:ListItem Text="Vanuatu" />
+                                                                <asp:ListItem Text="Venezuela" />
+                                                                <asp:ListItem Text="Vietnam" />
+                                                                <asp:ListItem Text="Virgin Islands (British)" />
+                                                                <asp:ListItem Text="Virgin Islands (USA)" />
+                                                                <asp:ListItem Text="Wallis and Futuna Islands" />
+                                                                <asp:ListItem Text="Western Sahara" />
+                                                                <asp:ListItem Text="Yemen" />
+                                                                <asp:ListItem Text="Yugoslavia" />
+                                                                <asp:ListItem Text="Zaire" />
+                                                                <asp:ListItem Text="Zambia" />
+                                                                <asp:ListItem Text="Zimbabwe" />
+                                                            </asp:DropDownList>
+                                                            <asp:RequiredFieldValidator ID="req_MCountry" CssClass="errorMsg" ControlToValidate="ddlMCountry" ErrorMessage="*Country is required" runat="server" Display="Dynamic" />
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            </asp:Panel>
+
+                                            <asp:Panel ID="pnlAdditional" runat="server" Visible="false">
+                                                <div class="section-top-border">
+                                                    <h3 class="mb-10">Additional Questions-Answering</h3>
+                                                    <p>These questions will help us help you grow your business and save more lives</p>
+
+                                                    <h5 class="mb-10 mt-20">Organization Information</h5>
+                                                    <div class="row mt-10">
+                                                        <div class="col-lg-4 col-md-4">
+                                                            Organization Capacity (average):
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4">
+                                                            <asp:DropDownList runat="server" ID="ddlcapacity" CssClass="single-input dropdown-scrollable nice-select">
+                                                                <asp:ListItem Value="" Text="" />
+                                                                <asp:ListItem Value="0-25" Text="0-25" />
+                                                                <asp:ListItem Value="25-55" Text="26-55" />
+                                                                <asp:ListItem Value="56-100" Text="56-100" />
+                                                                <asp:ListItem Value="101+" Text="101+" />
+                                                            </asp:DropDownList>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mt-10">
+                                                        <div class="col-lg-4 col-md-4">
+                                                            Primary Dog Food Brand Used:
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4">
+                                                            <asp:DropDownList runat="server" ID="ddlFood_dog" CssClass="single-input dropdown-scrollable nice-select">
+                                                                <asp:ListItem Value="" Text="" />
+                                                                <asp:ListItem Value="Blue Buffalo" Text="Blue Buffalo" />
+                                                                <asp:ListItem Value="Beneful" Text="Beneful" />
+                                                                <asp:ListItem Value="Eukanuba" Text="Eukanuba" />
+                                                                <asp:ListItem Value="Iams" Text="Iams" />
+                                                                <asp:ListItem Value="Natura" Text="Natura" />
+                                                                <asp:ListItem Value="Purina Chows" Text="Purina Chows" />
+                                                                <asp:ListItem Value="Purina ONE" Text="Purina ONE" />
+                                                                <asp:ListItem Value="Pedigree" Text="Pedigree" />
+                                                                <asp:ListItem Value="Science Diet" Text="Science Diet" />
+                                                                <asp:ListItem Value="Store brands" Text="Store brands" />
+                                                                <asp:ListItem Value="Other" Text="Other" />
+                                                            </asp:DropDownList>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mt-10">
+                                                        <div class="col-lg-4 col-md-4">
+                                                            Primary Cat Food Brand Used:
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4">
+                                                            <asp:DropDownList runat="server" ID="ddlFood_cat" CssClass="single-input dropdown-scrollable nice-select">
+                                                                <asp:ListItem Value="" Text="" />
+                                                                <asp:ListItem Value="Eukanuba" Text="Eukanuba" />
+                                                                <asp:ListItem Value="Blue Buffalo" Text="Blue Buffalo" />
+                                                                <asp:ListItem Value="Fancy Feast" Text="Fancy Feast" />
+                                                                <asp:ListItem Value="Friskies" Text="Friskies" />
+                                                                <asp:ListItem Value="Iams" Text="Iams" />
+                                                                <asp:ListItem Value="Meow Mix" Text="Meow Mix" />
+                                                                <asp:ListItem Value="Natura" Text="Natura" />
+                                                                <asp:ListItem Value="Purina Chows" Text="Purina Chows" />
+                                                                <asp:ListItem Value="Science Diet" Text="Science Diet" />
+                                                                <asp:ListItem Value="Store brand" Text="Store brand" />
+                                                                <asp:ListItem Value="Whiskas" Text="Whiskas" />
+                                                                <asp:ListItem Value="Other" Text="Other" />
+                                                            </asp:DropDownList>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-10">
+                                                        <div class="col-lg-4 col-md-4">
+                                                            Prmary Source of Funding for Food:
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4">
+                                                            <asp:DropDownList runat="server" ID="ddlFood_source" CssClass="single-input dropdown-scrollable nice-select">
+                                                                <asp:ListItem Value="" Text="" />
+                                                                <asp:ListItem Value="Community Donations" Text="Community Donations" />
+                                                                <asp:ListItem Value="Corporate Donations" Text="Corporate Donations" />
+                                                                <asp:ListItem Value="Fundraisers" Text="Fundraisers" />
+                                                                <asp:ListItem Value="Other" Text="Other" />
+                                                            </asp:DropDownList>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="row mt-10">
+                                                        <div class="col-lg-4 col-md-4">
+                                                            Do you have a Veterinarian on staff?
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4">
+                                                            <asp:DropDownList runat="server" ID="ddlVet" CssClass="single-input dropdown-scrollable nice-select">
+                                                                <asp:ListItem Value="" Text="" />
+                                                                <asp:ListItem Value="Yes" Text="Yes" />
+                                                                <asp:ListItem Value="No" Text="No" />
+                                                            </asp:DropDownList>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="row mt-10">
+                                                        <div class="col-lg-4 col-md-4">
+                                                            If no, how do you get Veterinary Services?
+                                                        </div>
+                                                        <div class="col-lg-8 col-md-8">
+                                                            <asp:TextBox ID="tbWhereVet" runat="server" MaxLength="250" CssClass="single-input" placeholder="Veterinary Services" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mt-10">
+                                                        <div class="col-lg-4 col-md-4">
+                                                            Which animals do you help?
+                                                        </div>
+                                                        <div class="col-lg-2 col-md-2">
+                                                            <asp:CheckBox ID="chkDog" runat="server" Text='Dogs' />
+                                                        </div>
+                                                        <div class="col-lg-2 col-md-2">
+                                                            <asp:CheckBox ID="chkCat" runat="server" Text='Cats' />
+                                                        </div>
+                                                        <div class="col-lg-2 col-md-2">
+                                                            <asp:CheckBox ID="chkReptile" runat="server" Text='Reptiles' />
+                                                        </div>
+                                                        <div class="col-lg-2 col-md-2">
+                                                            <asp:CheckBox ID="chkOther" runat="server" Text='Other' />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mt-10">
+                                                        <div class="col-lg-4 col-md-4">
+                                                            Do you have experience with offsite adoption events?
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4">
+                                                            <asp:DropDownList runat="server" ID="ddloffsite_events" CssClass="single-input dropdown-scrollable nice-select">
+                                                                <asp:ListItem Value="" Text="" />
+                                                                <asp:ListItem Value="Yes" Text="Yes" />
+                                                                <asp:ListItem Value="No" Text="No" />
+                                                            </asp:DropDownList>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mt-10">
+                                                        <div class="col-lg-4 col-md-4">
+                                                            Do you have a mobile adoption vehicle?
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4">
+                                                            <asp:DropDownList runat="server" ID="ddlmobile_vehicle" CssClass="single-input dropdown-scrollable nice-select">
+                                                                <asp:ListItem Value="" Text="" />
+                                                                <asp:ListItem Value="Yes" Text="Yes" />
+                                                                <asp:ListItem Value="No" Text="No" />
+                                                            </asp:DropDownList>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mt-10">
+                                                        <div class="col-lg-4 col-md-4">
+                                                            Have you worked with local retailers for adoption events?
+                                                        </div>
+                                                        <div class="col-lg-2 col-md-2">
+                                                            <asp:DropDownList runat="server" ID="ddlwork_with_retailers" CssClass="single-input dropdown-scrollable nice-select">
+                                                                <asp:ListItem Value="" Text="" />
+                                                                <asp:ListItem Value="Yes" Text="Yes" />
+                                                                <asp:ListItem Value="No" Text="No" />
+                                                            </asp:DropDownList>
+                                                        </div>
+                                                        <div class="col-lg-2 col-md-2">
+                                                            If Yes, whom?
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4">
+                                                            <asp:TextBox ID="tbwhich_retailers" runat="server" MaxLength="250" CssClass="single-input" placeholder="Retailers" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mt-10">
+                                                        <div class="col-lg-2 col-md-2">
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4">
+                                                            <asp:DropDownList runat="server" ID="ddlwant_adoption_retailer" Visible="false" CssClass="single-input dropdown-scrollable nice-select">
+                                                                <asp:ListItem Value="" Text="" />
+                                                                <asp:ListItem Value="Yes" Text="Yes" />
+                                                                <asp:ListItem Value="No" Text="No" />
+                                                            </asp:DropDownList>
+                                                        </div>
+                                                    </div>
+
+                                                    <h5 class="mt-20 mb-15">Marketing</h5>
+
+                                                    <div class="row mt-10">
+                                                        <div class="col-lg-8 col-md-8">
+                                                            Do you have a Public Relations person (volunteer, part/full time)?
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4">
+                                                            <asp:DropDownList runat="server" ID="ddlpr_person" CssClass="single-input dropdown-scrollable nice-select">
+                                                                <asp:ListItem Value="" Text="" />
+                                                                <asp:ListItem Value="Yes" Text="Yes" />
+                                                                <asp:ListItem Value="No" Text="No" />
+                                                            </asp:DropDownList>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mt-10">
+                                                        <div class="col-lg-8 col-md-8">
+                                                            Do you have a relationship with your local media (TV, newspaper, etc)?
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4">
+                                                            <asp:DropDownList runat="server" ID="ddlmedia_relations" CssClass="single-input dropdown-scrollable nice-select">
+                                                                <asp:ListItem Value="" Text="" />
+                                                                <asp:ListItem Value="Yes" Text="Yes" />
+                                                                <asp:ListItem Value="No" Text="No" />
+                                                            </asp:DropDownList>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mt-10">
+                                                        <div class="col-lg-8 col-md-8">
+                                                            Do you place ads on a regular basis?
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4">
+                                                            <asp:DropDownList runat="server" ID="ddlplace_ads" CssClass="single-input dropdown-scrollable nice-select">
+                                                                <asp:ListItem Value="" Text="" />
+                                                                <asp:ListItem Value="Yes" Text="Yes" />
+                                                                <asp:ListItem Value="No" Text="No" />
+                                                            </asp:DropDownList>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-10">
+                                                        <div class="col-lg-3 col-md-3">
+                                                            If yes, where?
+                                                        </div>
+                                                        <div class="col-lg-9 col-md-9">
+                                                            <asp:TextBox ID="tbwhere_ads" runat="server" MaxLength="250" CssClass="single-input" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mt-10">
+                                                        <div class="col-lg-8 col-md-8">
+                                                            If no, are you interested in being teamed with a local retailer?
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4">
+                                                            <asp:DropDownList runat="server" ID="ddlwant_marketing_retailer" CssClass="single-input dropdown-scrollable nice-select">
+                                                                <asp:ListItem Value="" Text="" />
+                                                                <asp:ListItem Value="Yes" Text="Yes" />
+                                                                <asp:ListItem Value="No" Text="No" />
+                                                            </asp:DropDownList>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mt-10">
+                                                        <div class="col-lg-8 col-md-8">
+                                                            Have you attended an <u><a href="http://www.animalcentero.org/ACESConference" target="_blank">ACES International Conference</a></u>?
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4">
+                                                            <asp:DropDownList runat="server" ID="ddlattended_ACES" CssClass="single-input dropdown-scrollable nice-select">
+                                                                <asp:ListItem Value="" Text="" />
+                                                                <asp:ListItem Value="Yes" Text="Yes" />
+                                                                <asp:ListItem Value="No" Text="No" />
+                                                            </asp:DropDownList>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mt-10">
+                                                        <div class="col-lg-8 col-md-8">
+                                                            Are you interested in attending an <u><a href="http://www.animalcentero.org/ACESConference" target="_blank">ACES International Conference</a></u>?
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4">
+                                                            <asp:DropDownList runat="server" ID="ddlinterested_ACES" CssClass="single-input dropdown-scrollable nice-select">
+                                                                <asp:ListItem Value="" Text="" />
+                                                                <asp:ListItem Value="Yes" Text="Yes" />
+                                                                <asp:ListItem Value="No" Text="No" />
+                                                            </asp:DropDownList>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="row mt-10">
+                                                        <div class="col-lg-4 col-md-4">
+                                                            <asp:CheckBox ID="chkIams_optin" runat="server" Visible="false" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </asp:Panel>
+
+
+                                            <%--fahad visible should be false--%>
+                                            <asp:Panel runat="server" ID="pnlAdmin" Visible="true">
+                                                <div class="section-top-border">
+                                                    <h3 class="mb-10">Admin</h3>
+
+                                                    <div class="row mt-10">
+                                                        <div class="col-lg-2 col-md-2">
+                                                            <asp:CheckBox ID="chkParticipant_2012" runat="server" Visible="false" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mt-10">
+                                                        <div class="col-lg-2 col-md-2">
+                                                            <asp:CheckBox ID="chkcompleted" runat="server" Visible="false" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mt-10">
+                                                        <div class="col-lg-3 col-md-3">
+                                                            *City:
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4">
+                                                            <asp:DropDownList runat="server" ID="ddlCalls" CssClass="single-input dropdown-scrollable nice-select">
+                                                                <asp:ListItem Value="0" Text="0" />
+                                                                <asp:ListItem Value="1" Text="1" />
+                                                                <asp:ListItem Value="2" Text="2" />
+                                                                <asp:ListItem Value="3" Text="3" />
+                                                                <asp:ListItem Value="4" Text="4" />
+                                                                <asp:ListItem Value="5" Text="5" />
+                                                            </asp:DropDownList>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mt-10">
+                                                        <div class="col-lg-3 col-md-3">
+                                                            <%--Status--%>
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4">
+                                                            <asp:DropDownList runat="server" ID="ddlResolution" Visible="false" CssClass="single-input dropdown-scrollable nice-select">
+                                                                <asp:ListItem Value="" Text="" />
+                                                                <asp:ListItem Value="Contacted-Participating" Text="Contacted-Participating" />
+                                                                <asp:ListItem Value="Contacted-NOT Participating-Not Interested" Text="Contacted-NOT Participating-Not Interested" />
+                                                                <asp:ListItem Value="Contacted-NOT Participating-Using Another Program" Text="Contacted-NOT Participating-Using Another Program" />
+                                                                <asp:ListItem Value="Contacted-NOT Participating-Shelter Closed/Not Operating" Text="Contacted-NOT Participating-Shelter Closed/Not Operating" />
+                                                                <asp:ListItem Value="No Contact-Wrong Number" Text="No Contact-Wrong Number" />
+                                                                <asp:ListItem Value="No Contact-No Answer" Text="No Contact-No Answer" />
+                                                                <asp:ListItem Value="No Contact-Disconnected Number" Text="No Contact-Disconnected Number" />
+                                                                <asp:ListItem Value="No Contact-Left Message" Text="No Contact-Left Message" />
+                                                                <asp:ListItem Value="Duplicate-Deleting Account" Text="Duplicate-Deleting Account" />
+                                                            </asp:DropDownList>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mt-10">
+                                                        <div class="col-lg-4 col-md-4">
+                                                            <asp:CheckBox ID="chkActive" runat="server" />
+                                                            Active
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mt-10">
+                                                        <div class="col-lg-3 col-md-3">
+                                                            2018 Admin Notes
+                                                        </div>
+                                                        <div class="col-lg-9 col-md-9 form-group">
+                                                            <asp:TextBox ID="tbAdmin_notes2018" CssClass="common-textarea form-control" runat="server" Height="200" MaxLength="4000" TextMode="MultiLine" />
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mt-10">
+                                                        <div class="col-lg-3 col-md-3">
+                                                            2017 Admin Notes
+                                                        </div>
+                                                        <div class="col-lg-9 col-md-9 form-group">
+                                                            <asp:TextBox ID="tbAdmin_notes2017" CssClass="common-textarea form-control" runat="server" MaxLength="4000" Height="200" TextMode="MultiLine" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mt-10">
+                                                        <div class="col-lg-3 col-md-3">
+                                                            INPEx Notes
+                                                        </div>
+                                                        <div class="col-lg-9 col-md-9 form-group">
+                                                            <asp:TextBox ID="tbINPExNotes" runat="server" CssClass="common-textarea form-control" MaxLength="4000" Height="200" TextMode="MultiLine" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mt-10">
+                                                        <div class="col-lg-3 col-md-3">
+                                                            2016 Admin Notes
+                                                        </div>
+                                                        <div class="col-lg-9 col-md-9 form-group">
+                                                            <asp:TextBox ID="tbAdmin_notes" runat="server" CssClass="common-textarea form-control" MaxLength="4000" Height="200" TextMode="MultiLine" />
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </asp:Panel>
+
+                                            <div class="title text-center mb-20">
+                                                <asp:Button ID="btnUpdate" OnClick="btnUpdate_Click" CssClass="genric-btn primary small round-border" runat="server" Text="Update Profile" />
+                                            </div>
+
+                                        </form>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+</asp:Content>

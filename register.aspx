@@ -213,13 +213,13 @@
 <asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
     <meta name="description" content="Increase pet adoptions in your animal shelter by joining Blue Buffalo Home 4 the Holidays - register today!" />
     <meta name="keywords" content="pet adoption, animal shelters, animal shelter marketing, pet adoption marketing, pet adoption events, Blue Buffalo, Helen Woodward Animal Center, Home 4 the Holidays, Mike Arms" />
-    <style type="text/css">
+   <%-- <style type="text/css">
         <!--
         .style1 {
             color: #FFFFFF
         }
         -->
-    </style>
+    </style>--%>
 </asp:Content>
 
 
