@@ -45,7 +45,7 @@ How To Guide</asp:content>
                                                             
 </div>
 <map name="Map">
-  <area shape="rect" coords="33,22,286,86" href="how-to-make-your-camgaign-a-success.aspx">
+  <area shape="rect" coords="33,22,286,86" href="how-to-make-your-campaign-a-success.aspx">
   <area shape="rect" coords="322,18,588,89" href="messaging-guidelines.aspx">
   <area shape="rect" coords="24,123,286,204" href="templates.aspx">
   <area shape="rect" coords="323,130,585,202" href="sharing-and-reporting-your-success.aspx">

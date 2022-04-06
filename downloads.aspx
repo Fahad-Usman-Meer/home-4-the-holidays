@@ -76,7 +76,7 @@
 
                                         <div class="row mt-10">
                                             <div class="col-lg-6 col-md-6">
-                                                <a href="how-to-make-your-camgaign-a-success.aspx" class="genric-btn primary ee-large">HOW TO MAKE YOUR CAMGAIGN A SUCCESS<span style="padding-left: inherit;font-size: large;font-weight: bold;" class="lnr lnr-arrow-right"></span></a>
+                                                <a href="how-to-make-your-campaign-a-success.aspx" class="genric-btn primary ee-large">HOW TO MAKE YOUR CAMPAIGN A SUCCESS<span style="padding-left: inherit;font-size: large;font-weight: bold;" class="lnr lnr-arrow-right"></span></a>
                                             </div>
                                             <div class="col-lg-6 col-md-6">
                                                 <a href="messaging-guidelines.aspx" class="genric-btn primary ee-large">MESSAGING & GUIDELINES<span style="padding-left: inherit;font-size: large;font-weight: bold;" class="lnr lnr-arrow-right"></span></a>

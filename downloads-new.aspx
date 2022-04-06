@@ -38,7 +38,7 @@ How To Guide</asp:content>
                                                             
                                                           <table border="0" align="center" cellpadding="5" cellspacing="5">
                                                             <tr>
-                                                              <td><a href="how-to-make-your-camgaign-a-success.aspx"><img src="_images/H4TH13-campaignbutt.jpg" width="275" height="85" border="0" /></a></td>
+                                                              <td><a href="how-to-make-your-campaign-a-success.aspx"><img src="_images/H4TH13-campaignbutt.jpg" width="275" height="85" border="0" /></a></td>
                                                               <td><a href="messaging-guidelines.aspx"><img src="_images/H4TH13-messbutt.jpg" width="275" height="85" border="0" /></a></td>
                                                             </tr>
                                                             <tr>
