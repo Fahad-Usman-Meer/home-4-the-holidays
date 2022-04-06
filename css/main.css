@@ -1004,8 +1004,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .genric-btn.ee-large {
-        padding: 0 40px;
-        line-height: 64px;
+        padding: 1em 1em 1em 0.5em;
+        /*line-height: 64px;*/
         font-size: larger;
     }
 
