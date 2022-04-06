@@ -54,7 +54,7 @@
         <div class="container main-menu">
             <div class="row align-items-center justify-content-between d-flex">
                 <div id="logo">
-                    <a href="/index.html">
+                    <a href="/index.aspx">
                         <img style="width: 130%; height: 40px" src="/_images/logos/H4TH13-topbar-logo.jpg" alt="" title="" />
                     </a>
                 </div>
