@@ -59,18 +59,18 @@
 
 </head>
 
-<body style="display: block; margin-top:-1.5em">
+<body style="display: block; margin-top: -1.5em">
     <script type="text/javascript" src="http://join.home4thehoidays.org/_js/wz_tooltip.js"></script>
     <! -- Header Start -->
 	
 
     <!-- #region #header -->
-    
-    
-      <div class="">
-          <HWAC:LeftNav runat="server" />
-          <asp:ContentPlaceHolder ID="Leftnav" runat="server" />
-      </div>
+
+
+    <div class="">
+        <HWAC:LeftNav runat="server" />
+        <asp:ContentPlaceHolder ID="Leftnav" runat="server" />
+    </div>
 
     <%--<script language="javascript" type="text/javascript" src="/common/header_and_menubar.txt"></script>--%>
     <!-- #endregion #header -->
@@ -129,7 +129,7 @@
       <%-- Start Counter Area --%>
       <section class="other-issue-area">
           <div class="container">
-              <div class="row d-flex justify-content-center">
+              <div class="row justify-content-center">
                   <div class="menu-content pb-20 col-lg-9">
                       <div class="title text-center">
                           <h2 class="mb-10">Pets Adopted: <b><span>
@@ -141,18 +141,15 @@
                       </div>
                   </div>
               </div>
-              <div class="row text-center">
-                  <div class="col-lg-4 col-md-4"></div>
-                  <div class="col-lg-4 col-md-4">
-                      <div class="single-other-issue">
-                          <div class="thumb" style="height: 7em !important; width: 25em !important;">
-                              <img style="height: 7em !important;" class="img-fluid" src="/img/paid_for/kids-park-dog.jpg" alt="">
-                          </div>
-                          <div>
-                              <p>Updated Weekly </p>
-                          </div>
-                      </div>
-                  </div>
+              <div class="row justify-content-center">
+                    <div class="single-other-issue">
+                        <div class="thumb row justify-content-center" style="height: 7em !important; width: 25em !important;">
+                            <img style="height: 7em !important;" class="img-fluid" src="/img/paid_for/kids-park-dog.jpg" alt="">
+                        </div>
+                        <div class="row justify-content-center">
+                            <p>Updated Weekly </p>
+                        </div>
+                    </div>
               </div>
               <div class="row">
               </div>
@@ -160,7 +157,6 @@
 
       </section>
       <%-- End Pay For Area --%>
-
   </div>
     <! -- Left Navigation End --> 
 
@@ -175,8 +171,5 @@
 
     <script language="javascript" type="text/javascript" src="/common/footer.txt"></script>
     <%-- End footer Area --%>
-
-
-
 </body>
 </html>
