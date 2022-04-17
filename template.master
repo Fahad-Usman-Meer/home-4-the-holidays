@@ -34,6 +34,7 @@
         }
     </style>
     <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+    
     <!-- Google Analytics -->
     <script>
         window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
@@ -42,6 +43,7 @@
         ga('linker:autoLink', ['remembermethursday.org']);
         ga('send', 'pageview');
     </script>
+    
     <script async src='//www.google-analytics.com/analytics.js'></script>
     <!-- End Google Analytics -->
     <!-- Begin Bing Analytics -->
@@ -51,7 +53,13 @@
     </noscript>
     <!-- End Bing Analytics -->
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            debugger
+            document.getElementById("spYear").innerHTML = new Date().getFullYear();
+        });
+    </script>
 
     <!-- #region Load Scripts & CSS -->
     <script language="javascript" type="text/javascript" src="/common/scripts_css_path.txt"></script>
@@ -142,14 +150,14 @@
                   </div>
               </div>
               <div class="row justify-content-center">
-                    <div class="single-other-issue">
-                        <div class="thumb row justify-content-center" style="height: 7em !important; width: 25em !important;">
-                            <img style="height: 7em !important;" class="img-fluid" src="/img/paid_for/kids-park-dog.jpg" alt="">
-                        </div>
-                        <div class="row justify-content-center">
-                            <p>Updated Weekly </p>
-                        </div>
-                    </div>
+                  <div class="single-other-issue">
+                      <div class="thumb row justify-content-center" style="height: 7em !important; width: 25em !important;">
+                          <img style="height: 7em !important;" class="img-fluid" src="/img/paid_for/kids-park-dog.jpg" alt="">
+                      </div>
+                      <div class="row justify-content-center">
+                          <p>Updated Weekly </p>
+                      </div>
+                  </div>
               </div>
               <div class="row">
               </div>
@@ -169,7 +177,21 @@
         </ul>
     </div>--%>
 
-    <script language="javascript" type="text/javascript" src="/common/footer.txt"></script>
+    <div style="background: #04091e;">
+        <div class="container">
+            <div class="row d-flex justify-content-between align-items-center pt-10 pb-10">
+                <p class="col-lg-8 col-sm-12 footer-text m-0">
+                    &copy;
+                    <%--current year will come here--%>
+                    <span id="spYear"></span>
+                    Helen Woodward Animal Center - v(2.0)
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <%--<script language="javascript" type="text/javascript" src="/common/footer.txt"></script>--%>
     <%-- End footer Area --%>
 </body>
 </html>
