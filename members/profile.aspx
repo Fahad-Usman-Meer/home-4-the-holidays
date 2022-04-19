@@ -233,7 +233,7 @@
                     <h1 class="text-white">Member Profile
                     </h1>
                     <p class="text-white link-nav">
-                        <a href="/index.aspx">Member Home </a>
+                        <a href="/members/index.aspx">Member Home </a>
                         <span class="lnr lnr-arrow-right"></span>
                         <a>Member Profile</a>
                     </p>
@@ -1498,9 +1498,7 @@
 
                                             </asp:Panel>
 
-
-                                            <%--fahad visible should be false--%>
-                                            <asp:Panel runat="server" ID="pnlAdmin" Visible="true">
+                                            <asp:Panel runat="server" ID="pnlAdmin" Visible="false">
                                                 <div class="section-top-border">
                                                     <h3 class="mb-10">Admin</h3>
 
