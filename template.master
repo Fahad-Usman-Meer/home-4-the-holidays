@@ -12,9 +12,9 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
 
-    <link rel="stylesheet" href="http://join.home4theholidays.org/_css/thickbox.css" type="text/css" media="screen" />
-    <%--<link href="http://join.home4theholidays.org/_css/style2.css" rel="stylesheet" type="text/css" />--%>
-    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <link rel="stylesheet" href="/_css/thickbox.css" type="text/css" media="screen" />
+    <%--<link href="https://join.home4theholidays.org/_css/style2.css" rel="stylesheet" type="text/css" />--%>
+    <script type="text/javascript" src="https://w.sharethis.com/button/buttons.js"></script>
     <script type="text/javascript">stLight.options({ publisher: '127b4c89-1c34-4e68-b933-85623e8ca959' });</script>
 
     <!--[if IE 6]>
@@ -56,19 +56,43 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
-            debugger
+            //debugger
             document.getElementById("spYear").innerHTML = new Date().getFullYear();
         });
     </script>
 
-    <!-- #region Load Scripts & CSS -->
-    <script language="javascript" type="text/javascript" src="/common/scripts_css_path.txt"></script>
+    <!-- #region Load Scripts & CSS /common/scripts_css_path.txt-->
+    <link rel="icon" type="image/png" href="/_images/logos/title_bar_logo.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" charset="UTF-8"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"/>
+    <link rel="stylesheet" href="/css/linearicons.css"/>
+    <link rel="stylesheet" href="/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/css/magnific-popup.css"/>
+    <link rel="stylesheet" href="/css/jquery-ui.css"/>
+    <link rel="stylesheet" href="/css/nice-select.css"/>
+    <link rel="stylesheet" href="/css/animate.min.css"/>
+    <link rel="stylesheet" href="/css/owl.carousel.css"/>
+    <link rel="stylesheet" href="/css/main.css"/>
+    <script type="text/javascript" src="/js/vendor/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="/js/popper.min.js"></script>
+    <script type="text/javascript" src="/js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="/js/easing.min.js"></script>
+    <script type="text/javascript" src="/js/hoverIntent.js"></script>
+    <script type="text/javascript" src="/js/superfish.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.ajaxchimp.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.nice-select.min.js"></script>
+    <script type="text/javascript" src="/js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="/js/mail-script.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
     <!-- #endregion Load Scripts & CSS -->
 
 </head>
 
 <body style="display: block; margin-top: -1.5em">
-    <script type="text/javascript" src="http://join.home4thehoidays.org/_js/wz_tooltip.js"></script>
+    <script type="text/javascript" src="/_js/wz_tooltip.js"></script>
     <! -- Header Start -->
 	
 
@@ -90,7 +114,7 @@
 
     <div class="clearer"></div>
     <div id="Container">
-        <%--<div class="brdcrmb"><a href="http://join.home4theholidays.org/invite.aspx">Invite Shelters </a> | <a href="http://join.home4theholidays.org/Contact.aspx">Contact Us</a> | <span class="st_sharethis_custom" displayText="">Share This Page</span> </div>
+        <%--<div class="brdcrmb"><a href="https://join.home4theholidays.org/invite.aspx">Invite Shelters </a> | <a href="https://join.home4theholidays.org/Contact.aspx">Contact Us</a> | <span class="st_sharethis_custom" displayText="">Share This Page</span> </div>
         --%>
 <! -- Header Image Start -->
 
@@ -125,9 +149,9 @@
 	
   <div class="left_cntnt">
       <%--<div class="Blg_lt">
-          <img src="http://join.home4theholidays.org/_images/Pets-Adopted.gif" alt="" /><br />
+          <img src="https://join.home4theholidays.org/_images/Pets-Adopted.gif" alt="" /><br />
           <div class="count">
-              <img src="http://join.home4theholidays.org/_images/counter.gif" alt="" />
+              <img src="https://join.home4theholidays.org/_images/counter.gif" alt="" />
               <small>Updated Weekly</small><div style="margin-left: 12px;"></div>
           </div>
           <div class="clearer"></div>
@@ -141,7 +165,8 @@
                   <div class="menu-content pb-20 col-lg-9">
                       <div class="title text-center">
                           <h2 class="mb-10">Pets Adopted: <b><span>
-                              <script src="/common/counter.txt"></script>
+                              <%--<script src="/common/counter.txt"></script>--%>
+                              1,062,127
                           </span></b>
                               <br />
                           </h2>

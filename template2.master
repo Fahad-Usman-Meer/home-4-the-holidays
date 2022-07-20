@@ -1,4 +1,4 @@
-<%@ MASTER LANGUAGE="VB" %>
+﻿<%@ MASTER LANGUAGE="VB" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/">
 <%@ Register TagPrefix="HWAC" TagName="LeftNav" src="~/_controls/h4thleftnav2.ascx" %>
@@ -11,8 +11,8 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 
-<link rel="stylesheet" href="http://join.home4theholidays.org/_css/thickbox.css" type="text/css" media="screen" />
-<link href="http://join.home4theholidays.org/_css/style2.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://join.home4theholidays.org/_css/thickbox.css" type="text/css" media="screen" />
+<link href="https://join.home4theholidays.org/_css/style2.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'127b4c89-1c34-4e68-b933-85623e8ca959'});</script>
 
 <!--[if IE 6]>

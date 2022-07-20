@@ -52,7 +52,7 @@
 
         'Close the stream
         objStreamWriter.Close()
-        lblmessage.Text = "Description updated " & DateTime.Now.ToString() & " PST   <a href=""http://join.home4theholidays.org/shelter_details.aspx?ShelterID=" & Session("UserId") & """ target=""_blank"">View Profile</a>"
+        lblmessage.Text = "Description updated " & DateTime.Now.ToString() & " PST   <a href=""https://join.home4theholidays.org/shelter_details.aspx?ShelterID=" & Session("UserId") & """ target=""_blank"">View Profile</a>"
     End Sub
 
 

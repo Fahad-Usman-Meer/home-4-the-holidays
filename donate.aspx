@@ -149,7 +149,7 @@ end function
                                                                         <td colspan="2" nowrap><br>
                                                                           100% of your donation will go to 
                                                                             <asp:Label ID="lblShelter" runat="server"  Font-Bold="true"/><Br>
-                                                                        <a href="http://join.home4theholidays.org/shelter_map.aspx?ID=donate">Change Shelter</a></td>
+                                                                        <a href="https://join.home4theholidays.org/shelter_map.aspx?ID=donate">Change Shelter</a></td>
                                                                       </tr>
                                                                     </table>
                                                                       <HWAC:UserInfoForm id="UserInfoForm" runat="server"/> <HWAC:UserBAddressForm id="BAddress" runat="server" /> <HWAC:UserCCForm id="UserCCForm" runat="Server" />

@@ -2,7 +2,7 @@
 
 <script runat="server">
     Sub page_load(obj As Object, e As EventArgs)
-        'response.Redirect("http://join.home4theholidays.org/How-To-Guide")
+        'response.Redirect("https://join.home4theholidays.org/How-To-Guide")
 
     End Sub
 </script>

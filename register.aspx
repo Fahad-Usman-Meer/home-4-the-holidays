@@ -156,15 +156,15 @@
                     .MailTo = objUserDetails.Email
                     .From = "Home 4 The Holidays <h4th@animalcenter.org>"
                     .Subject = "Welcome to the Home 4 The Holidays Campaign!"
-                    .Body = "<table width=500 border=1 align=center cellpadding=4><tr><td><img src=""http://join.home4theholidays.org/_images/H4TH_color_sm.jpg"" width=225 height=67 align=right /><p>Congratulations, you are now a part of a worldwide campaign to give orphan animals a Home 4 The Holidays!<p>"
-                    .Body &= "<p>Your personal account has been set up for you.  <br><Br>YOU MUST VERIFY YOUR ACCOUNT BY <a href=""http://join.home4theholidays.org/verify.aspx?Var1=" & theUniqueID & """>CLICKING HERE</a>.  YOUR PROFILE WILL NOT BE PUBLIC UNTIL YOU VERIFY IT.<br><br>You may view this account by <a href=http://join.home4theholidays.org/members>logging on</a> with the following information.</P>"
+                    .Body = "<table width=500 border=1 align=center cellpadding=4><tr><td><img src=""https://join.home4theholidays.org/_images/H4TH_color_sm.jpg"" width=225 height=67 align=right /><p>Congratulations, you are now a part of a worldwide campaign to give orphan animals a Home 4 The Holidays!<p>"
+                    .Body &= "<p>Your personal account has been set up for you.  <br><Br>YOU MUST VERIFY YOUR ACCOUNT BY <a href=""https://join.home4theholidays.org/verify.aspx?Var1=" & theUniqueID & """>CLICKING HERE</a>.  YOUR PROFILE WILL NOT BE PUBLIC UNTIL YOU VERIFY IT.<br><br>You may view this account by <a href=https://join.home4theholidays.org/members>logging on</a> with the following information.</P>"
                     .Body &= "<table align=center cellspacing=2><tr><td><b>Username:</b></td><td>" & objUserDetails.UserName & "</td></tr><tr><td><b>Password:</b></td><td>" & objUserDetails.Password & "</td></tr></table>"
 
                     '.Body &="<p>Stay tuned for exciting news about this year's campaign:  coming soon!</p>"
                     '.Body &="<p>Be sure to log in and set your adoption goal for the H4TH Campaign(October 1st-January 5th).</p>"
                     '.Body &="<ul><li>November 14, 2005</li><li>November 21, 2005</li><li>November 28, 2005</li><li>December 5, 2005</li><li>December 12, 2005</li><li>December 19, 2005</li><li>December 26, 2005</li><li>January 2, 2006</li></ul>"
-                    .Body &= "<p><a href=http://join.home4theholidays.org/members/adoptions.aspx>Click here</a> to log into your account to record your adoptions each week.  That way we can track the success of the program.</p>"
-                    .Body &= "<p>You may also simply <b><a href=""http://join.home4theholidays.org/login.aspx?p=" & theUniqueID & "&l=account"">Click Here</a></b> to automatically log in.</p>"
+                    .Body &= "<p><a href=https://join.home4theholidays.org/members/adoptions.aspx>Click here</a> to log into your account to record your adoptions each week.  That way we can track the success of the program.</p>"
+                    .Body &= "<p>You may also simply <b><a href=""https://join.home4theholidays.org/login.aspx?p=" & theUniqueID & "&l=account"">Click Here</a></b> to automatically log in.</p>"
                     .Body &= "<p>Thank you for your participation!</p></td></tr></table>"
                     'need to include username and password, info about updating adoptions
                     .Send_Email(objMM)
@@ -257,12 +257,12 @@
                         <h1 class="mb-10">Shine a Light by Joining Blue Buffalo Home 4 the Holidays</h1>
                     </div>
                     <p><strong>We want to help your pet  adoption organization increase adoptions and raise more funds for your  life-saving mission &ndash; <b>FOR FREE!</b>. </strong>Become a Blue Buffalo Home 4 the Holidays  partner by registering your shelter today.</p>
-                    <p><strong>ALL ORGANIZATIONS</strong>:  please check the&nbsp;<a href="http://join.home4theholidays.org/shelter_map.aspx">Shelter Map</a> to see if you are already registered. Please check all similar names before registering, to ensure no duplicate registrations.</p>
+                    <p><strong>ALL ORGANIZATIONS</strong>:  please check the&nbsp;<a href="https://join.home4theholidays.org/shelter_map.aspx">Shelter Map</a> to see if you are already registered. Please check all similar names before registering, to ensure no duplicate registrations.</p>
 
                     <div class="country">
                         <ul class="unordered-list">
                             <li><strong><em><u>If your organization IS NOT registered</u></em></strong>,  please fill out all of the fields to register for Blue&nbsp;Buffalo Home 4 the  Holidays. Once you are registered, you will have access to your personal  shelter profile, be able to enter your weekly adoptions online, receive special  announcements, download&nbsp;our annual informative guide to help  you increase adoptions, and more! </li>
-                            <li><strong><em><u>If your organization IS registered</u></em></strong>, thank  you and please update your email, adoption goals and contact information  annually.  You can&nbsp;<a href="http://join.home4theholidays.org/members">log in here.</a></li>
+                            <li><strong><em><u>If your organization IS registered</u></em></strong>, thank  you and please update your email, adoption goals and contact information  annually.  You can&nbsp;<a href="https://join.home4theholidays.org/members">log in here.</a></li>
                         </ul>
                     </div>
 

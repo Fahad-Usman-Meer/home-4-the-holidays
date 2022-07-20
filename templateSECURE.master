@@ -1,4 +1,4 @@
-<%@ MASTER LANGUAGE="VB" %>
+﻿<%@ MASTER LANGUAGE="VB" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/">
 <%@ Register TagPrefix="HWAC" TagName="LeftNav" src="~/_controls/h4thleftnav2.ascx" %>
@@ -54,7 +54,7 @@ pageTracker._trackPageview();
 
 <div class="clearer"></div>
 <div id="Container">
-  <div class="brdcrmb"><a href="http://join.home4theholidays.org/shelter_map.aspx?ID=donate">Donate To A Shelter</a> | <a href="http://join.home4theholidays.org/invite.aspx">Invite Shelters</a> | <a href="http://join.home4theholidays.org/Contact.aspx" target="_blank">Contact Us</a> </div>
+  <div class="brdcrmb"><a href="https://join.home4theholidays.org/shelter_map.aspx?ID=donate">Donate To A Shelter</a> | <a href="https://join.home4theholidays.org/invite.aspx">Invite Shelters</a> | <a href="https://join.home4theholidays.org/Contact.aspx" target="_blank">Contact Us</a> </div>
   
 <! -- Header Image Start -->
 

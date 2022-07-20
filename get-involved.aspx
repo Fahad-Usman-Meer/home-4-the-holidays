@@ -29,7 +29,7 @@ end sub
  <p align="center"><iframe width="350" height="197" src="https://www.youtube.com/embed/DdtgDix-rEg" frameborder="0" allowfullscreen></iframe>&nbsp;</p>
   <h3> Will You <strong>#LightTheirWayHome</strong>?</h3>
   <p> <strong>Adopt a New Forever  Friend</strong></p>
-  <p>    Locate a  participating shelter and find your new forever friend! <a href="http://join.home4theholidays.org/shelter_map.aspx">Click here</a> to find a shelter near you and bring a loving friend home for the holidays. <u></u></p>
+  <p>    Locate a  participating shelter and find your new forever friend! <a href="https://join.home4theholidays.org/shelter_map.aspx">Click here</a> to find a shelter near you and bring a loving friend home for the holidays. <u></u></p>
   <p><strong>If You Have Adopted a Pet, Share Your Pet  Adoption Story</strong><br>
   Encourage  pet adoption this holiday season and help send more orphan pets into loving  forever homes. Share your pet adoption moment or story using <strong>#LightTheirWayHome</strong> to inspire others to  adopt, too. Helen Woodward Animal Center could share your story!</p>
 <p><a class="twitter-timeline" href="https://twitter.com/search?q=lighttheirwayhome" data-widget-id="648582790045237248">Tweets about lighttheirwayhome</a>

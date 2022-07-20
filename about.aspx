@@ -24,6 +24,6 @@ end sub
   <p>Home 4 the Holidays is a three-month adoption drive  that&nbsp;saves the lives of orphan pets&nbsp;and raises awareness about the  importance of pet adoption during the holiday season. More families bring a new  pet home during the holiday season than at any other time of the year.</p>
   <p> The program educates the public about the importance of  choosing&nbsp;pet adoption, as opposed to supporting puppy mills and backyard  breeders. Through our collective group of over 4,000 pet adoption agencies,  facilities and rescue-groups, this campaign has become the largest pet adoption  campaign on record, saving over 10 million pets since its inception in 1999.</p>
   <p> For its third year, Helen Woodward Animal Center is excited  to partner with Blue Buffalo for this impactful program.  The pet food company not only provides  impressive national marketing to spread the word about adopting over the  holiday season, but also distributes &ldquo;Adoption Kits&rdquo; to all participating  rescue facilities to gift to each new pet parent who takes home an orphan pet  throughout the campaign.</p>
-  <p> <a href="http://join.home4theholidays.org/register.aspx">Be a part of  Home 4 the Holidays.</a>  Shine a light  on orphan pets.  Share the movement.</p>
+  <p> <a href="https://join.home4theholidays.org/register.aspx">Be a part of  Home 4 the Holidays.</a>  Shine a light  on orphan pets.  Share the movement.</p>
 </div>
 </asp:content>
