@@ -165,7 +165,7 @@
                 <div class="about-content col-lg-12">
                     <h1 class="text-white">H4TH Members</h1>
                     <p class="text-white link-nav">
-                        <a href="members/index.aspx">Member Home </a>
+                        <a href="/members/index.aspx">Member Home </a>
                         <span class="lnr lnr-arrow-right"></span>
                         <a>Recording Adoptions</a>
                     </p>
@@ -179,7 +179,6 @@
 
 <asp:Content ID="navigation" ContentPlaceHolderID="Leftnav" runat="server"></asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="maincontent" runat="Server">
-
 
     <%--Start about-info Area--%>
     <section class="about-info-area">
@@ -293,7 +292,8 @@
 
                                         <div class="section-top-border">
                                             <h5 class="mb-20">
-                                                <asp:Label runat="server" ID="lblgraph" /></h5>
+                                                <asp:Label runat="server" ID="lblgraph" />
+                                            </h5>
                                             <h3 class="mb-10">History</h3>
 
                                             <asp:Label runat="server" ID="lblHistory" />
