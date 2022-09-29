@@ -89,13 +89,24 @@
             'build table
             With objReader2
                 While .Read()
-                    lblgraph.Text = "<table><tr><td>Your " & .GetString(0) & " Goal</td></tr><tr>"
-                    If .Item(1) <> 0 Then lblgraph.Text &= "<p><td>" & .Item(1) & " Dogs&nbsp;</td><td>" & clsGraph.CreateGraph(.Item(1), intdogs) & "</td></tr><tr></p>"
-                    If .Item(2) <> 0 Then lblgraph.Text &= "<p>" & .Item(2) & " Puppies&nbsp;" & clsGraph.CreateGraph(.Item(2), intPuppies) & "</p>"
-                    If .Item(3) <> 0 Then lblgraph.Text &= "<p>" & .Item(3) & " Cats&nbsp;" & clsGraph.CreateGraph(.Item(3), intcats) & "</p>"
-                    If .Item(4) <> 0 Then lblgraph.Text &= "<p>" & .Item(4) & " Kittens&nbsp;" & clsGraph.CreateGraph(.Item(4), intKittens) & "</p>"
-                    If .Item(5) <> 0 Then lblgraph.Text &= "<p>" & .Item(5) & " Other&nbsp;" & clsGraph.CreateGraph(.Item(5), intOther) & "</p>"
-                    lblgraph.Text &= "<td></td><td></td></tr></table>"
+                    lblgraph.Text = "<table><tr><td>Your " & .GetString(0) & " Goal</td></tr>"
+
+                    If .Item(1) <> 0 Then
+                        lblgraph.Text &= "<tr><td>" & .Item(1) & " Dogs&nbsp;</td><td>" & clsGraph.CreateGraph(.Item(1), intdogs) & "</td></tr>"
+                    End If
+                    If .Item(2) <> 0 Then
+                        lblgraph.Text &= "<tr><td>" & .Item(2) & " Puppies&nbsp;</td><td>" & clsGraph.CreateGraph(.Item(2), intPuppies) & "</td></tr>"
+                    End If
+                    If .Item(3) <> 0 Then
+                        lblgraph.Text &= "<tr><td>" & .Item(3) & " Cats&nbsp;</td><td>" & clsGraph.CreateGraph(.Item(3), intcats) & "</td></tr>"
+                    End If
+                    If .Item(4) <> 0 Then
+                        lblgraph.Text &= "<tr><td>" & .Item(4) & " Kittens&nbsp;</td><td>" & clsGraph.CreateGraph(.Item(4), intKittens) & "</td></tr>"
+                    End If
+                    If .Item(5) <> 0 Then
+                        lblgraph.Text &= "<tr><td>" & .Item(5) & " Other&nbsp;</td><td>" & clsGraph.CreateGraph(.Item(5), intOther) & "</td></tr>"
+                    End If
+                    lblgraph.Text &= "<tr><td></td><td></td></tr></table>"
                 End While
             End With
         Else
