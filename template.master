@@ -17,6 +17,26 @@
     <script type="text/javascript" src="https://w.sharethis.com/button/buttons.js"></script>
     <script type="text/javascript">stLight.options({ publisher: '127b4c89-1c34-4e68-b933-85623e8ca959' });</script>
 
+
+    <script runat="server">
+        Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
+            Dim gdprConsentCookie As HttpCookie = Request.Cookies("gdpr-consent")
+            Dim analyticsConsentCookie As HttpCookie = Request.Cookies("analytics-consent")
+            Dim adsConsentCookie As HttpCookie = Request.Cookies("ads-consent")
+
+            If gdprConsentCookie IsNot Nothing AndAlso gdprConsentCookie.Value = "true" Then
+                ' User accepted the consent
+                If analyticsConsentCookie IsNot Nothing AndAlso analyticsConsentCookie.Value = "true" Then
+                    ' Load analytics scripts
+                End If
+
+                If adsConsentCookie IsNot Nothing AndAlso adsConsentCookie.Value = "true" Then
+                    ' Load advertising scripts
+                End If
+            End If
+        End Sub
+    </script>
+
     <!--[if IE 6]>
 <style type="text/css">
 #landing .lndg_fc, #Angel .lndg_fc{margin-right:7px;}
@@ -34,7 +54,7 @@
         }
     </style>
     <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
-    
+
     <!-- Google Analytics -->
     <script>
         window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
@@ -43,26 +63,26 @@
         ga('linker:autoLink', ['remembermethursday.org']);
         ga('send', 'pageview');
     </script>
-	 
 
-<!-- Google tag (gtag.js) -->
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8SHC6ZNV7Z"></script>
+    <!-- Google tag (gtag.js) -->
 
-<script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8SHC6ZNV7Z"></script>
 
-  window.dataLayer = window.dataLayer || [];
+    <script>
 
-  function gtag(){dataLayer.push(arguments);}
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('js', new Date());
+        function gtag() { dataLayer.push(arguments); }
 
- 
+        gtag('js', new Date());
 
-  gtag('config', 'G-8SHC6ZNV7Z');
 
-</script>
-    
+
+        gtag('config', 'G-8SHC6ZNV7Z');
+
+    </script>
+
     <script async src='//www.google-analytics.com/analytics.js'></script>
     <!-- End Google Analytics -->
     <!-- Begin Bing Analytics -->
@@ -81,18 +101,18 @@
     </script>
 
     <!-- #region Load Scripts & CSS /common/scripts_css_path.txt-->
-    <link rel="icon" type="image/png" href="/_images/logos/title_bar_logo.png"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" charset="UTF-8"/>
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"/>
-    <link rel="stylesheet" href="/css/linearicons.css"/>
-    <link rel="stylesheet" href="/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="/css/bootstrap.css"/>
-    <link rel="stylesheet" href="/css/magnific-popup.css"/>
-    <link rel="stylesheet" href="/css/jquery-ui.css"/>
-    <link rel="stylesheet" href="/css/nice-select.css"/>
-    <link rel="stylesheet" href="/css/animate.min.css"/>
-    <link rel="stylesheet" href="/css/owl.carousel.css"/>
-    <link rel="stylesheet" href="/css/main.css"/>
+    <link rel="icon" type="image/png" href="/_images/logos/title_bar_logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/linearicons.css" />
+    <link rel="stylesheet" href="/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/magnific-popup.css" />
+    <link rel="stylesheet" href="/css/jquery-ui.css" />
+    <link rel="stylesheet" href="/css/nice-select.css" />
+    <link rel="stylesheet" href="/css/animate.min.css" />
+    <link rel="stylesheet" href="/css/owl.carousel.css" />
+    <link rel="stylesheet" href="/css/main.css" />
     <script type="text/javascript" src="/js/vendor/jquery-2.2.4.min.js"></script>
     <script type="text/javascript" src="/js/popper.min.js"></script>
     <script type="text/javascript" src="/js/vendor/bootstrap.min.js"></script>
@@ -108,12 +128,58 @@
     <script type="text/javascript" src="/js/main.js"></script>
     <!-- #endregion Load Scripts & CSS -->
 
+    <link rel="stylesheet" type="text/css" href="/css/gdpr.css" />
+    <script type="text/javascript" src="/js/gdpr.js"></script>
+
+
 </head>
 
 <body style="display: block; margin-top: -1.5em">
     <script type="text/javascript" src="/_js/wz_tooltip.js"></script>
-    <! -- Header Start -->
-	
+
+    <!-- #region GDPR Consent Cookie Banner -->
+    <form id="form1" runat="server">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+
+        <div id="gdpr-banner" class="gdpr-banner" style="display: none;">
+            <p>
+                We use cookies to personalize content and ads, to provide social media features and to analyze our traffic. 
+               You consent to our cookies if you continue to use our website.
+            </p>
+            <div class="gdpr-toggles row">
+
+                <div class="col-lg-3 col-md-4 mt-sm-30 element-wrap">
+                    <div class="switch-wrap d-flex justify-content-between">
+
+                        <p>Allow Analytics</p>
+                        <div class="primary-switch">
+                            <input class="analytics-consent" type="checkbox" id="default-switch" checked="checked"/>
+                            <label for="default-switch"></label>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 mt-sm-30 element-wrap">
+                    <div class="switch-wrap d-flex justify-content-between">
+
+                        <p>Allow Advertising</p>
+                        <div class="primary-switch">
+                            <input class="ads-consent" type="checkbox" id="primary-switch" checked="checked"/>
+                            <label for="primary-switch"></label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <button id="accept-cookies" onclick="acceptCookies()" class="genric-btn primary">Accept</button>
+        </div>
+
+    </form>
+
+
+    <!-- #endregion Cookie Consent -->
 
     <!-- #region #header -->
 
@@ -128,8 +194,6 @@
 
     <div id="Header"></div>
 
-
-    <! -- Header End -->
 
     <div class="clearer"></div>
     <div id="Container">
@@ -183,8 +247,7 @@
               <div class="row justify-content-center">
                   <div class="menu-content pb-20 col-lg-9">
                       <div class="title text-center">
-                          <h2 class="mb-10">Pets Adopted in 2023: <b><span>
-                             888,723
+                          <h2 class="mb-10">Pets Adopted in 2023: <b><span>888,723
 
                          <!-- <a href="https://www.youtube.com/watch?v=zlflMDqO4yM">Thank you to all who worked saving animals throughout the pandemic.</a>-->
                       </div>

@@ -1,0 +1,21 @@
+.gdpr-banner {
+    position: fixed;
+    bottom: 0;
+    left: 50%; /* Move the left edge of the div to the center of the page */
+    transform: translateX(-50%); /* Shift the div left by 50% of its width to center it */
+    width: 75%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    z-index: 1000;
+}
+
+
+.gdpr-toggles {
+    margin: 10px 0;
+}
+
+.gdpr-toggles label {
+    margin-right: 15px;
+}
