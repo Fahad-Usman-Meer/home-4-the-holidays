@@ -134,7 +134,7 @@
                     'insert registration record
                     db.ExecuteNonQuery(str2) 'success-email me and them, and send them to profile page
                     'Insert animal goals
-                    str3 = "INSERT INTO tblH4thAdoptions (ShelterID, DateId, AYear, Dogs, Cats, Puppies, Kittens, other, AType) Values(" & .UserId & ",248,'2022'," & .Dogs & "," & .Cats & "," & .Puppies & "," & .Kittens & "," & .Other & ",'Goal')"
+                    str3 = "INSERT INTO tblH4thAdoptions (ShelterID, DateId, AYear, Dogs, Cats, Puppies, Kittens, other, AType) Values(" & .UserId & ",263,'2023'," & .Dogs & "," & .Cats & "," & .Puppies & "," & .Kittens & "," & .Other & ",'Goal')"
                     db.ExecuteNonQuery(str3)
                 End With
                 Session("UserID") = objUserDetails.UserId
@@ -170,7 +170,7 @@
                     .Send_Email(objMM)
                 End With
                 With objMM
-                    .MailTo = "lonjones@hotmail.com"
+                    .MailTo = "lonjones1972@gmail.com"
                     .From = "Home 4 The Holidays <h4th@animalcenter.org>"
                     .Subject = "H4TH Registration"
                     .Body = Session("ShelterName") & ", UserID:" & Session("UserID") & " has created a new profile.<br>"
@@ -504,7 +504,7 @@
                                                     </div>
                                                     <div class="col-lg-10 col-md-10">
                                                         <asp:TextBox ID="tbSAddress" runat="server" MaxLength="50" CssClass="single-input" placeholder="Address" />
-                                                        <asp:RequiredFieldValidator ControlToValidate="tbSAddress" CssClass="errorMsg" ErrorMessage="*Shipping address required" Display="Dynamic" runat="server" />
+                                                      <!-- <asp:RequiredFieldValidator ControlToValidate="tbSAddress" CssClass="errorMsg" ErrorMessage="*Shipping address required" Display="Dynamic" runat="server" />-->
                                                     </div>
                                                 </div>
                                                 <div class="row mt-10">
@@ -513,7 +513,7 @@
                                                     </div>
                                                     <div class="col-lg-4 col-md-4">
                                                         <asp:TextBox ID="tbSCity" runat="server" MaxLength="20" CssClass="single-input" placeholder="City" />
-                                                        <asp:RequiredFieldValidator ControlToValidate="tbSCity" CssClass="errorMsg" ErrorMessage="*City required" Display="Dynamic" runat="server" />
+                                                       <!-- <asp:RequiredFieldValidator ControlToValidate="tbSCity" CssClass="errorMsg" ErrorMessage="*City required" Display="Dynamic" runat="server" />-->
                                                     </div>
                                                     <div class="col-lg-2 col-md-2">
                                                         *State/Province:
@@ -610,7 +610,7 @@
                                                             <asp:ListItem Value="" Text=" " />
                                                             <asp:ListItem Value="None" Text="None" />
                                                         </asp:DropDownList>
-                                                        <asp:RequiredFieldValidator ID="req_SState" CssClass="errorMsg" ControlToValidate="ddlSState" ErrorMessage="*State is required. Select None if State does not apply to you" runat="server" Display="Dynamic" />
+                                                        <!--<asp:RequiredFieldValidator ID="req_SState" CssClass="errorMsg" ControlToValidate="ddlSState" ErrorMessage="*State is required. Select None if State does not apply to you" runat="server" Display="Dynamic" />-->
 
                                                     </div>
                                                 </div>
@@ -869,7 +869,7 @@
                                                             <asp:ListItem Text="Zambia" />
                                                             <asp:ListItem Text="Zimbabwe" />
                                                         </asp:DropDownList>
-                                                        <asp:RequiredFieldValidator ID="req_SCountry" CssClass="errorMsg" ControlToValidate="ddlSCountry" ErrorMessage="*Country is required" runat="server" Display="Dynamic" />
+                                                        <!--<asp:RequiredFieldValidator ID="req_SCountry" CssClass="errorMsg" ControlToValidate="ddlSCountry" ErrorMessage="*Country is required" runat="server" Display="Dynamic" />-->
 
                                                     </div>
                                                 </div>
@@ -893,7 +893,7 @@
                                                         </div>
                                                         <div class="col-lg-10 col-md-10">
                                                             <asp:TextBox ID="tbMAddress" runat="server" MaxLength="50" CssClass="single-input" placeholder="Address" />
-                                                            <asp:RequiredFieldValidator ControlToValidate="tbMAddress" CssClass="errorMsg" ErrorMessage="*Mailing address required" Display="Dynamic" runat="server" />
+                                                            <!--<asp:RequiredFieldValidator ControlToValidate="tbMAddress" CssClass="errorMsg" ErrorMessage="*Mailing address required" Display="Dynamic" runat="server" />-->
                                                         </div>
                                                     </div>
 
@@ -903,7 +903,7 @@
                                                         </div>
                                                         <div class="col-lg-4 col-md-4">
                                                             <asp:TextBox ID="tbMCity" runat="server" MaxLength="20" CssClass="single-input" placeholder="City" />
-                                                            <asp:RequiredFieldValidator ControlToValidate="tbMCity" CssClass="errorMsg" ErrorMessage="*City required" Display="Dynamic" runat="server" />
+                                                            <!--<asp:RequiredFieldValidator ControlToValidate="tbMCity" CssClass="errorMsg" ErrorMessage="*City required" Display="Dynamic" runat="server" />-->
                                                         </div>
                                                         <div class="col-lg-2 col-md-2">
                                                             *State/Province:
@@ -1000,7 +1000,7 @@
                                                                 <asp:ListItem Value="" Text=" " />
                                                                 <asp:ListItem Value="None" Text="None" />
                                                             </asp:DropDownList>
-                                                            <asp:RequiredFieldValidator ID="req_MState" CssClass="errorMsg" ControlToValidate="ddlMState" ErrorMessage="*State is required. Select None if State does not apply to you" runat="server" Display="Dynamic" />
+                                                            <!--<asp:RequiredFieldValidator ID="req_MState" CssClass="errorMsg" ControlToValidate="ddlMState" ErrorMessage="*State is required. Select None if State does not apply to you" runat="server" Display="Dynamic" />-->
 
                                                         </div>
                                                     </div>
@@ -1259,7 +1259,7 @@
                                                                 <asp:ListItem Text="Zambia" />
                                                                 <asp:ListItem Text="Zimbabwe" />
                                                             </asp:DropDownList>
-                                                            <asp:RequiredFieldValidator ID="req_MCountry" CssClass="errorMsg" ControlToValidate="ddlMCountry" ErrorMessage="*Country is required" runat="server" Display="Dynamic" />
+                                                            <!--<asp:RequiredFieldValidator ID="req_MCountry" CssClass="errorMsg" ControlToValidate="ddlMCountry" ErrorMessage="*Country is required" runat="server" Display="Dynamic" />-->
 
                                                         </div>
                                                     </div>
@@ -1272,7 +1272,7 @@
                                                 <h3 class="mb-10">Adoption Information</h3>
 
                                                 <p>
-                                                    Please enter the number of projected adoptions you will have during this year's Home 4 The Holidays <b>October 1st-January 4th </b>
+                                                    Please enter the number of projected adoptions you will have during this year's Home 4 The Holidays <b>October 1st-January 2nd </b>
                                                 </p>
 
                                                 <div class="row mt-10">

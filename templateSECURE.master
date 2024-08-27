@@ -50,8 +50,27 @@ var pageTracker = _gat._getTracker("UA-8531953-1");
 pageTracker._trackPageview();
 } catch(err) {}</script>
 
-<! -- Header End -->
 
+	 
+
+<!-- Google tag (gtag.js) -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8SHC6ZNV7Z"></script>
+
+<script>
+
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag(){dataLayer.push(arguments);}
+
+  gtag('js', new Date());
+
+ 
+
+  gtag('config', 'G-8SHC6ZNV7Z');
+
+</script>
+<! -- Header End -->
 <div class="clearer"></div>
 <div id="Container">
   <div class="brdcrmb"><a href="https://join.home4theholidays.org/shelter_map.aspx?ID=donate">Donate To A Shelter</a> | <a href="https://join.home4theholidays.org/invite.aspx">Invite Shelters</a> | <a href="https://join.home4theholidays.org/Contact.aspx" target="_blank">Contact Us</a> </div>

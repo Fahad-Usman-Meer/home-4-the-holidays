@@ -39,7 +39,7 @@
                             If Mid(.Item("ShowPublic"), 6, 1) = "1" Then
                                 lblShelterAddress.Text = "<strong>Physical</strong><br>" & .Item("SAddress") & "<br>" & .Item("SCity") & ", " & .Item("SState") & "  " & .Item("SZip")
                                 If .GetString(8) <> "United States" Then lblShelterAddress.Text &= "  " & .GetString(8)
-                                If .Item("SAddress") <> "" Then lblShelterAddress.Text &= "<br><a href=""http://www.maps.google.com/maps?complete=1&hl=en&q=" & .Item("SAddress") & "%20" & .Item("SCity") & "%20" & .Item("SState") & "%20" & .Item("SCountry") & "&sa=N&tab=wl"" target=""_blank"">Map</a>"
+                                If .Item("SAddress") <> "" Then lblShelterAddress.Text &= "<br><a href=""https://google.com/maps?complete=1&hl=en&q=" & .Item("SAddress") & "%20" & .Item("SCity") & "%20" & .Item("SState") & "%20" & .Item("SCountry") & "&sa=N&tab=wl"" target=""_blank"">Map</a>"
                             End If
                             If Mid(.Item("ShowPublic"), 7, 1) = "1" Then
                                 lblShelterAddress.Text &= "<br><br><strong>Mailing</strong><br>" & .Item("MAddress") & "<br>" & .Item("MCity") & ", " & .Item("MState") & "  " & .Item("MZip")
@@ -52,11 +52,11 @@
                             Else
                                 lblShelterWebsite.Text &= "<br>"
                             End If
-                            If .GetString(20) <> "" Then lblShelterWebsite.Text &= "<a href=http://" & .GetString(20) & " target=""_blank""><img src=""../_images/layout/3D-Icons-PNG/facebook.png"" alt=""facebook""  width=""25"" Height=""25"" vspace=""1""/></a>"
-                            If .GetString(21) <> "" Then lblShelterWebsite.Text &= "<a href=http://" & .GetString(21) & " target=""_blank""><img src=""../_images/layout/3D-Icons-PNG/Twitter.png"" width=""25"" Height=""25"" vspace=""1""/></a>"
+                            If .GetString(20) <> "" Then lblShelterWebsite.Text &= "<a href=https://" & .GetString(20) & " target=""_blank""><img src=""../_images/layout/3D-Icons-PNG/facebook.png"" alt=""facebook""  width=""25"" Height=""25"" vspace=""1""/></a>"
+                            If .GetString(21) <> "" Then lblShelterWebsite.Text &= "<a href=https://" & .GetString(21) & " target=""_blank""><img src=""../_images/layout/3D-Icons-PNG/Twitter.png"" width=""25"" Height=""25"" vspace=""1""/></a>"
 
-                            If .GetString(23) <> "" Then lblShelterWebsite.Text &= "<a href=http://" & .GetString(23) & " target=""_blank""><img src=""../_images/layout/3D-Icons-PNG/Pinterest.png"" width=""25"" Height=""25"" vspace=""1""/></a>"
-                            If .GetString(24) <> "" Then lblShelterWebsite.Text &= "<a href=http://" & .GetString(24) & " target=""_blank""><img src=""../_images/layout/3D-Icons-PNG/YouTube.png""  alt=""youtube"" width=""25"" Height=""25""vspace=""1""/></a>"
+                            If .GetString(23) <> "" Then lblShelterWebsite.Text &= "<a href=https://" & .GetString(23) & " target=""_blank""><img src=""../_images/layout/3D-Icons-PNG/Pinterest.png"" width=""25"" Height=""25"" vspace=""1""/></a>"
+                            If .GetString(24) <> "" Then lblShelterWebsite.Text &= "<a href=https://" & .GetString(24) & " target=""_blank""><img src=""../_images/layout/3D-Icons-PNG/YouTube.png""  alt=""youtube"" width=""25"" Height=""25""vspace=""1""/></a>"
                             lblDonate.Text = "<a href=""https://join.home4theholidays.org/donate.aspx?ShelterID=" & .Item("ShelterID") & "&ShelterName=" & .Item("ShelterName") & """ class=""genric-btn primary small round-border"">Donate To This Shelter</a>"
                         End While
                     End With
@@ -205,7 +205,7 @@
             </p>
 
             <div class="title text-center mt-40">
-                <asp:Label CssClass="donate_orange" ID="lblDonate" runat="server" Font-Bold="true" />
+                <!--<asp:Label CssClass="donate_orange" ID="lblDonate" runat="server" Font-Bold="true" />-->
             </div>
 
         </div>

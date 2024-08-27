@@ -26,7 +26,7 @@
             <div class="row fullscreen align-items-center justify-content-between" style="height: 545px;">
                 <div class="col-lg-6 col-md-6 banner-left">
                     <p class="text-white">
-                        It's Best Time to become a part of
+                        It's the best time to become a part of
                     </p>
                     <h1 id="main-bold-text" class="text-white">Home 4 The Holidays</h1>
                     <h6 class="text-white">join Us</h6>
@@ -52,8 +52,8 @@
                         <h1 class="mb-10">Join the world&rsquo;s  largest adoption campaign with Blue Buffalo® Home 4 the Holidays®</h1>
                     </div>
                     <p>Home 4 the Holidays is a three month adoption drive that  saves the lives of orphan pets and raises awareness about the importance of pet  adoption during the holiday season.&nbsp; <b>Why?</b> More families bring a new pet  home during the holiday season than at any other time of year.</p>
-                    <img src="_images/H4TH_historic_logo_08.jpg" align="right" width="200" />
-                    <p>This campaign is dedicated to educating the public about the  importance of choosing pet adoption over supporting puppy mills and backyard  breeders.&nbsp; Through our collective group of over 4,000 pet adoption  agencies, facilities, and rescue-groups, this campaign has become the largest  pet adoption campaign on record, saving over&nbsp;18 million pets&nbsp;since  its inception in 1999.</p>
+                    <img src="_images/logos/h4th-original-logo.png" align="right" width="200" />
+                    <p>This campaign is dedicated to educating the public about the  importance of choosing pet adoption over supporting puppy mills and backyard  breeders.&nbsp; Through our collective group of over 4,000 pet adoption  agencies, facilities, and rescue-groups, this campaign has become the largest  pet adoption campaign on record, saving over&nbsp;20 million pets&nbsp;since  its inception in 1999.</p>
                     <p><b>Benefits your organization/rescue can receive when you join  Blue Buffalo Home 4 the Holidays:</b></p>
 
                     <div class="country">

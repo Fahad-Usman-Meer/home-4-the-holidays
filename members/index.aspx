@@ -64,12 +64,12 @@
             <div class="row align-items-center section-gap">
                 <div class="col-lg-12">
                     <div class="title text-center">
-                        <h1 class="mb-10"><b>16 million</b> pets have gone "Home 4 the Holidays" <b>since 1999!</b></h1>
+                        <h1 class="mb-10"><b>20 million</b> pets have gone "Home 4 the Holidays" <b>since 1999!</b></h1>
                     </div>
 
                     <asp:Label ID="lblmessage" runat="server" />
                     <br />
-                    <p>You are joining over 4,200 shelters and rescue organizations, in  over 24 countries, working to secure forever homes for orphan pets. Please  check the list of participants. If you notice that other groups in your area  are NOT enrolled, please <u><b><a href="../invite.aspx">invite</a></b></u> them to join us. It's never too late to enroll! All they  need is a desire to increase adoptions, help lower euthanasia rates, and take  business away from puppy mills and backyard breeders during their most  profitable time of year.</p>
+                    <p>You are joining over 4,100 shelters and rescue organizations, in  over 24 countries, working to secure forever homes for orphan pets. Please  check the list of participants. If you notice that other groups in your area  are NOT enrolled, please <u><b><a href="../invite.aspx">invite</a></b></u> them to join us. It's never too late to enroll! All they  need is a desire to increase adoptions, help lower euthanasia rates, and take  business away from puppy mills and backyard breeders during their most  profitable time of year.</p>
 
 
                     <p>

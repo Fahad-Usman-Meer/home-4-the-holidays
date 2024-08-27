@@ -1,1 +1,1 @@
-﻿document.write('1,062,127')
+﻿document.write('71,608')

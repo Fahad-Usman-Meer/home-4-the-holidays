@@ -472,7 +472,7 @@ Public Class Payment
 		'Actual Server
 		'uncomment the following line and also set above Testmode=off to go live)
 		'objRequest.BaseAddress =  "https://secure.authorize.net/gateway/transact.dll"  OLD
-		objRequest.BaseAddress =  "https://secure2.authorize.net/gateway/transact.dll" 'NEW 7/20/15
+	 objRequest.BaseAddress =  "https://secure2.authorize.net/gateway/transact.dll" 'NEW 7/20/15
 	
 		objRetBytes = objRequest.UploadValues(objRequest.BaseAddress, "POST", objInf)
 		objRetVals = System.Text.Encoding.ASCII.GetString(objRetBytes).Split(",".ToCharArray())
@@ -1097,7 +1097,7 @@ Public Class DatabaseH4TH
 
  'Database Connection String for all class functions
  '----------------------------------------------------------------------------------------------------------------------------
- Private objConn as New SqlConnection("Data Source=198.71.226.6; Initial Catalog=0_HWACH4TH; User ID=dbH4TH; Password=HWAC*6461; Max Pool Size=1200;" )'
+Private objConn as New SqlConnection("Data Source=A2NWPLSK14SQL-v02.shr.prod.iad2.secureserver.net,1433; Initial Catalog=0_HWACH4TH; User ID=dbH4TH; Password=HWAC*6461; Max Pool Size=1200;" )'
  '----------------------------------------------------------------------------------------------------------------------------
  
  Public Function GetReader(strQuery as String) as SqlDataReader
@@ -1183,7 +1183,7 @@ Public Class Database
 
  'Database Connection String for all class functions
  '----------------------------------------------------------------------------------------------------------------------------
- Private objConn as New SqlConnection("Data Source=198.71.226.6; Initial Catalog=0_HWACETAL; User ID=dbETAL; Password=HWAC*6461; Max Pool Size=200;" )'
+ Private objConn as New SqlConnection("Data Source=A2NWPLSK14SQL-v02.shr.prod.iad2.secureserver.net,1433; Initial Catalog=0_HWACETAL; User ID=dbETAL; Password=HWAC*6461; Max Pool Size=200;" )'
  '----------------------------------------------------------------------------------------------------------------------------
  
  Public Function GetReader(strQuery as String) as SqlDataReader
@@ -1234,7 +1234,7 @@ Public Class DatabaseSEC
 
  'Database Connection String for all class functions
  '----------------------------------------------------------------------------------------------------------------------------
- Private objConn as New SqlConnection("Data Source=198.71.226.6; Initial Catalog=0_HWACSEC; User ID=dbSEC; Password=HWAC*6461; Max Pool Size=200;" )'
+ Private objConn as New SqlConnection("Data Source=A2NWPLSK14SQL-v02.shr.prod.iad2.secureserver.net,1433; Initial Catalog=0_HWACSEC; User ID=dbSEC; Password=HWAC*6461; Max Pool Size=200;" )'
  '----------------------------------------------------------------------------------------------------------------------------
  
  Public Function GetReader(strQuery as String) as SqlDataReader

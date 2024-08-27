@@ -81,14 +81,14 @@
                         If .GetString(43) <> "" Then ddlinterested_ACES.Items.Insert(0, New ListItem(.GetString(43), .GetString(43)))
                         'if .item("Iams_email_optin")=true then chkIams_optin.checked=true
                         'if .item("participant_2012")=true then chkParticipant_2012.checked=true
-                        tbAdmin_notes.Text = .Item("Admin_Notes_2016") & ""
-                        tbAdmin_notes2017.Text = .Item("Admin_Notes_2017") & ""
+                        'tbAdmin_notes.Text = .Item("Admin_Notes_2016") & ""
+                        'tbAdmin_notes2017.Text = .Item("Admin_Notes_2017") & ""
                         tbAdmin_notes2018.Text = .Item("Admin_Notes_2018") & ""
-                        tbINPExNotes.Text = .Item("INPExNotes") & ""
+                        'tbINPExNotes.Text = .Item("INPExNotes") & ""
                         If .Item("Completed") = True Then chkcompleted.Checked = True
                         If .Item("Active") = True Then chkActive.Checked = True
-                        'ddlCalls.Items.Insert(0, new ListItem(.item("calls"),.item("calls")))
-                        'ddlResolution.Items.Insert(0, new ListItem(.item("resolution"),.item("resolution")))
+                        ddlCalls.Items.Insert(0, new ListItem(.item("calls"),.item("calls")))
+                        ddlResolution.Items.Insert(0, new ListItem(.item("resolution"),.item("resolution")))
 
                         'show admin fields if neccessary
                         If Session("Admin") = "@F@EWE$" Then
@@ -156,23 +156,24 @@
             If chkOther.Checked Then Animal_Focus &= "Other|"
             If Animal_Focus <> "" Then Animal_Focus = Left(Animal_Focus, Len(Animal_Focus) - 1)
             Dim AdminNotes As String
-            If Session("Admin") = "@F@EWE$" Then
-                AdminNotes = Replace(tbAdmin_notes.Text, "'", "''") & "-profile edited by staff:" & DateTime.Now.ToString()
-            Else
-                AdminNotes = Replace(tbAdmin_notes.Text, "'", "''") & "-profile edited by client:" & DateTime.Now.ToString()
-            End If
+           ' If Session("Admin") = "@F@EWE$" Then
+            '    AdminNotes = Replace(tbAdmin_notes.Text, "'", "''") & "-profile edited by staff:" & 'DateTime.Now.ToString()
+            'Else
+             '   AdminNotes = Replace(tbAdmin_notes.Text, "'", "''") & "-profile edited by client:" & DateTime.Now.ToString()
+            'End If
             Dim AdminNotes2 As String
-            If Not Right(tbINPExNotes.Text, 8) = "INPEx | " Then 'new data in text box
-                AdminNotes2 = Replace(tbINPExNotes.Text, "'", "''") & " -- " & DateTime.Now.ToString() & " -edited by INPEx | "
-            Else
-                AdminNotes2 = Replace(tbINPExNotes.Text, "'", "''")
-            End If
+            'If Not Right(tbINPExNotes.Text, 8) = "INPEx | " Then 'new data in text box
+               ' AdminNotes2 = Replace(tbINPExNotes.Text, "'", "''") & " -- " & DateTime.Now.ToString() & " -edited by INPEx | "
+            'Else
+                'AdminNotes2 = Replace(tbINPExNotes.Text, "'", "''")
+            'End If
             Dim AdminNotes3 As String
-            If Not Right(tbAdmin_notes2017.Text, 8) = "Staff | " And Not tbAdmin_notes2017.Text = "" Then 'new data in text box
-                AdminNotes3 = Replace(tbAdmin_notes2017.Text, "'", "''") & " -- " & DateTime.Now.ToString() & " -edited by Staff | "
-            Else
-                AdminNotes3 = Replace(tbAdmin_notes2017.Text, "'", "''")
-            End If
+            'If Not Right(tbAdmin_notes2017.Text, 8) = "Staff | " And Not tbAdmin_notes2017.Text = "" Then 
+	'new data in text box
+                'AdminNotes3 = Replace(tbAdmin_notes2017.Text, "'", "''") & " -- " & DateTime.Now.ToString() & " -edited by Staff | "
+            'Else
+                'AdminNotes3 = Replace(tbAdmin_notes2017.Text, "'", "''")
+            'End If
             Dim AdminNotes4 As String
             If Not Right(tbAdmin_notes2018.Text, 8) = "Staff | " And Not tbAdmin_notes2018.Text = "" Then 'new data in text box
                 AdminNotes4 = Replace(tbAdmin_notes2018.Text, "'", "''") & " -- " & DateTime.Now.ToString() & " -edited by Staff | "
@@ -835,7 +836,7 @@
 
                                             </div>
 
-                                            <asp:Panel runat="server" ID="pnlMailing" Visible="false">
+                                            <asp:Panel runat="server" ID="pnlMailing" Visible="True">
                                                 <div class="section-top-border">
                                                     <h3 class="mb-10">Mailing Address</h3>
 
@@ -1516,7 +1517,7 @@
 
                                                     <div class="row mt-10">
                                                         <div class="col-lg-3 col-md-3">
-                                                            *City:
+                                                            Calls:
                                                         </div>
                                                         <div class="col-lg-4 col-md-4">
                                                             <asp:DropDownList runat="server" ID="ddlCalls" CssClass="single-input dropdown-scrollable nice-select">
@@ -1532,10 +1533,10 @@
 
                                                     <div class="row mt-10">
                                                         <div class="col-lg-3 col-md-3">
-                                                            <%--Status--%>
+                                                            Status:<%--Status--%>
                                                         </div>
                                                         <div class="col-lg-4 col-md-4">
-                                                            <asp:DropDownList runat="server" ID="ddlResolution" Visible="false" CssClass="single-input dropdown-scrollable nice-select">
+                                                            <asp:DropDownList runat="server" ID="ddlResolution" Visible="True" CssClass="single-input dropdown-scrollable nice-select">
                                                                 <asp:ListItem Value="" Text="" />
                                                                 <asp:ListItem Value="Contacted-Participating" Text="Contacted-Participating" />
                                                                 <asp:ListItem Value="Contacted-NOT Participating-Not Interested" Text="Contacted-NOT Participating-Not Interested" />
@@ -1559,14 +1560,14 @@
 
                                                     <div class="row mt-10">
                                                         <div class="col-lg-3 col-md-3">
-                                                            2018 Admin Notes
+                                                            Admin Notes
                                                         </div>
                                                         <div class="col-lg-9 col-md-9 form-group">
                                                             <asp:TextBox ID="tbAdmin_notes2018" CssClass="common-textarea form-control" runat="server" Height="200" MaxLength="4000" TextMode="MultiLine" />
 
                                                         </div>
                                                     </div>
-
+<%--
                                                     <div class="row mt-10">
                                                         <div class="col-lg-3 col-md-3">
                                                             2017 Admin Notes
@@ -1592,7 +1593,7 @@
                                                         <div class="col-lg-9 col-md-9 form-group">
                                                             <asp:TextBox ID="tbAdmin_notes" runat="server" CssClass="common-textarea form-control" MaxLength="4000" Height="200" TextMode="MultiLine" />
                                                         </div>
-                                                    </div>
+                                                    </div>--%>
 
                                                 </div>
                                             </asp:Panel>

@@ -6,9 +6,7 @@
 <script runat="server">
     Sub Page_Load(obj As Object, e As EventArgs)
         If Session("UserId") = "" Then Response.Redirect("../login.aspx?ReturnURL=../members/adoptions.aspx")
-
         ShowGraph() 'get goal table set up
-
         If Not Page.IsPostBack Then
             'load ddlDates here with dates from h4th dates where date-180 to present
             GetDates()
@@ -21,7 +19,6 @@
         Dim objReader As SqlDataReader
         Dim db As New HWAC.DatabaseH4TH
         strSqL = "Select DateID, DisplayDesc FROM tblH4thDates Where BegDate<='" & DateTime.Now.ToShortDateString & "' AND EndDate>='" & DateTime.Now.ToShortDateString & "' ORDER BY Begdate Desc"
-
         objReader = db.GetReader(strSqL)
         ddlDates.DataSource = objReader
         ddlDates.DataBind()
@@ -39,10 +36,9 @@
         Dim db As New HWAC.DatabaseH4TH
         Dim db2 As New HWAC.DatabaseH4TH
         Dim clsGraph As New HWAC.Utility
-
         'History---------------------------------------------
         lblHistory.Text = ""
-        strSql = "SELECT AYear, Sum(dogs) as dogs, SUM(puppies) as Puppies, SUM(Cats) as Cats, SUM(Kittens) as Kittens, Sum(other) as Other, AType FROM tblh4thAdoptions WHERE ShelterId=" & Session("UserId") & " GROUP BY AYear,AType ORDER BY AYear asc, AType Asc"
+        strSql = "SELECT AYear, Sum(dogs) as dogs, SUM(puppies) as Puppies, SUM(Cats) as Cats, SUM(Kittens) as Kittens, Sum(other) as Other, AType FROM tblh4thAdoptions WHERE ShelterId=" & Session("UserId") & " GROUP BY AYear,AType ORDER BY AYear ASC, AType Asc"
         objReader = db.GetReader(strSql)
         If Not objReader Is Nothing Then
             While objReader.Read()
@@ -53,7 +49,6 @@
                     Else
                         'if .getstring(0)<>year(now) then
                         'lblHistory.text &="<tr><td>" & .getstring(0) & "</td><td>"& .getint32(1) & "</td><td>" & .Getint32(2) & "</td><td>" & .Getint32(3) & "</td><td>" & .Getint32(4)	& "</td><td>" & .Getint32(5) & "</td></tr>"
-
                         'else
                         If .Item("AType") <> "Goal" Then 'weekly numbers
                             lblHistory.Text &= "<div Class=table-row><div Class=serial>Total</div><div Class=serial>" & .GetString(0) & "</div><div Class=serial>" & .GetInt32(1) & "</div><div Class=serial>" & .GetInt32(2) & "</div><div Class=serial>" & .GetInt32(3) & "</div><div Class=serial>" & .GetInt32(4) & "</div><div Class=serial>" & .GetInt32(5) & "</div></div>"
@@ -70,11 +65,8 @@
                     End If
                 End With
             End While
-
             If lblHistory.Text <> "" Then lblHistory.Text = "<p align=center><b>Total Adoptions</b></p><div Class=progress-table-wrap><div Class=progress-table><div Class=table-head><div Class=serial></div><div Class=serial>Year</div><div Class=serial>Dogs</div><div Class=serial>Puppies</div><div Class=serial>Cats</div><div Class=serial>Kittens</div><div Class=serial>Other</div></div><div style=""height: 40em;overflow-y: auto;"">" & lblHistory.Text & "</div></div></div>"
-
             'If lblHistory.Text <> "" Then lblHistory.Text = "<table align=center ><tr><td colspan=7 align=center><b>Total Adoptions</b></td></tr><tr><td></td><td>Year</td><td>Dogs</td><td>Puppies</td><td>Cats</td><td>Kittens</td><td>Other</td></tr>" & lblHistory.Text & "</table>"
-
             objReader.Close()
         Else 'no data yet
             intdogs = 0 : intcats = 0 : intPuppies = 0 : intKittens = 0 : intOther = 0
@@ -90,7 +82,6 @@
             With objReader2
                 While .Read()
                     lblgraph.Text = "<table><tr><td>Your " & .GetString(0) & " Goal</td></tr>"
-
                     If .Item(1) <> 0 Then
                         lblgraph.Text &= "<tr><td>" & .Item(1) & " Dogs&nbsp;</td><td>" & clsGraph.CreateGraph(.Item(1), intdogs) & "</td></tr>"
                     End If
@@ -110,17 +101,14 @@
                 End While
             End With
         Else
-
         End If
         objReader2.Close()
         'End Current Year Graph---------------------------------------------------------------
-
         'Breakdown this years entries---------------------------------------------------------
         'show this years adoption entries
         Dim objreader3 As SqlDataReader
         Dim db3 As New HWAC.DatabaseH4TH
-
-        strSql = "SELECT dbo.tblH4thDates.DisplayDesc, dbo.tblH4thAdoptions.pKey, dbo.tblH4thAdoptions.Dogs, dbo.tblH4thAdoptions.Puppies, dbo.tblH4thAdoptions.Cats, dbo.tblH4thAdoptions.Kittens, dbo.tblH4thAdoptions.Other FROM dbo.tblH4thAdoptions INNER JOIN dbo.tblH4thDates ON dbo.tblH4thAdoptions.DateId = dbo.tblH4thDates.DateID WHERE (dbo.tblH4thDates.BegDate <= '" & DateTime.Now.ToShortDateString & "') AND (dbo.tblH4thDates.EndDate >='" & DateTime.Now.ToShortDateString & "') AND (dbo.tblH4thAdoptions.ShelterID=" & Session("UserID") & ") AND (dbo.tblH4thAdoptions.AType<>'Goal') ORDER BY dbo.tblH4thDates.BegDate"
+        strSql = "SELECT dbo.tblH4thDates.DisplayDesc, dbo.tblH4thAdoptions.pKey, dbo.tblH4thAdoptions.Dogs, dbo.tblH4thAdoptions.Puppies, dbo.tblH4thAdoptions.Cats, dbo.tblH4thAdoptions.Kittens, dbo.tblH4thAdoptions.Other FROM dbo.tblH4thAdoptions INNER JOIN dbo.tblH4thDates ON dbo.tblH4thAdoptions.DateId = dbo.tblH4thDates.DateID WHERE (dbo.tblH4thDates.BegDate <= '" & DateTime.Now.ToShortDateString & "') AND (dbo.tblH4thDates.EndDate >='" & DateTime.Now.ToShortDateString & "') AND (dbo.tblH4thAdoptions.ShelterID=" & Session("UserID") & ") AND (dbo.tblH4thAdoptions.AType<>'Goal') ORDER BY dbo.tblH4thDates.BegDate DESC"
         'Create/Populate the DataReader
         objreader3 = db3.GetReader(strSql)
         'Databind the DataReader to the DataList Web control
@@ -131,7 +119,6 @@
             dlAdoptions.Visible = False
         End If
         objreader3.Close()
-
     End Sub
     Sub btnAdd_Adoptions_Click(obj As Object, e As EventArgs)
         If Page.IsValid Then
@@ -149,7 +136,7 @@
                 strAType = "Weekly"
             End If
             If strResult = "" Then 'does not exist-insert new
-                strsql = "INSERT Into tblH4thAdoptions (ShelterID, DateID, Ayear, AType, Dogs, Puppies, Cats, Kittens, Other) Values (" & Session("UserId") & "," & ddlDates.SelectedItem.Value & ",'2021','" & strAType & "'," & tbDogs.Text & "," & tbPuppies.Text & "," & tbCats.Text & "," & tbKittens.Text & "," & tbOther.Text & ")"
+                strsql = "INSERT Into tblH4thAdoptions (ShelterID, DateID, Ayear, AType, Dogs, Puppies, Cats, Kittens, Other) Values (" & Session("UserId") & "," & ddlDates.SelectedItem.Value & ",'2023','" & strAType & "'," & tbDogs.Text & "," & tbPuppies.Text & "," & tbCats.Text & "," & tbKittens.Text & "," & tbOther.Text & ")"
             Else 'exists, update
                 strsql = "Update tblH4thAdoptions Set Dogs=" & tbDogs.Text & ", Puppies=" & tbPuppies.Text & ", Cats=" & tbCats.Text & ", Kittens=" & tbKittens.Text & ", Other=" & tbOther.Text & " WHERE ShelterId=" & Session("UserId") & " AND DateId=" & ddlDates.SelectedItem.Value
             End If
@@ -157,16 +144,11 @@
             ShowGraph()
         End If
     End Sub
-
-
 </script>
-
-
 <asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
     <%--<link rel="stylesheet" href="../_css/thickbox.css" type="text/css" media="screen" />
 <link href="../_css/style2.css" rel="stylesheet" type="text/css" />--%>
 </asp:Content>
-
 <%-- start banner Area --%>
 <asp:Content ID="Content1" ContentPlaceHolderID="PageTitle" runat="Server">
     <section class="relative my-banner" style="background: url(/img/banners/family-with-dog-porch-banner-2.jpg) center; background-size: cover;">
@@ -186,11 +168,8 @@
     </section>
 </asp:Content>
 <%-- End banner Area --%>
-
-
 <asp:Content ID="navigation" ContentPlaceHolderID="Leftnav" runat="server"></asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="maincontent" runat="Server">
-
     <%--Start about-info Area--%>
     <section class="about-info-area">
         <div class="container">
@@ -199,16 +178,13 @@
                     <div class="title text-center">
                         <h1 class="mb-10">Recording Adoptions For Your Shelter</h1>
                     </div>
-
                     <div class="whole-wrap">
                         <div class="container">
                             <div class="">
                                 <div class="row">
                                     <div class="col-lg-12 col-md-12">
                                         <form runat="server" id="form1">
-
                                             <div class="section-top-border">
-
                                                 <div class="row mt-10">
                                                     <div class="col-lg-1 col-md-1"></div>
                                                     <div class="col-lg-3 col-md-3">
@@ -238,7 +214,6 @@
                                                     </div>
                                                     <div class="col-lg-1 col-md-1"></div>
                                                 </div>
-
                                                 <div class="row mt-10">
                                                     <div class="col-lg-1 col-md-1"></div>
                                                     <div class="col-lg-2 col-md-2">
@@ -258,7 +233,6 @@
                                                     </div>
                                                     <div class="col-lg-1 col-md-1"></div>
                                                 </div>
-
                                                 <div class="row mt-10">
                                                     <div class="col-lg-2 col-md-2"></div>
                                                     <div class="col-lg-10 col-md-10">
@@ -274,49 +248,30 @@
                                                         <asp:RangeValidator runat="server" MinimumValue="0" MaximumValue="2000" CssClass="errorMsg" Display="Dynamic" ControlToValidate="tbOther" Type="Integer" ErrorMessage="*Other animals must be a number between 0 and 2000" />
                                                     </div>
                                                 </div>
-
-
                                             </div>
-
                                             <div class="title text-center">
                                                 <asp:Button ID="btnRegister" OnClick="btnAdd_Adoptions_Click" CssClass="genric-btn primary small round-border mb-20" runat="server" Text="Submit Numbers" />
                                             </div>
                                         </form>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
-
                     <div class="container section-top">
                         <div class="">
                             <div class="row">
                                 <div class="col-lg-12 col-md-12">
-
-
-
                                     <div class="col-lg-12 col-md-12">
-
-
                                         <div class="section-top-border">
                                             <h5 class="mb-20">
                                                 <asp:Label runat="server" ID="lblgraph" />
                                             </h5>
                                             <h3 class="mb-10">History</h3>
-
                                             <asp:Label runat="server" ID="lblHistory" />
-
                                         </div>
-
                                         <br>
                                         <asp:Label runat="server" ID="lblCurrentNumbers" />
-
-
-
-
                                         <div align="center">
                                             <asp:DataList ID="dlAdoptions" runat="server" DataKeyField="pKey" ShowBorder="true">
                                                 <HeaderTemplate>
@@ -347,21 +302,13 @@
                                                         <td><%# Container.DataItem("Other") %></td>
                                                     </tr>
                                                 </ItemTemplate>
-
                                             </asp:DataList>
                                         </div>
                                     </div>
-
-
                                 </div>
-
                             </div>
                         </div>
                     </div>
-
-
-
-
                 </div>
             </div>
         </div>

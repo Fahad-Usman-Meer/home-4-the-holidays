@@ -35,10 +35,10 @@ End Property
   <td width="28%" nowrap><div align="right">Cards Accepted</div></td>
   <td width="72%">
   
-  <img src="https://www.animalcenter.org/_images/business_logos/visa_small.gif">
-  <img src="https://www.animalcenter.org/_images/business_logos/mastercd_small.gif">
-  <img src="https://www.animalcenter.org/_images/business_logos/amex_small.gif">
-  <img src="https://www.animalcenter.org/_images/business_logos/discover.jpg">  </td>
+  <img src="https:/join.animalcenter.org/_images/business_logos/visa_small.gif">
+  <img src="https://join.animalcenter.org/_images/business_logos/mastercd_small.gif">
+  <img src="https://join.animalcenter.org/_images/business_logos/amex_small.gif">
+  <img src="https://join.animalcenter.org/_images/business_logos/discover.jpg">  </td>
 </tr>
 <tr>
   <td><div align="right">*Card Number </div></td>
@@ -65,14 +65,13 @@ End Property
   </asp:DropdownList> 
     *Expiration Year 
 	<asp:DropdownList runat="server" ID="Exp_Year">
-	<asp:ListItem Selected="true">2015</asp:ListItem>
-	<asp:ListItem>2014</asp:ListItem>
-	<asp:ListItem>2016</asp:ListItem>
-	<asp:ListItem>2017</asp:ListItem>
-	<asp:ListItem>2018</asp:ListItem>
-	<asp:ListItem>2019</asp:ListItem>
-	<asp:ListItem>2020</asp:ListItem>
-	<asp:ListItem>2021</asp:ListItem>  
+	<asp:ListItem Selected="true">2023</asp:ListItem>
+	<asp:ListItem>2024</asp:ListItem>
+	<asp:ListItem>2025</asp:ListItem>
+	<asp:ListItem>2026</asp:ListItem>
+	<asp:ListItem>2027</asp:ListItem>
+	<asp:ListItem>2028</asp:ListItem>
+	<asp:ListItem>2029</asp:ListItem>  
   </asp:DropdownList>  </td>
 </tr>
 </table>

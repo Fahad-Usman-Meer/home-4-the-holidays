@@ -69,7 +69,7 @@
 
                                         <div class="row mt-10">
                                             <div class="col-lg-6 col-md-6">
-                                                <a href="_downloads/How To Guide/Sharing and Reporting/4A How to Report Adoption Success - 2021.doc" class="genric-btn primary ee-large">HOW TO REPORT ADOPTION<span style="padding-left: inherit; font-size: large; font-weight: bold;" class="lnr lnr-download"></span></a>
+                                                <a href="_downloads/How To Guide/Sharing and Reporting/4A How to Report Adoption Success - 2023.doc" class="genric-btn primary ee-large">HOW TO REPORT ADOPTIONS<span style="padding-left: inherit; font-size: large; font-weight: bold;" class="lnr lnr-download"></span></a>
                                             </div>
                                             <div class="col-lg-6 col-md-6">
                                                 <a href="_downloads/How To Guide/Sharing and Reporting/4B Social Media Sample Posts - 2021.docx" class="genric-btn primary ee-large">SOCIAL MEDIA SAMPLE POSTS<span style="padding-left: inherit; font-size: large; font-weight: bold;" class="lnr lnr-download"></span></a>

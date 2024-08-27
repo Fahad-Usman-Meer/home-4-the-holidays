@@ -31,7 +31,7 @@ sub Page_load(obj as object, e as EventArgs)
 	
 end sub
 sub donate_click(sender As Object, e As System.EventArgs)
-exit sub
+'exit sub
 if page.isvalid then
 	''process the donation
 	'lblmessage.text=GetForm()
@@ -66,8 +66,8 @@ if page.isvalid then
 			Dim EM as new HWAC.EMailMessage()
 				EM.From="noreply@animalcenter.org"
 				EM.Subject="Home 4 The Holidays Shelter Donation to " & lblshelter.text
-				EM.MailTo="ReneeS@Animalcenter.org, KirsiA@animalcenter.org"
-				EM.BCC="lonjones@hotmail.com"
+				EM.MailTo="ReneeS@Animalcenter.org"
+				EM.BCC=""
 				EM.Body="<h3>Home 4 The Holidays Shelter Donation</h3><br><br>" & "$" & Amount.text & FindShelter
 				'EM.BodyFormat=MailFormat.Html
 				 Try
@@ -126,10 +126,10 @@ end function
 </asp:content>
 <asp:Content ID="Content3" ContentPlaceHolderID="maincontent" Runat="Server" >
  
-<h1 class="grn_ttl_blg">Support a shelter through your generous donation<br></h1>
+<h1 class="grn_ttl_blg">Support a shelter through your generous donation<br>This program is currently closed.</h1>
 <div class="feature">
 														    <asp:label runat="server" id="lblMessage" />                                                          
-                                                            <form runat="server" id="form1">
+                                                            <form runat="server" id="form1" visible="false">
                                                               <table border="1" align="center" bordercolor="#F68428" bordercolordark="#000000" bgcolor="#FFF0CF" style="border-style:ridge " >
                                                                 <tr>
                                                                   <td><table width="400" border="0" align="center" cellpadding="0" cellspacing="2">

@@ -73,7 +73,7 @@
 
                                         <div class="row mt-10">
                                             <div class="col-lg-6 col-md-6">
-                                                <a href="_downloads/How To Guide/How to Make Your Campaign a Success/1C What's Next (Executing Your Event) 2019.doc" class="genric-btn primary ee-large">WHAT'S NEXT? (EXECUTING YOUR EVENT)<span style="padding-left: inherit;font-size: large;font-weight: bold;" class="lnr lnr-download"></span></a>
+                                                <a href="_downloads/How To Guide/How to Make Your Campaign a Success/1C What's Next (Executing Your Event) 2023.doc" class="genric-btn primary ee-large">WHAT'S NEXT? (EXECUTING YOUR EVENT)<span style="padding-left: inherit;font-size: large;font-weight: bold;" class="lnr lnr-download"></span></a>
                                             </div>
                                             <div class="col-lg-6 col-md-6">
                                                 <a href="_downloads/How To Guide/How to Make Your Campaign a Success/1B How to Create an Adoption Event 2019.doc" class="genric-btn primary ee-large">HOW TO CREATE AN ADOPTIONS EVENT<span style="padding-left: inherit;font-size: large;font-weight: bold;" class="lnr lnr-download"></span></a>
@@ -82,10 +82,10 @@
                                         
                                         <div class="row mt-10">
                                             <div class="col-lg-6 col-md-6">
-                                                <a href="_downloads/How To Guide/How to Make Your Campaign a Success/1E %23IChoseToRescue Contest (Previously the Most Heartwarming Story contest) - 2021.doc" class="genric-btn primary ee-large">ENTER THE #IChoseToRescue CONTEST<span style="padding-left: inherit;font-size: large;font-weight: bold;" class="lnr lnr-download"></span></a>
+                                                <a href="_downloads/How To Guide/How to Make Your Campaign a Success/1E %23IChoseToRescue Contest 2023.doc" class="genric-btn primary ee-large">ENTER THE #IChoseToRescue CONTEST<span style="padding-left: inherit;font-size: large;font-weight: bold;" class="lnr lnr-download"></span></a>
                                             </div>
                                             <div class="col-lg-6 col-md-6">
-                                                <a href="_downloads/How To Guide/How to Make Your Campaign a Success/1E #IChoseToRescue Contest (Previously the Most Heartwarming Story contest) 2019.doc" class="genric-btn primary ee-large">ENTER TIMELINE AND CHECKLIST<span style="padding-left: inherit;font-size: large;font-weight: bold;" class="lnr lnr-download"></span></a>
+                                                <a href="_downloads/How To Guide/How to Make Your Campaign a Success/1D Event Timeline and Checklist (Tracking Your Adoptions Progress).doc" class="genric-btn primary ee-large">EVENT TIMELINE AND CHECKLIST<span style="padding-left: inherit;font-size: large;font-weight: bold;" class="lnr lnr-download"></span></a>
                                             </div>
                                         </div>
                                         

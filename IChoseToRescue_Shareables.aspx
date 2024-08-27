@@ -78,8 +78,8 @@
                     </div>
 
                     <div class="col-md-4">
-                        <a href="_images/Social-Shares/2021/H4TH21_Contest_Sharable-4.jpg" class="img-gal">
-                            <div class="single-gallery-image" style="background: url(_images/Social-Shares/2021/H4TH21_Contest_Sharable-4.jpg);"></div>
+                        <a href="_images/Social-Shares/2022/H4TH_22_Social_Sharable_1200x1200.jpg" class="img-gal">
+                            <div class="single-gallery-image" style="background: url(_images/Social-Shares/2022/H4TH_22_Social_Sharable_1200x1200.jpg);"></div>
                         </a>
                     </div>
                     <div class="col-md-4">
@@ -111,8 +111,8 @@
                     </div>
 
                     <div class="col-md-4">
-                        <a href="_images/Social-Shares/2021/H4TH21_Contest_Story-Sharable-4.jpg" class="img-gal">
-                            <div class="single-gallery-image" style="background: url(_images/Social-Shares/2021/H4TH21_Contest_Story-Sharable-4.jpg);"></div>
+                        <a href="_images/Social-Shares/2022/H4TH_22_Social_Sharable_540x960.jpg" class="img-gal">
+                            <div class="single-gallery-image" style="background: url(_images/Social-Shares/2022/H4TH_22_Social_Sharable_540x960.jpg);"></div>
                         </a>
                     </div>
                     <div class="col-md-4">

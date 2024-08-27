@@ -43,6 +43,25 @@
         ga('linker:autoLink', ['remembermethursday.org']);
         ga('send', 'pageview');
     </script>
+	 
+
+<!-- Google tag (gtag.js) -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8SHC6ZNV7Z"></script>
+
+<script>
+
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag(){dataLayer.push(arguments);}
+
+  gtag('js', new Date());
+
+ 
+
+  gtag('config', 'G-8SHC6ZNV7Z');
+
+</script>
     
     <script async src='//www.google-analytics.com/analytics.js'></script>
     <!-- End Google Analytics -->
@@ -164,14 +183,10 @@
               <div class="row justify-content-center">
                   <div class="menu-content pb-20 col-lg-9">
                       <div class="title text-center">
-                          <h2 class="mb-10">Pets Adopted: <b><span>
-                              <%--<script src="/common/counter.txt"></script>--%>
-                              1,062,127
-                          </span></b>
-                              <br />
-                          </h2>
+                          <h2 class="mb-10">Pets Adopted in 2023: <b><span>
+                             888,723
 
-                          <a href="https://www.youtube.com/watch?v=zlflMDqO4yM">Thank you to all who worked saving animals throughout the pandemic.</a>
+                         <!-- <a href="https://www.youtube.com/watch?v=zlflMDqO4yM">Thank you to all who worked saving animals throughout the pandemic.</a>-->
                       </div>
                   </div>
               </div>
