@@ -5,13 +5,13 @@ $(document).ready(function () {
 
     $("#accept-cookies").click(function (e) {
         e.preventDefault();
-        var analyticsConsent = $(".analytics-consent").is(":checked");
-        var adsConsent = $(".ads-consent").is(":checked");
+        var analyticsConsent = $(".accept-all-consent").is(":checked");
+        var adsConsent = $(".reject-all-consent").is(":checked");
 
         // Store consent in cookies
         setCookie("gdpr-consent", true, 365);
-        setCookie("analytics-consent", analyticsConsent, 365);
-        setCookie("ads-consent", adsConsent, 365);
+        setCookie("accept-all-consent", analyticsConsent, 365);
+        setCookie("reject-all-consent", adsConsent, 365);
 
         $("#gdpr-banner").hide();
     });

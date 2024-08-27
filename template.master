@@ -12,6 +12,8 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
 
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="de33bd91-bf83-4adf-bc96-569f96eaf756" data-blockingmode="auto" type="text/javascript"></script>
+
     <link rel="stylesheet" href="/_css/thickbox.css" type="text/css" media="screen" />
     <%--<link href="https://join.home4theholidays.org/_css/style2.css" rel="stylesheet" type="text/css" />--%>
     <script type="text/javascript" src="https://w.sharethis.com/button/buttons.js"></script>
@@ -21,8 +23,8 @@
     <script runat="server">
         Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
             Dim gdprConsentCookie As HttpCookie = Request.Cookies("gdpr-consent")
-            Dim analyticsConsentCookie As HttpCookie = Request.Cookies("analytics-consent")
-            Dim adsConsentCookie As HttpCookie = Request.Cookies("ads-consent")
+            Dim analyticsConsentCookie As HttpCookie = Request.Cookies("accept-all-consent")
+            Dim adsConsentCookie As HttpCookie = Request.Cookies("reject-all-consent")
 
             If gdprConsentCookie IsNot Nothing AndAlso gdprConsentCookie.Value = "true" Then
                 ' User accepted the consent
@@ -144,33 +146,40 @@
 
         <div id="gdpr-banner" class="gdpr-banner" style="display: none;">
             <p>
-                We use cookies to personalize content and ads, to provide social media features and to analyze our traffic. 
-               You consent to our cookies if you continue to use our website.
+                we use cookies and other similar technologies to collect and process certain information about your interaction with our website. These technologies may allow us to record information about your browsing behavior on the website, such as what pages you visited and what videos you watched, for analytics, debugging, and other purposes. Some of these technologies may be provided by third-parties. By allowing us to use such technologies, you consent to our recording of this information and its disclosure to our third-party technology providers. Some parts of our website may be inaccessible or may not function properly if you do not allow us to use such technologies. For more information about our use of such technologies, please see our <a href="https://animalcenter.org/privacy-policy/">privacy notice</a>.
             </p>
             <div class="gdpr-toggles row">
 
                 <div class="col-lg-3 col-md-4 mt-sm-30 element-wrap">
                     <div class="switch-wrap d-flex justify-content-between">
-
-                        <p>Allow Analytics</p>
+                        <p>Accept All</p>
                         <div class="primary-switch">
-                            <input class="analytics-consent" type="checkbox" id="default-switch" checked="checked"/>
+                            <input class="accept-all-consent" type="checkbox" id="default-switch" checked="checked"/>
                             <label for="default-switch"></label>
                         </div>
-
                     </div>
                 </div>
 
                 <div class="col-lg-3 col-md-4 mt-sm-30 element-wrap">
                     <div class="switch-wrap d-flex justify-content-between">
-
-                        <p>Allow Advertising</p>
+                        <p>Reject All Non-Essential</p>
                         <div class="primary-switch">
-                            <input class="ads-consent" type="checkbox" id="primary-switch" checked="checked"/>
+                            <input class="reject-all-consent" type="checkbox" id="primary-switch" checked="checked"/>
                             <label for="primary-switch"></label>
                         </div>
                     </div>
                 </div>
+                
+                <div class="col-lg-3 col-md-4 mt-sm-30 element-wrap">
+                    <div class="switch-wrap d-flex justify-content-between">
+                        <p>More Options</p>
+                        <div class="confirm-switch">
+                            <input class="reject-all-consent" type="checkbox" id="confirm-switch" checked="checked"/>
+                            <label for="confirm-switch"></label>
+                        </div>
+                    </div>
+                </div>
+
 
             </div>
             <button id="accept-cookies" onclick="acceptCookies()" class="genric-btn primary">Accept</button>
