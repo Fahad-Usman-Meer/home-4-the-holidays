@@ -12,7 +12,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
 
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="de33bd91-bf83-4adf-bc96-569f96eaf756" data-blockingmode="auto" type="text/javascript"></script>
+    <%--<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="de33bd91-bf83-4adf-bc96-569f96eaf756" data-blockingmode="auto" type="text/javascript"></script>--%>
 
     <link rel="stylesheet" href="/_css/thickbox.css" type="text/css" media="screen" />
     <%--<link href="https://join.home4theholidays.org/_css/style2.css" rel="stylesheet" type="text/css" />--%>
@@ -167,7 +167,7 @@
 
                 <div class="col-lg-3 col-md-4 mt-sm-30 element-wrap">
                     <div class="switch-wrap d-flex justify-content-between">
-                        <p>Reject All Non-Essential</p>
+                        <p>Deny Non-Essential</p>
                         <div class="primary-switch">
                             <input class="reject-all-consent" type="checkbox" id="primary-switch" checked="checked"/>
                             <label for="primary-switch"></label>
@@ -175,7 +175,7 @@
                     </div>
                 </div>
                 
-                <div class="col-lg-3 col-md-4 mt-sm-30 element-wrap">
+                <%--<div class="col-lg-3 col-md-4 mt-sm-30 element-wrap">
                     <div class="switch-wrap d-flex justify-content-between">
                         <p>More Options</p>
                         <div class="confirm-switch">
@@ -183,7 +183,7 @@
                             <label for="confirm-switch"></label>
                         </div>
                     </div>
-                </div>
+                </div>--%>
 
 
             </div>
@@ -302,7 +302,7 @@
                     &copy;
                     <%--current year will come here--%>
                     <span id="spYear"></span>
-                    Helen Woodward Animal Center - v(2.1)
+                    Helen Woodward Animal Center - v(2.2)
                 </p>
 
             </div>
