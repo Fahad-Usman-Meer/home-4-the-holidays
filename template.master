@@ -23,8 +23,8 @@
     <script runat="server">
         Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
             Dim gdprConsentCookie As HttpCookie = Request.Cookies("gdpr-consent")
-            Dim analyticsConsentCookie As HttpCookie = Request.Cookies("accept-all-consent")
-            Dim adsConsentCookie As HttpCookie = Request.Cookies("reject-all-consent")
+            Dim analyticsConsentCookie As HttpCookie = Request.Cookies("accept-all-cookies")
+            Dim adsConsentCookie As HttpCookie = Request.Cookies("reject-non-essential-cookies")
 
             If gdprConsentCookie IsNot Nothing AndAlso gdprConsentCookie.Value = "true" Then
                 ' User accepted the consent
@@ -155,31 +155,31 @@
 
             <div class="gdpr-toggles row">
 
-                <div class="col-lg-3 col-md-4 mt-sm-30 element-wrap">
+                <%--<div class="col-lg-3 col-md-4 mt-sm-30 element-wrap">
                     <div class="switch-wrap d-flex justify-content-between">
                         <p>Accept All</p>
                         <div class="primary-switch">
-                            <input class="accept-all-consent" type="checkbox" id="default-switch" checked="checked"/>
+                            <input class="accept-all-cookies" type="checkbox" id="default-switch" checked="checked"/>
                             <label for="default-switch"></label>
                         </div>
                     </div>
-                </div>
+                </div>--%>
 
-                <div class="col-lg-3 col-md-4 mt-sm-30 element-wrap">
+                <%--<div class="col-lg-3 col-md-4 mt-sm-30 element-wrap">
                     <div class="switch-wrap d-flex justify-content-between">
                         <p>Deny Non-Essential</p>
                         <div class="primary-switch">
-                            <input class="reject-all-consent" type="checkbox" id="primary-switch" checked="checked"/>
+                            <input class="reject-non-essential-cookies" type="checkbox" id="primary-switch" checked="checked"/>
                             <label for="primary-switch"></label>
                         </div>
                     </div>
-                </div>
+                </div>--%>
                 
                 <%--<div class="col-lg-3 col-md-4 mt-sm-30 element-wrap">
                     <div class="switch-wrap d-flex justify-content-between">
                         <p>More Options</p>
                         <div class="confirm-switch">
-                            <input class="reject-all-consent" type="checkbox" id="confirm-switch" checked="checked"/>
+                            <input class="reject-non-essential-cookies" type="checkbox" id="confirm-switch" checked="checked"/>
                             <label for="confirm-switch"></label>
                         </div>
                     </div>
@@ -187,7 +187,10 @@
 
 
             </div>
-            <button id="accept-cookies" class="genric-btn primary">Accept</button>
+            <%--<button id="accept-cookies" class="genric-btn primary">Accept</button>--%>
+
+            <button id="accept-all-cookies" class="genric-btn primary">Accept All</button>
+            <button id="reject-non-essential-cookies" class="genric-btn primary">Deny Non-Essential</button>
         </div>
 
     </div>
@@ -302,7 +305,7 @@
                     &copy;
                     <%--current year will come here--%>
                     <span id="spYear"></span>
-                    Helen Woodward Animal Center - v(2.3)
+                    Helen Woodward Animal Center - v(2.4)
                 </p>
 
             </div>

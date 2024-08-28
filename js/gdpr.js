@@ -3,15 +3,38 @@ $(document).ready(function () {
         $("#gdpr-banner").show();
     }
 
-    $("#accept-cookies").click(function (e) {
+    // This is the old way of handling the consent
+    //$("#accept-cookies").click(function (e) {
+    //    e.preventDefault();
+    //    var analyticsConsent = $("#accept-all-cookies").is(":checked");
+    //    var adsConsent = $("#reject-non-essential-cookies").is(":checked");
+
+    //    // Store consent in cookies
+    //    setCookie("gdpr-consent", true, 365);
+    //    setCookie("accept-all-cookies", analyticsConsent, 365);
+    //    setCookie("reject-non-essential-cookies", adsConsent, 365);
+
+    //    $("#gdpr-banner").hide();
+    //});
+
+    $("#accept-all-cookies").click(function (e) {
         e.preventDefault();
-        var analyticsConsent = $(".accept-all-consent").is(":checked");
-        var adsConsent = $(".reject-all-consent").is(":checked");
+        var analyticsConsent = true;
+        
+        // Store consent in cookies
+        setCookie("gdpr-consent", true, 365);
+        setCookie("accept-all-cookies", analyticsConsent, 365);
+
+        $("#gdpr-banner").hide();
+    });
+
+    $("#reject-non-essential-cookies").click(function (e) {
+        e.preventDefault();
+        var adsConsent = true;// $("#reject-non-essential-cookies").is(":checked");
 
         // Store consent in cookies
         setCookie("gdpr-consent", true, 365);
-        setCookie("accept-all-consent", analyticsConsent, 365);
-        setCookie("reject-all-consent", adsConsent, 365);
+        setCookie("reject-non-essential-cookies", adsConsent, 365);
 
         $("#gdpr-banner").hide();
     });
