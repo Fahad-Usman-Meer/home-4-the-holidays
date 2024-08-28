@@ -145,9 +145,14 @@
 
 
         <div id="gdpr-banner" class="gdpr-banner" style="display: none;">
+
+            <h5 style="color: white; margin-bottom: 30px;">Manage Consent</h5>
+
             <p>
-                we use cookies and other similar technologies to collect and process certain information about your interaction with our website. These technologies may allow us to record information about your browsing behavior on the website, such as what pages you visited and what videos you watched, for analytics, debugging, and other purposes. Some of these technologies may be provided by third-parties. By allowing us to use such technologies, you consent to our recording of this information and its disclosure to our third-party technology providers. Some parts of our website may be inaccessible or may not function properly if you do not allow us to use such technologies. For more information about our use of such technologies, please see our <a href="https://animalcenter.org/privacy-policy/" target="_blank">privacy notice</a>.
+                Like most websites, we use cookies and other similar technologies to collect and process certain information about your interaction with our website. These technologies may allow us to record information about your browsing behavior on the website, such as what pages you visited and what videos you watched, for analytics, debugging, and other purposes. Some of these technologies may be provided by third-parties. By allowing us to use such technologies, you consent to our recording of this information and its disclosure to our third-party technology providers. Some parts of our website may be inaccessible or may not function properly if you do not allow us to use such technologies. For more information about our use of such technologies, please see our <a href="https://animalcenter.org/privacy-policy/" target="_blank">privacy notice</a>.
             </p>
+
+
             <div class="gdpr-toggles row">
 
                 <div class="col-lg-3 col-md-4 mt-sm-30 element-wrap">
@@ -182,7 +187,7 @@
 
 
             </div>
-            <button id="accept-cookies" onclick="acceptCookies()" class="genric-btn primary">Accept</button>
+            <button id="accept-cookies" class="genric-btn primary">Accept</button>
         </div>
 
     </form>
@@ -297,7 +302,7 @@
                     &copy;
                     <%--current year will come here--%>
                     <span id="spYear"></span>
-                    Helen Woodward Animal Center - v(3.0)
+                    Helen Woodward Animal Center - v(2.1)
                 </p>
 
             </div>
