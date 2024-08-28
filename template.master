@@ -140,7 +140,7 @@
     <script type="text/javascript" src="/_js/wz_tooltip.js"></script>
 
     <!-- #region GDPR Consent Cookie Banner -->
-    <form id="form1" runat="server">
+    <div id="form1" runat="server">
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
 
 
@@ -190,7 +190,7 @@
             <button id="accept-cookies" class="genric-btn primary">Accept</button>
         </div>
 
-    </form>
+    </div>
 
 
     <!-- #endregion Cookie Consent -->
