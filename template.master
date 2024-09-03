@@ -131,7 +131,7 @@
     <!-- #endregion Load Scripts & CSS -->
 
     <link rel="stylesheet" type="text/css" href="/css/gdpr.css" />
-    <script type="text/javascript" src="/js/gdpr.js"></script>
+    <script type="text/javascript" src="/js/gdpr2.js"></script>
 
 
 </head>
@@ -305,7 +305,7 @@
                     &copy;
                     <%--current year will come here--%>
                     <span id="spYear"></span>
-                    Helen Woodward Animal Center - v(2.4)
+                    Helen Woodward Animal Center - v(2.5)
                 </p>
 
             </div>
