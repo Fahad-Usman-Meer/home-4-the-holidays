@@ -40,6 +40,9 @@ function loadAllScripts() {
     // Load Google Tag
     loadGoogleTagScript();
 
+    // Load Google Tag Analytics
+    loadGoogleTagAnalyticsScript();
+
     // Load Google Analytics Com
     loadGoogleAnalyticsComScript();
 }
