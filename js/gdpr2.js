@@ -6,7 +6,7 @@ $(document).ready(function () {
     $("#accept-all-cookies").click(function (e) {
         e.preventDefault();
         var analyticsConsent = true;
-        
+
         // Store consent in cookies
         setCookie("gdpr-consent", true, 365);
         setCookie("accept-all-cookies", analyticsConsent, 365);

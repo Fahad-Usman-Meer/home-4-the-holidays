@@ -12,10 +12,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
 
-    <%--<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="de33bd91-bf83-4adf-bc96-569f96eaf756" data-blockingmode="auto" type="text/javascript"></script>--%>
-
     <link rel="stylesheet" href="/_css/thickbox.css" type="text/css" media="screen" />
-    <%--<link href="https://join.home4theholidays.org/_css/style2.css" rel="stylesheet" type="text/css" />--%>
     <script type="text/javascript" src="https://w.sharethis.com/button/buttons.js"></script>
     <script type="text/javascript">stLight.options({ publisher: '127b4c89-1c34-4e68-b933-85623e8ca959' });</script>
 
@@ -72,17 +69,10 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8SHC6ZNV7Z"></script>
 
     <script>
-
         window.dataLayer = window.dataLayer || [];
-
         function gtag() { dataLayer.push(arguments); }
-
         gtag('js', new Date());
-
-
-
         gtag('config', 'G-8SHC6ZNV7Z');
-
     </script>
 
     <script async src='//www.google-analytics.com/analytics.js'></script>
