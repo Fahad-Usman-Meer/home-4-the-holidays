@@ -32,39 +32,36 @@ $(document).ready(function () {
 
 function loadAllCookies() {
     // script 'Share This'
-    stLightLoadScript();
+    loadStLightScript();
 
     // Load Google Analytics
-    initializeGoogleAnalytics('UA-8531953-1', 'remembermethursday.org');
+    loadGoogleAnalyticsScript('UA-8531953-1', 'remembermethursday.org');
 }
 
 function loadOnlyNecessaryCookies() {
     // script 'Share This'
-    stLightLoadScript();
+    loadStLightScript();
 }
 
-function stLightLoadScript() {
-    // Check if the script is already loaded to avoid reloading
+function loadStLightScript() {
     if (!document.getElementById('shareThisScript')) {
         var script = document.createElement('script');
-        script.id = 'shareThisScript'; // Give an ID to avoid multiple loads
+        script.id = 'loadStLightScript'; // Give an ID to avoid multiple loads
         script.type = 'text/javascript';
         script.src = 'https://ws.sharethis.com/button/buttons.js'; // Load ShareThis JS
         document.body.appendChild(script);
 
-        // After the script is loaded, configure ShareThis options
         script.onload = function () {
             stLight.options({ publisher: '127b4c89-1c34-4e68-b933-85623e8ca959' });
         };
+        console.log('ShareThis script loaded');
     }
 }
 
-function initializeGoogleAnalytics(trackingId, domain) {
-    // Create a new <script> element
+function loadGoogleAnalyticsScript(trackingId, domain) {
     var script = document.createElement('script');
+    script.id = 'loadGoogleAnalyticsScript';
     script.type = 'text/javascript';
-
-    // Define the contents of the script
     var scriptContent = `
         window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
         ga.l = +new Date;
@@ -73,13 +70,13 @@ function initializeGoogleAnalytics(trackingId, domain) {
         ga('linker:autoLink', ['remembermethursday.org']);
         ga('send', 'pageview');
     `;
-
-    // Insert the script content into the script element
     script.text = scriptContent;
-
-    // Append the <script> element to the <body> tag
     document.body.appendChild(script);
+    console.log('Google Analytics script loaded');
 }
+
+
+
 
 
 
