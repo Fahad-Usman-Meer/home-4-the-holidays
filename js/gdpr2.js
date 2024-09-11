@@ -39,6 +39,9 @@ function loadAllScripts() {
 
     // Load Google Tag
     loadGoogleTagScript();
+
+    // Load Google Analytics Com
+    loadGoogleAnalyticsComScript();
 }
 
 function loadOnlyNecessaryScripts() {
@@ -98,10 +101,18 @@ function loadGoogleTagAnalyticsScript() {
                 gtag('config', 'G-8SHC6ZNV7Z');
             `;
     document.body.appendChild(script);
-
     console.log('loaded Google Analytics script id:"loadGoogleTagAnalyticsScript"');
 }
 
+function loadGoogleAnalyticsComScript() {
+    var script = document.createElement('script');
+    script.id = 'loadGoogleAnalyticsComScript';
+    script.src = '//www.google-analytics.com/analytics.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    console.log('loaded Google Analytics script id:"loadGoogleAnalyticsComScript"');
+}
 
 
 
