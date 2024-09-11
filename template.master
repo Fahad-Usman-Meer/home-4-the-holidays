@@ -14,7 +14,7 @@
 
     <link rel="stylesheet" href="/_css/thickbox.css" type="text/css" media="screen" />
     <script type="text/javascript" src="https://w.sharethis.com/button/buttons.js"></script>
-    <script type="text/javascript">stLight.options({ publisher: '127b4c89-1c34-4e68-b933-85623e8ca959' });</script>
+    <%--<script type="text/javascript">stLight.options({ publisher: '127b4c89-1c34-4e68-b933-85623e8ca959' });</script>--%>
 
 
     <script runat="server">

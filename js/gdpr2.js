@@ -11,6 +11,7 @@ $(document).ready(function () {
         setCookie("gdpr-consent", true, 365);
         setCookie("accept-all-cookies", analyticsConsent, 365);
 
+        loadAllCookies();
         $("#gdpr-banner").hide();
     });
 
@@ -22,10 +23,37 @@ $(document).ready(function () {
         setCookie("gdpr-consent", true, 365);
         setCookie("reject-non-essential-cookies", adsConsent, 365);
 
+        loadOnlyNecessaryCookies();
+
         $("#gdpr-banner").hide();
     });
 });
 
+function loadAllCookies() {
+    // script 'Share This'
+    stLightLoadScript();
+}
+
+function loadOnlyNecessaryCookies() {
+    // script 'Share This'
+    stLightLoadScript();
+}
+
+function stLightLoadScript() {
+    // Check if the script is already loaded to avoid reloading
+    if (!document.getElementById('shareThisScript')) {
+        var script = document.createElement('script');
+        script.id = 'shareThisScript'; // Give an ID to avoid multiple loads
+        script.type = 'text/javascript';
+        script.src = 'https://ws.sharethis.com/button/buttons.js'; // Load ShareThis JS
+        document.body.appendChild(script);
+
+        // After the script is loaded, configure ShareThis options
+        script.onload = function () {
+            stLight.options({ publisher: '127b4c89-1c34-4e68-b933-85623e8ca959' });
+        };
+}
+}
 function setCookie(name, value, days) {
     var expires = "";
     if (days) {
