@@ -12,6 +12,7 @@ $(document).ready(function () {
         setCookie("accept-all-cookies", analyticsConsent, 365);
 
         loadAllCookies();
+
         $("#gdpr-banner").hide();
     });
 
@@ -32,6 +33,9 @@ $(document).ready(function () {
 function loadAllCookies() {
     // script 'Share This'
     stLightLoadScript();
+
+    // Load Google Analytics
+    initializeGoogleAnalytics('UA-8531953-1', 'remembermethursday.org');
 }
 
 function loadOnlyNecessaryCookies() {
@@ -52,8 +56,34 @@ function stLightLoadScript() {
         script.onload = function () {
             stLight.options({ publisher: '127b4c89-1c34-4e68-b933-85623e8ca959' });
         };
+    }
 }
+
+function initializeGoogleAnalytics(trackingId, domain) {
+    // Create a new <script> element
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+
+    // Define the contents of the script
+    var scriptContent = `
+        window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
+        ga.l = +new Date;
+        ga('create', 'UA-8531953-1', 'auto', { 'allowLinker': true });
+        ga('require', 'linker');
+        ga('linker:autoLink', ['remembermethursday.org']);
+        ga('send', 'pageview');
+    `;
+
+    // Insert the script content into the script element
+    script.text = scriptContent;
+
+    // Append the <script> element to the <body> tag
+    document.body.appendChild(script);
 }
+
+
+
+
 function setCookie(name, value, days) {
     var expires = "";
     if (days) {
@@ -63,7 +93,6 @@ function setCookie(name, value, days) {
     }
     document.cookie = name + "=" + (value || "") + expires + "; path=/";
 }
-
 function getCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');

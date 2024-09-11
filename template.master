@@ -55,13 +55,13 @@
     <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
 
     <!-- Google Analytics -->
-    <script>
+    <%--<script>
         window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
         ga('create', 'UA-8531953-1', 'auto', { 'allowLinker': true });
         ga('require', 'linker');
         ga('linker:autoLink', ['remembermethursday.org']);
         ga('send', 'pageview');
-    </script>
+    </script>--%>
 
 
     <!-- Google tag (gtag.js) -->
