@@ -11,7 +11,7 @@ $(document).ready(function () {
         setCookie("gdpr-consent", true, 365);
         setCookie("accept-all-cookies", analyticsConsent, 365);
 
-        loadAllCookies();
+        loadAllScripts();
 
         $("#gdpr-banner").hide();
     });
@@ -24,21 +24,24 @@ $(document).ready(function () {
         setCookie("gdpr-consent", true, 365);
         setCookie("reject-non-essential-cookies", adsConsent, 365);
 
-        loadOnlyNecessaryCookies();
+        loadOnlyNecessaryScripts();
 
         $("#gdpr-banner").hide();
     });
 });
 
-function loadAllCookies() {
+function loadAllScripts() {
     // script 'Share This'
     loadStLightScript();
 
     // Load Google Analytics
     loadGoogleAnalyticsScript('UA-8531953-1', 'remembermethursday.org');
+
+    // Load Google Tag
+    loadGoogleTagScript();
 }
 
-function loadOnlyNecessaryCookies() {
+function loadOnlyNecessaryScripts() {
     // script 'Share This'
     loadStLightScript();
 }
@@ -73,6 +76,30 @@ function loadGoogleAnalyticsScript(trackingId, domain) {
     script.text = scriptContent;
     document.body.appendChild(script);
     console.log('Google Analytics script loaded');
+}
+
+function loadGoogleTagScript() {
+    var script = document.createElement('script');
+    script.id = 'loadGoogleTagScript';
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-8SHC6ZNV7Z';
+    script.async = true;
+    document.body.appendChild(script);
+    console.log('Google Tag script loaded');
+}
+
+function loadGoogleTagAnalyticsScript() {
+    var script = document.createElement('script');
+    script.id = 'loadGoogleTagAnalyticsScript';
+    script.type = 'text/javascript';
+    script.text = `
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-8SHC6ZNV7Z');
+            `;
+    document.body.appendChild(script);
+
+    console.log('loaded Google Analytics script id:"loadGoogleTagAnalyticsScript"');
 }
 
 
